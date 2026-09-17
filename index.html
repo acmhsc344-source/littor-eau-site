@@ -3,21 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Littor'eau — Ingénierie Hydraulique & Risques Côtiers · Alexis Camand</title>
-<meta name="description" content="Littor'eau — Ingénieur hydraulicien spécialisé en risques naturels, inondations et risques côtiers. Basé à Montpellier, Sud de la France.">
+<title>Littor'eau · Ingénierie Hydraulique & Risques Côtiers · Alexis Camand</title>
+<meta name="description" content="Littor'eau : ingénieur hydraulicien spécialisé en risques naturels, inondations et risques côtiers. Basé à Montpellier, Sud de la France.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ocean:#0a3d55;--deep:#061e2a;--wave:#1470a0;--foam:#3ab4d4;
-  --light:#7fd4e8;--sand:#f2ece0;--sand2:#e8dfc8;--ink:#0d1e28;
-  --mist:#5a8090;--white:#ffffff;--off:#f8f5ef;--red:#e8003d;
+  /* Direction 1 "Cabinet d'ingénierie" : navy + un seul accent chaud (terracotta) */
+  --ocean:#0b2c4a;--deep:#081f36;--wave:#a8492f;--foam:#c85a3c;
+  --light:#dd7d5f;--sand:#e8dcc4;--sand2:#ddcda8;--ink:#0d1e28;
+  --mist:#5a7590;--white:#ffffff;--off:#f5f3ef;--red:#c85a3c;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--white);overflow-x:hidden;}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:10px 6vw;display:flex;justify-content:space-between;align-items:center;transition:background 0.4s,box-shadow 0.4s;}
-nav.scrolled{background:rgba(6,30,42,0.97);box-shadow:0 2px 30px rgba(0,0,0,0.3);backdrop-filter:blur(10px);}
+nav.scrolled{background:rgba(8,31,54,0.97);box-shadow:0 2px 30px rgba(0,0,0,0.3);backdrop-filter:blur(10px);}
 .nav-logo img{height:70px;width:auto;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.2);}
 .nav-links{display:flex;gap:28px;list-style:none;}
 .nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:9pt;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:color 0.2s;}
@@ -25,7 +26,7 @@ nav.scrolled{background:rgba(6,30,42,0.97);box-shadow:0 2px 30px rgba(0,0,0,0.3)
 .nav-cta{background:var(--foam);color:var(--deep)!important;padding:8px 18px;border-radius:4px;font-weight:600!important;}
 
 .hero{min-height:100vh;background:var(--deep);position:relative;display:flex;align-items:center;overflow:hidden;}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 110%,rgba(52,180,212,0.12) 0%,transparent 60%),radial-gradient(ellipse 60% 80% at -10% 50%,rgba(20,112,160,0.2) 0%,transparent 60%),linear-gradient(160deg,#061e2a 0%,#0a3d55 50%,#061e2a 100%);}
+.hero::before{content:'';position:absolute;inset:0;}
 .wave-lines{position:absolute;right:-60px;bottom:-40px;width:65vw;height:65vw;opacity:0.06;pointer-events:none;}
 .wave-lines circle{fill:none;stroke:var(--foam);stroke-width:1;}
 .hero-content{position:relative;z-index:2;padding:0 8vw;max-width:760px;animation:fadeUp 1s ease both;}
@@ -77,33 +78,36 @@ section{padding:90px 8vw;}
 .galerie{background:var(--deep);padding:70px 8vw;}
 .galerie .section-eyebrow{color:var(--foam);}
 .galerie .section-title{color:var(--white);margin-bottom:36px;}
-.galerie-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
-.galerie-grid .wide{grid-column:span 2;}
-.galerie-item{border-radius:10px;overflow:hidden;position:relative;aspect-ratio:16/10;background:var(--ocean);}
-.galerie-item.tall{aspect-ratio:4/5;}
+.galerie-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:12px;}
+.galerie-grid.galerie-more{display:none;margin-top:12px;}
+.galerie-item{border-radius:10px;overflow:hidden;position:relative;background:var(--ocean);}
+.galerie-item.featured{grid-column:span 2;grid-row:span 2;}
 .galerie-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;}
 .galerie-item:hover img{transform:scale(1.04);}
 .galerie-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(6,30,42,0.9),transparent);padding:16px 14px 12px;font-size:8pt;color:rgba(255,255,255,0.8);font-weight:500;}
 
 /* MARCHE */
-.marche{background:linear-gradient(160deg,#08151e 0%,#0d2d3d 50%,#08151e 100%);position:relative;overflow:hidden;}
-.marche::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 80% 50%,rgba(232,0,61,0.07),transparent 60%),radial-gradient(ellipse 60% 40% at 20% 50%,rgba(58,180,212,0.07),transparent 60%);pointer-events:none;}
-.marche .section-eyebrow{color:#ff4060;}
+.marche{background:linear-gradient(160deg,#081f36 0%,#0f2e4a 50%,#081f36 100%);position:relative;overflow:hidden;}
+.marche::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 80% 50%,rgba(200,90,60,0.10),transparent 60%),radial-gradient(ellipse 60% 40% at 20% 50%,rgba(200,90,60,0.06),transparent 60%);pointer-events:none;}
+.marche .section-eyebrow{color:var(--light);}
 .marche .section-title{color:var(--white);}
 .marche .section-lead{color:rgba(255,255,255,0.55);max-width:640px;}
 .marche-inner{position:relative;z-index:1;}
 .marche-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:40px 0;}
 .mstat{text-align:center;border:1px solid rgba(255,255,255,0.09);border-radius:10px;padding:20px 12px;transition:border-color 0.2s,background 0.2s;}
-.mstat:hover{border-color:rgba(58,180,212,0.35);background:rgba(58,180,212,0.05);}
+.mstat:hover{border-color:rgba(200,90,60,0.35);background:rgba(200,90,60,0.06);}
 .mstat .n{font-family:'Cormorant Garamond',serif;font-size:26pt;font-weight:700;color:var(--foam);line-height:1;}
 .mstat .l{font-size:7.5pt;color:rgba(255,255,255,0.45);margin-top:6px;line-height:1.4;text-transform:uppercase;}
 .marche-body{display:grid;grid-template-columns:3fr 2fr;gap:56px;align-items:start;}
 .marche-text p{font-size:10.5pt;line-height:1.85;color:rgba(255,255,255,0.72);margin-bottom:14px;}
 .marche-text strong{color:var(--foam);}
 .marche-text .btn-red{margin-top:8px;}
+.marche-text ul{list-style:none;margin:0 0 14px 0;display:flex;flex-direction:column;gap:7px;}
+.marche-text ul li{font-size:10.5pt;line-height:1.6;color:rgba(255,255,255,0.72);padding-left:18px;position:relative;}
+.marche-text ul li::before{content:'•';position:absolute;left:0;color:var(--foam);}
 .marche-cards{display:flex;flex-direction:column;gap:12px;}
 .mcard{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:10px;padding:18px 16px;transition:background 0.2s,border-color 0.2s;}
-.mcard:hover{background:rgba(58,180,212,0.07);border-color:rgba(58,180,212,0.25);}
+.mcard:hover{background:rgba(200,90,60,0.07);border-color:rgba(200,90,60,0.25);}
 .mcard .icon{font-size:18pt;margin-bottom:8px;display:block;}
 .mcard h4{font-size:9.5pt;font-weight:600;color:var(--white);margin-bottom:4px;}
 .mcard p{font-size:8.5pt;color:rgba(255,255,255,0.4);line-height:1.55;}
@@ -119,7 +123,7 @@ section{padding:90px 8vw;}
 .terrain-card h3{font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:700;color:var(--ocean);margin-bottom:10px;}
 .terrain-card p{font-size:9.5pt;color:#3a4e58;line-height:1.7;margin-bottom:8px;}
 .terrain-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
-.terrain-tag{background:#eaf4f8;color:var(--wave);font-size:7.5pt;font-weight:600;padding:2px 9px;border-radius:20px;}
+.terrain-tag{background:#fbeee7;color:var(--wave);font-size:7.5pt;font-weight:600;padding:2px 9px;border-radius:20px;}
 
 /* EXPERTISES */
 .expertises{background:var(--off);}
@@ -130,9 +134,9 @@ section{padding:90px 8vw;}
 .exp-card:hover::before{transform:scaleX(1);}
 .exp-icon{font-size:24pt;margin-bottom:14px;display:block;}
 .exp-card h3{font-family:'Cormorant Garamond',serif;font-size:13pt;font-weight:700;color:var(--ocean);margin-bottom:8px;}
-.exp-card p{font-size:8.5pt;color:var(--mist);line-height:1.7;}
+.exp-card p{font-size:9pt;color:var(--mist);line-height:1.7;}
 .exp-tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:5px;}
-.exp-tag{background:#eaf4f8;color:var(--wave);font-size:7.5pt;font-weight:600;padding:2px 9px;border-radius:20px;}
+.exp-tag{background:#fbeee7;color:var(--wave);font-size:7.5pt;font-weight:600;padding:2px 9px;border-radius:20px;}
 
 /* CIBLES */
 .cibles{background:var(--deep);}
@@ -140,7 +144,7 @@ section{padding:90px 8vw;}
 .cibles .section-lead{color:rgba(255,255,255,0.5);}
 .cibles-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px;}
 .cible-card{border:1px solid rgba(255,255,255,0.09);border-radius:10px;padding:22px 16px;transition:background 0.2s,border-color 0.2s,transform 0.2s;}
-.cible-card:hover{background:rgba(58,180,212,0.08);border-color:rgba(58,180,212,0.3);transform:translateY(-4px);}
+.cible-card:hover{background:rgba(200,90,60,0.08);border-color:rgba(200,90,60,0.3);transform:translateY(-4px);}
 .cible-icon{font-size:20pt;margin-bottom:10px;display:block;}
 .cible-card h4{font-size:9.5pt;font-weight:600;color:var(--white);margin-bottom:5px;}
 .cible-card p{font-size:8pt;color:rgba(255,255,255,0.4);line-height:1.6;}
@@ -156,7 +160,7 @@ section{padding:90px 8vw;}
 .territoire{background:var(--white);}
 .territoire-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:48px;}
 .territoire-map{background:linear-gradient(135deg,var(--ocean),var(--deep));border-radius:16px;padding:44px;text-align:center;position:relative;overflow:hidden;}
-.territoire-map::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 80%,rgba(58,180,212,0.15),transparent 60%);}
+.territoire-map::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 80%,rgba(200,90,60,0.15),transparent 60%);}
 .map-logo{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.10;}
 .map-logo img{height:160px;width:auto;filter:brightness(0) invert(1);}
 .map-icon{font-size:52pt;display:block;margin-bottom:12px;position:relative;z-index:1;}
@@ -169,7 +173,7 @@ section{padding:90px 8vw;}
 
 /* CONTACT */
 .contact{background:var(--ocean);position:relative;overflow:hidden;}
-.contact::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(58,180,212,0.12),transparent 70%);}
+.contact::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(200,90,60,0.12),transparent 70%);}
 .contact-logo{position:absolute;bottom:-30px;left:6vw;opacity:0.05;}
 .contact-logo img{height:200px;width:auto;filter:brightness(0) invert(1);}
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1;}
@@ -177,7 +181,7 @@ section{padding:90px 8vw;}
 .contact .section-lead{color:rgba(255,255,255,0.6);margin-bottom:32px;}
 .contact-items{display:flex;flex-direction:column;gap:16px;}
 .contact-item{display:flex;align-items:center;gap:14px;}
-.contact-item-icon{width:44px;height:44px;background:rgba(58,180,212,0.15);border:1px solid rgba(58,180,212,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14pt;flex-shrink:0;}
+.contact-item-icon{width:44px;height:44px;background:rgba(200,90,60,0.15);border:1px solid rgba(200,90,60,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14pt;flex-shrink:0;}
 .contact-item-text .label{font-size:7pt;color:rgba(255,255,255,0.4);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1px;}
 .contact-item-text .value{font-size:10.5pt;font-weight:500;color:var(--white);}
 .contact-item-text a{color:var(--foam);text-decoration:none;}
@@ -185,7 +189,7 @@ section{padding:90px 8vw;}
 
 /* FORM CONTACT */
 .contact-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:34px;backdrop-filter:blur(10px);}
-.badge-available{display:inline-flex;align-items:center;gap:7px;background:rgba(58,180,212,0.15);border:1px solid rgba(58,180,212,0.3);color:var(--foam);border-radius:20px;padding:5px 14px;font-size:8pt;font-weight:600;margin-bottom:20px;}
+.badge-available{display:inline-flex;align-items:center;gap:7px;background:rgba(200,90,60,0.15);border:1px solid rgba(200,90,60,0.3);color:var(--foam);border-radius:20px;padding:5px 14px;font-size:8pt;font-weight:600;margin-bottom:20px;}
 .dot-pulse{width:8px;height:8px;background:var(--foam);border-radius:50%;animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(0.8);}}
 .contact-card h3{font-family:'Cormorant Garamond',serif;font-size:17pt;color:#fff;font-weight:700;margin-bottom:18px;line-height:1.2;}
@@ -206,7 +210,7 @@ section{padding:90px 8vw;}
 .objet-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px;}
 .objet-chip{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);border-radius:20px;padding:6px 13px;font-size:8pt;font-weight:500;cursor:pointer;transition:background 0.2s,border-color 0.2s,color 0.2s;}
 .objet-chip:hover{border-color:var(--foam);color:var(--foam);}
-.objet-chip.active{background:rgba(58,180,212,0.18);border-color:var(--foam);color:var(--foam);}
+.objet-chip.active{background:rgba(200,90,60,0.18);border-color:var(--foam);color:var(--foam);}
 .contact-alt{display:flex;align-items:center;gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1);}
 .contact-alt p{font-size:8.5pt;color:rgba(255,255,255,0.45);}
 .contact-alt a{color:var(--foam);font-weight:600;text-decoration:none;}
@@ -220,8 +224,8 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 .footer-logo-large img{height:60px;width:auto;border-radius:8px;}
 
 @media(max-width:900px){
-  .exp-grid,.galerie-grid{grid-template-columns:1fr 1fr;}
-  .galerie-grid .wide{grid-column:span 1;}
+  .exp-grid{grid-template-columns:1fr 1fr;}
+  .galerie-grid{grid-template-columns:1fr 1fr;grid-auto-rows:140px;}
   .cibles-grid,.marche-stats{grid-template-columns:1fr 1fr;}
   .about-grid,.territoire-inner,.contact-inner,.marche-body,.terrain-grid,.temoignages-grid{grid-template-columns:1fr;gap:36px;}
   nav{padding:10px 5vw;}
@@ -229,10 +233,33 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
   .hero-logo{display:none;}
 }
 @media(max-width:600px){
-  .exp-grid,.cibles-grid,.about-stats,.galerie-grid{grid-template-columns:1fr;}
+  .exp-grid,.cibles-grid,.about-stats{grid-template-columns:1fr;}
+  .galerie-grid{grid-template-columns:1fr;grid-auto-rows:220px;}
+  .galerie-item.featured{grid-column:span 1;grid-row:span 1;}
   .marche-stats{grid-template-columns:1fr 1fr;}
   section{padding:60px 6vw;}
 }
+
+/* ==========================================================================
+   Direction 1 "Cabinet d'ingénierie" : traitements photo (au-delà d'une
+   simple couleur, donc non couverts par les variables de :root ci-dessus)
+   ========================================================================== */
+
+/* Hero : vraie photo de terrain en duoton marine, au lieu du dégradé abstrait */
+.hero::before{
+  background-image:
+    linear-gradient(160deg, rgba(8,31,54,0.90) 0%, rgba(11,44,74,0.68) 55%, rgba(8,31,54,0.92) 100%),
+    url('images/galerie-07-rechargement-plage.jpg');
+  background-size:cover;
+  background-position:center 35%;
+  background-repeat:no-repeat;
+  filter:grayscale(35%) contrast(1.05);
+}
+.hero .hero-sub{font-size:12pt;}
+
+/* Galerie : même traitement duoton que le hero */
+.galerie-item img{filter:grayscale(35%) contrast(1.05);}
+.galerie-item::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg, rgba(8,31,54,0.35), rgba(11,44,74,0.15));pointer-events:none;}
 </style>
 </head>
 <body>
@@ -263,7 +290,7 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
   <div class="hero-content">
     <div class="hero-eyebrow">Littor'eau · Montpellier · Sud de la France</div>
     <h1 class="hero-title">Ingénierie hydraulique<br>& <em>risques côtiers</em></h1>
-    <p class="hero-sub">Expertise indépendante en hydraulique fluviale, risques côtiers et cartographie SIG — au service des territoires du Sud de la France.</p>
+    <p class="hero-sub">Expertise indépendante en hydraulique fluviale, risques côtiers et cartographie SIG, au service des territoires du Sud de la France.</p>
     <div class="hero-btns">
       <a href="#contact" class="btn-primary">Demander un devis gratuit</a>
       <a href="#marche" class="btn-red">🥾 La Marche Méditerranée</a>
@@ -279,8 +306,8 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
   <h2 class="section-title">Une expertise rare,<br>un ancrage territorial fort</h2>
   <div class="about-grid">
     <div class="about-text">
-      <p>Littor'eau est une structure d'ingénierie indépendante spécialisée en <strong>hydraulique fluviale, risques côtiers et cartographie SIG</strong>. Fondée par Alexis Camand, double diplômé de l'Université de Montpellier.</p>
-      <p>Du diagnostic terrain à la modélisation hydraulique, de la cartographie LiDAR HD aux levés drone — une expertise complète, réactive, ancrée dans le Sud de la France.</p>
+      <p>Littor'eau est un cabinet d'ingénierie indépendant en <strong>hydraulique, risques côtiers et cartographie SIG</strong>, fondé par Alexis Camand, formé à l'Université de Montpellier.</p>
+      <p>Du diagnostic terrain à la modélisation, du LiDAR HD au drone : une expertise complète, réactive, ancrée dans le Sud de la France.</p>
     </div>
     <div class="about-stats">
       <!-- Correction : un seul Master, 2 spécialisations (et non 2 Masters) -->
@@ -296,20 +323,20 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 <section id="parcours" style="background:var(--white);">
   <div class="section-eyebrow">Parcours</div>
   <h2 class="section-title">Une expertise de terrain,<br>pas seulement de diplôme</h2>
-  <p class="section-lead">Avant d'être un rapport, la connaissance du littoral, c'est des heures passées dessus — à pied, en mer, sur les plages.</p>
+  <p class="section-lead">Avant d'être un rapport, la connaissance du littoral, c'est des heures passées à pied, en mer, sur les plages.</p>
   <div class="terrain-grid" style="margin-top:48px;">
     <div class="terrain-card">
       <h3>🎓 Master Sciences de l'Eau et de l'Environnement</h3>
-      <p>Spécialisations <strong>Sciences de l'Eau et du Littoral</strong> et <strong>Gestion des Littoraux et des Mers</strong> — Université de Montpellier.</p>
+      <p>Spécialisations <strong>Eau & Littoral</strong> et <strong>Gestion des Mers</strong>, Université de Montpellier.</p>
       <div class="terrain-tags"><span class="terrain-tag">Université de Montpellier</span><span class="terrain-tag">Eau & Littoral</span><span class="terrain-tag">Gestion des Mers</span></div>
     </div>
     <div class="terrain-card">
       <h3>🛟 6 saisons sauveteur en mer</h3>
-      <p>Une connaissance directe du milieu littoral et de ses dangers — pas seulement en théorie.</p>
+      <p>Une connaissance directe du milieu littoral et de ses dangers. Pas seulement en théorie.</p>
       <div class="terrain-tags"><span class="terrain-tag">Sauvetage en mer</span><span class="terrain-tag">Sécurité littorale</span></div>
     </div>
     <div class="terrain-card">
-      <h3>🏝️ 5 mois de terrain continu — Ghisonaccia</h3>
+      <h3>🏝️ 5 mois de terrain continu à Ghisonaccia</h3>
       <p>Suivi morphodynamique quotidien du littoral corse, 2024–2025. <a href="#galerie" style="color:var(--wave);font-weight:600;text-decoration:none;">Voir le terrain →</a></p>
       <div class="terrain-tags"><span class="terrain-tag">Haute-Corse</span><span class="terrain-tag">2024–2025</span></div>
     </div>
@@ -321,52 +348,82 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
   </div>
 </section>
 
-<!-- GALERIE TECHNIQUE -->
+<!-- PORTFOLIO / ETUDES DE CAS : résumés courts, renvoient vers #galerie et #marche sans dupliquer leur contenu -->
+<section id="portfolio" style="background:var(--off);">
+  <div class="section-eyebrow">Portfolio</div>
+  <h2 class="section-title">Des missions de terrain,<br>pas que des rapports</h2>
+  <p class="section-lead">Deux interventions récentes, du diagnostic à la donnée de terrain. Le détail complet est disponible plus bas.</p>
+  <div class="terrain-grid" style="margin-top:48px;">
+    <div class="exp-card">
+      <span class="exp-icon">📍</span>
+      <h3>Étude de cas : suivi littoral, Ghisonaccia (Haute-Corse)</h3>
+      <p style="font-weight:600;color:var(--wave);margin-bottom:8px;">5 mois de mission continue · 2024–2025</p>
+      <p>Profils de plage, drone, bathymétrie, sédimentologie : 7 km de littoral suivis avec la Mairie de Ghisonaccia.</p>
+      <div class="exp-tags"><span class="exp-tag">Suivi morphodynamique</span><span class="exp-tag">Photogrammétrie drone</span><span class="exp-tag">Bathymétrie</span></div>
+      <p style="margin-top:14px;"><a href="#galerie" style="color:var(--wave);font-weight:600;text-decoration:none;">Voir le détail →</a></p>
+    </div>
+    <div class="exp-card">
+      <span class="exp-icon">🏕️</span>
+      <h3>Étude de cas : diagnostic camping littoral</h3>
+      <p style="font-weight:600;color:var(--wave);margin-bottom:8px;">Note d'avis technique · Marche Méditerranée 2026</p>
+      <p>Note d'avis technique pour un camping audois/héraultais exposé à l'érosion : diagnostic et recommandations remis à l'exploitant.</p>
+      <div class="exp-tags"><span class="exp-tag">Diagnostic érosion</span><span class="exp-tag">Note technique</span><span class="exp-tag">Camping littoral</span></div>
+      <p style="margin-top:14px;"><a href="#marche" style="color:var(--wave);font-weight:600;text-decoration:none;">Voir le détail →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE TECHNIQUE : 5 photos mises en avant (1 grande + 4), 5 autres repliées sous "Voir plus" -->
 <section class="galerie" id="galerie">
   <div class="section-eyebrow">Terrain · Ghisonaccia, Haute-Corse · 2024–2025</div>
   <h2 class="section-title">5 mois sur le littoral corse</h2>
-  <p style="font-size:11pt;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.7;max-width:580px;margin-bottom:36px;">Commune de Ghisonaccia, Haute-Corse. Profils de plage quotidiens au niveau optique, photogrammétrie drone, bathymétrie kayak, analyses sédimentaires et suivi des mouvements du trait de côte sur 7 km de littoral méditerranéen.</p>
+  <p style="font-size:11pt;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.7;max-width:580px;margin-bottom:36px;">Ghisonaccia, Haute-Corse : profils de plage, drone, bathymétrie, sédimentologie, suivi du trait de côte sur 7 km.</p>
   <div class="galerie-grid">
-        <div class="galerie-item wide">
-          <img src="images/galerie-01-profil-plage.jpg" alt="Profil de plage au niveau optique" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Profil de plage au niveau optique</strong> — Ghisonaccia · Suivi morphodynamique quotidien</div>
+        <div class="galerie-item featured">
+          <img src="images/galerie-09-degats-erosion.jpg" alt="Dégâts d'érosion côtière" loading="lazy"/>
+          <div class="galerie-caption"><strong>Dégâts d'érosion côtière</strong> · Ghisonaccia · Submersion marine · Infrastructures</div>
         </div>
         <div class="galerie-item">
-          <img src="images/galerie-02-mesure-deferlement.jpg" alt="Mesure dans la zone de déferlement" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Mesure dans la zone de déferlement</strong> — Ghisonaccia · Mire tenue dans les vagues</div>
-        </div>
-        <div class="galerie-item tall">
-          <img src="images/galerie-03-vue-aerienne.jpg" alt="Vue aérienne du site d'étude" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Vue aérienne du site d'étude</strong> — Ghisonaccia · Herbiers de posidonie & barres sableuses</div>
+          <img src="images/galerie-03-vue-aerienne.jpg" alt="Vue aérienne du site d'étude" loading="lazy"/>
+          <div class="galerie-caption"><strong>Vue aérienne</strong> · Posidonie & barres sableuses</div>
         </div>
         <div class="galerie-item">
-          <img src="images/galerie-04-orthophoto-drone.jpg" alt="Orthophoto drone · Transects annotés" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Orthophoto drone · Transects annotés</strong> — Ghisonaccia · 3 transects côtiers</div>
+          <img src="images/galerie-01-profil-plage.jpg" alt="Profil de plage au niveau optique" loading="lazy"/>
+          <div class="galerie-caption"><strong>Profil de plage</strong> · Suivi quotidien</div>
         </div>
         <div class="galerie-item">
-          <img src="images/galerie-05-pendage-clino.jpg" alt="Pendage à l'application Clino" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Pendage à l'application Clino</strong> — Ghisonaccia · Géoréférencement terrain</div>
-        </div>
-        <div class="galerie-item tall">
-          <img src="images/galerie-06-piquets-suivi.jpg" alt="Piquets de suivi sédimentaire" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Piquets de suivi sédimentaire</strong> — Ghisonaccia · Mouvements de sable sur 7 km</div>
-        </div>
-        <div class="galerie-item wide">
-          <img src="images/galerie-07-rechargement-plage.jpg" alt="Rechargement mécanique de plage" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Rechargement mécanique de plage</strong> — Ghisonaccia · Gestion du trait de côte</div>
+          <img src="images/galerie-04-orthophoto-drone.jpg" alt="Orthophoto drone · Transects annotés" loading="lazy"/>
+          <div class="galerie-caption"><strong>Orthophoto drone</strong> · 3 transects côtiers</div>
         </div>
         <div class="galerie-item">
-          <img src="images/galerie-08-station-debit.jpg" alt="Station de mesure de débit" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Station de mesure de débit</strong> — Ghisonaccia · Capteur Vortex · Vigilance crues</div>
+          <img src="images/galerie-08-station-debit.jpg" alt="Station de mesure de débit" loading="lazy"/>
+          <div class="galerie-caption"><strong>Station de débit</strong> · Vigilance crues</div>
+        </div>
+  </div>
+  <div class="galerie-grid galerie-more" id="galerieMore">
+        <div class="galerie-item">
+          <img src="images/galerie-02-mesure-deferlement.jpg" alt="Mesure dans la zone de déferlement" loading="lazy"/>
+          <div class="galerie-caption"><strong>Mesure de déferlement</strong> · Mire tenue dans les vagues</div>
         </div>
         <div class="galerie-item">
-          <img src="images/galerie-09-degats-erosion.jpg" alt="Dégâts d'érosion côtière" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Dégâts d'érosion côtière</strong> — Ghisonaccia · Submersion marine · Infrastructures</div>
+          <img src="images/galerie-05-pendage-clino.jpg" alt="Pendage à l'application Clino" loading="lazy"/>
+          <div class="galerie-caption"><strong>Pendage Clino</strong> · Géoréférencement terrain</div>
         </div>
         <div class="galerie-item">
-          <img src="images/galerie-10-releve-swash.jpg" alt="Relevé en zone de swash" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Relevé en zone de swash</strong> — Ghisonaccia · Limite de l'estran</div>
+          <img src="images/galerie-06-piquets-suivi.jpg" alt="Piquets de suivi sédimentaire" loading="lazy"/>
+          <div class="galerie-caption"><strong>Piquets de suivi</strong> · Mouvements de sable</div>
         </div>
+        <div class="galerie-item">
+          <img src="images/galerie-07-rechargement-plage.jpg" alt="Rechargement mécanique de plage" loading="lazy"/>
+          <div class="galerie-caption"><strong>Rechargement de plage</strong> · Gestion du trait de côte</div>
+        </div>
+        <div class="galerie-item">
+          <img src="images/galerie-10-releve-swash.jpg" alt="Relevé en zone de swash" loading="lazy"/>
+          <div class="galerie-caption"><strong>Relevé de swash</strong> · Limite de l'estran</div>
+        </div>
+  </div>
+  <div style="text-align:center;margin-top:24px;">
+    <button type="button" class="btn-outline" id="galerieToggle" style="cursor:pointer;">Voir 5 photos supplémentaires →</button>
   </div>
 </section>
 
@@ -374,7 +431,7 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 <section class="marche" id="marche">
   <div class="marche-inner">
     <div class="section-eyebrow">Mission accomplie · 11 mai → 7 juin 2026 · Port-Bou → Vintimille</div>
-    <h2 class="section-title">La Marche Méditerranée 2026 — 1 000 km de terrain</h2>
+    <h2 class="section-title">La Marche Méditerranée 2026 · 1 000 km de terrain</h2>
     <p class="section-lead">28 jours. 1 000 km à pied. De Port-Bou à Vintimille. Une expédition de terrain pour documenter l'état réel de l'érosion côtière et de la submersion marine sur le littoral méditerranéen français en 2026.</p>
 
     <!-- BILAN DE LA MARCHE -->
@@ -387,16 +444,21 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 
     <div class="marche-body">
       <div class="marche-text">
-        <p>Du 11 mai au 7 juin 2026, j'ai parcouru à pied l'intégralité du littoral méditerranéen français — Côte Vermeille, Languedoc, Camargue, Provence, Var, Côte d'Azur — avec un drone, des carnets de terrain et une caméra.</p>
-        <p>Au programme : des dizaines de rencontres avec chercheurs, gestionnaires de campings, élus locaux, riverains, pêcheurs, sauveteurs en mer et enseignants, des interviews filmées pour la série documentaire <strong>« Voix du Littoral »</strong>, des interventions de sensibilisation en lycées, et un premier client accompagné dès le terrain.</p>
-        <p><strong>Ce que j'ai observé :</strong> les plages méditerranéennes reculent. Certaines disparaîtront dans 10 à 20 ans. Les gestionnaires savent, les données existent, mais le lien entre la science et la décision reste trop souvent absent. Littor'eau est ce lien.</p>
+        <p>Du 11 mai au 7 juin 2026, tout le littoral méditerranéen français parcouru à pied, de la Côte Vermeille à la Côte d'Azur, en passant par le Languedoc, la Camargue et la Provence. Drone, carnets de terrain, caméra.</p>
+        <ul>
+          <li>Rencontres : chercheurs, élus, campings, pêcheurs, sauveteurs, enseignants</li>
+          <li>Série documentaire <strong>« Voix du Littoral »</strong></li>
+          <li>Interventions de sensibilisation en lycées</li>
+          <li>Premier client accompagné dès le terrain</li>
+        </ul>
+        <p><strong>Constat :</strong> les plages méditerranéennes reculent, certaines disparaîtront sous 10 à 20 ans. Littor'eau fait le lien entre donnée scientifique et décision locale.</p>
         <a href="#contact" class="btn-red" onclick="setTimeout(()=>{const s=document.querySelector('select[name=objet]');if(s){s.value='Suite Marche Méditerranée';}},200)">Échanger sur les données récoltées</a>
       </div>
       <div class="marche-cards">
         <div class="mcard"><span class="icon">🚁</span><h4>Relevés drone quotidiens</h4><p>Photogrammétrie, orthophotos, MNT des zones côtières traversées.</p></div>
         <div class="mcard"><span class="icon">🗺️</span><h4>Cartographie SIG</h4><p>Données de terrain versées en open-source sur littor-eau.fr</p></div>
         <div class="mcard"><span class="icon">🏫</span><h4>Interventions scolaires</h4><p>Lycées et collèges sensibilisés de Port-Bou à Vintimille.</p></div>
-        <div class="mcard"><span class="icon">📱</span><h4>Documenté au quotidien</h4><p>LinkedIn, Instagram et YouTube — la science littorale rendue accessible.</p></div>
+        <div class="mcard"><span class="icon">📱</span><h4>Documenté au quotidien</h4><p>LinkedIn, Instagram et YouTube. La science littorale rendue accessible.</p></div>
       </div>
     </div>
   </div>
@@ -404,7 +466,7 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 
 <!-- RÉSEAU PARTENAIRES & CARTE -->
 <section id="reseau" style="background:var(--deep);padding:80px 8vw;position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 100% 50%,rgba(58,180,212,0.06),transparent 60%);pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 100% 50%,rgba(200,90,60,0.06),transparent 60%);pointer-events:none;"></div>
   <div style="position:relative;z-index:1;">
     <div class="section-eyebrow" style="color:var(--foam);">Réseau en cours de construction</div>
     <h2 class="section-title" style="color:var(--white);">Le réseau littorale<br><em style="font-style:normal;color:var(--foam);">prend forme</em></h2>
@@ -415,53 +477,64 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
       <!-- Carte France côte med -->
       <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px;position:relative;">
         <div style="font-size:8pt;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--foam);margin-bottom:20px;">Carte du tracé · Littoral méditerranéen</div>
-        <svg viewBox="0 0 560 320" style="width:100%;height:auto;display:block;" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 560 340" style="width:100%;height:auto;display:block;" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="seaGrad" x1="0%" y1="0%" x2="60%" y2="100%">
+              <stop offset="0%" stop-color="#0f3a5c"/>
+              <stop offset="100%" stop-color="#081f36"/>
+            </linearGradient>
+          </defs>
           <!-- Fond mer -->
-          <rect width="560" height="320" fill="rgba(10,61,85,0.4)" rx="10"/>
-          <!-- Trait de côte schématique -->
-          <path d="M 40 280 C 60 270, 90 260, 130 255 C 160 252, 180 248, 210 240 C 240 232, 260 230, 290 225 C 320 218, 345 215, 380 210 C 410 206, 440 208, 470 205 C 500 202, 525 195, 540 190" stroke="rgba(58,180,212,0.5)" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+          <rect width="560" height="340" fill="url(#seaGrad)" rx="14"/>
+          <!-- Trait de côte schématique (légèrement décalé du tracé de marche) -->
+          <path d="M 40 288 C 60 278, 90 268, 130 263 C 160 260, 180 256, 210 248 C 240 240, 260 238, 290 233 C 320 226, 345 223, 380 218 C 410 214, 440 216, 470 213 C 500 210, 525 203, 540 198" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" fill="none" stroke-dasharray="3,5"/>
           <!-- Tracé de la marche avec animation -->
-          <path id="traceMarche" d="M 40 280 C 60 270, 90 260, 130 255 C 160 252, 180 248, 210 240 C 240 232, 260 230, 290 225 C 320 218, 345 215, 380 210 C 410 206, 440 208, 470 205 C 500 202, 525 195, 540 190" stroke="var(--foam)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path id="traceMarche" d="M 40 280 C 60 270, 90 260, 130 255 C 160 252, 180 248, 210 240 C 240 232, 260 230, 290 225 C 320 218, 345 215, 380 210 C 410 206, 440 208, 470 205 C 500 202, 525 195, 540 190" stroke="var(--foam)" stroke-width="3" fill="none" stroke-linecap="round"/>
 
           <!-- Étiquettes départements -->
-          <text x="75" y="245" fill="rgba(255,255,255,0.3)" font-size="9" font-family="sans-serif">66</text>
-          <text x="165" y="238" fill="rgba(255,255,255,0.3)" font-size="9" font-family="sans-serif">11</text>
-          <text x="265" y="228" fill="rgba(255,255,255,0.3)" font-size="9" font-family="sans-serif">34</text>
-          <text x="360" y="220" fill="rgba(255,255,255,0.3)" font-size="9" font-family="sans-serif">13</text>
-          <text x="460" y="210" fill="rgba(255,255,255,0.3)" font-size="9" font-family="sans-serif">06</text>
+          <text x="75" y="243" fill="rgba(255,255,255,0.45)" font-size="10" font-family="sans-serif" letter-spacing="0.5">66</text>
+          <text x="165" y="236" fill="rgba(255,255,255,0.45)" font-size="10" font-family="sans-serif" letter-spacing="0.5">11</text>
+          <text x="265" y="226" fill="rgba(255,255,255,0.45)" font-size="10" font-family="sans-serif" letter-spacing="0.5">34</text>
+          <text x="360" y="218" fill="rgba(255,255,255,0.45)" font-size="10" font-family="sans-serif" letter-spacing="0.5">13</text>
+          <text x="460" y="208" fill="rgba(255,255,255,0.45)" font-size="10" font-family="sans-serif" letter-spacing="0.5">06</text>
 
           <!-- Départ Port-Bou -->
-          <circle cx="40" cy="280" r="7" fill="#ff4060" opacity="0.9"/>
-          <text x="48" y="276" fill="rgba(255,255,255,0.8)" font-size="8" font-family="sans-serif">🇪🇸 Port-Bou</text>
+          <circle cx="40" cy="280" r="11" fill="rgba(221,125,95,0.2)"/>
+          <circle cx="40" cy="280" r="6" fill="var(--light)"/>
+          <text x="52" y="277" fill="rgba(255,255,255,0.85)" font-size="9" font-family="sans-serif">🇪🇸 Port-Bou</text>
 
           <!-- Points contacts en cours (écoles, mairies, campings) - sans noms -->
-          <circle cx="90" cy="267" r="4" fill="rgba(58,180,212,0.7)"/>
-          <circle cx="128" cy="255" r="7" fill="#3ab4d4" opacity="1"/>
-          <circle cx="128" cy="255" r="12" fill="rgba(58,180,212,0.25)" class="pulse-ring"/>
-          <circle cx="155" cy="252" r="4" fill="rgba(255,64,96,0.6)"/>
-          <circle cx="195" cy="243" r="4" fill="rgba(255,64,96,0.6)"/>
-          <circle cx="240" cy="234" r="4" fill="rgba(255,64,96,0.6)"/>
-          <circle cx="270" cy="229" r="4" fill="rgba(255,64,96,0.6)"/>
-          <circle cx="295" cy="224" r="7" fill="#3ab4d4" opacity="1"/>
-          <circle cx="295" cy="224" r="12" fill="rgba(58,180,212,0.25)" class="pulse-ring"/>
-          <circle cx="315" cy="222" r="4" fill="rgba(255,64,96,0.6)"/>
-          <circle cx="345" cy="217" r="4" fill="rgba(255,64,96,0.6)"/>
-          <circle cx="390" cy="211" r="4" fill="rgba(255,64,96,0.6)"/>
+          <circle cx="90" cy="267" r="4" fill="rgba(200,90,60,0.7)"/>
+          <circle cx="128" cy="255" r="7" fill="#c85a3c" opacity="1"/>
+          <circle cx="128" cy="255" r="12" fill="rgba(200,90,60,0.25)" class="pulse-ring"/>
+          <circle cx="155" cy="252" r="4" fill="rgba(221,125,95,0.6)"/>
+          <circle cx="195" cy="243" r="4" fill="rgba(221,125,95,0.6)"/>
+          <circle cx="240" cy="234" r="4" fill="rgba(221,125,95,0.6)"/>
+          <circle cx="270" cy="229" r="4" fill="rgba(221,125,95,0.6)"/>
+          <circle cx="295" cy="224" r="7" fill="#c85a3c" opacity="1"/>
+          <circle cx="295" cy="224" r="12" fill="rgba(200,90,60,0.25)" class="pulse-ring"/>
+          <circle cx="315" cy="222" r="4" fill="rgba(221,125,95,0.6)"/>
+          <circle cx="345" cy="217" r="4" fill="rgba(221,125,95,0.6)"/>
+          <circle cx="390" cy="211" r="4" fill="rgba(221,125,95,0.6)"/>
 
           <!-- Arrivée Vintimille -->
-          <circle cx="540" cy="190" r="7" fill="rgba(58,180,212,0.4)" stroke="var(--foam)" stroke-width="1.5"/>
-          <text x="482" y="185" fill="rgba(255,255,255,0.6)" font-size="8" font-family="sans-serif">Vintimille 🇮🇹</text>
+          <circle cx="540" cy="190" r="11" fill="rgba(200,90,60,0.15)"/>
+          <circle cx="540" cy="190" r="7" fill="rgba(200,90,60,0.4)" stroke="var(--foam)" stroke-width="2"/>
+          <text x="486" y="185" fill="rgba(255,255,255,0.7)" font-size="9" font-family="sans-serif">Vintimille 🇮🇹</text>
 
           <!-- Légende -->
-          <circle cx="30" cy="30" r="5" fill="#3ab4d4"/>
-          <text x="40" y="34" fill="rgba(255,255,255,0.7)" font-size="8" font-family="sans-serif">Partenaire confirmé</text>
-          <circle cx="30" cy="50" r="4" fill="rgba(255,64,96,0.7)"/>
-          <text x="40" y="54" fill="rgba(255,255,255,0.7)" font-size="8" font-family="sans-serif">Contact établi</text>
-          <line x1="22" y1="70" x2="38" y2="70" stroke="var(--foam)" stroke-width="2.5"/>
-          <text x="40" y="74" fill="rgba(255,255,255,0.7)" font-size="8" font-family="sans-serif">Tracé de la marche</text>
+          <g transform="translate(20,20)">
+            <rect x="-8" y="-16" width="185" height="72" rx="8" fill="rgba(8,31,54,0.55)"/>
+            <circle cx="8" cy="0" r="5" fill="#c85a3c"/>
+            <text x="20" y="4" fill="rgba(255,255,255,0.8)" font-size="9" font-family="sans-serif">Partenaire confirmé</text>
+            <circle cx="8" cy="22" r="4" fill="rgba(221,125,95,0.7)"/>
+            <text x="20" y="26" fill="rgba(255,255,255,0.8)" font-size="9" font-family="sans-serif">Contact établi</text>
+            <line x1="4" y1="44" x2="16" y2="44" stroke="var(--foam)" stroke-width="3"/>
+            <text x="20" y="48" fill="rgba(255,255,255,0.8)" font-size="9" font-family="sans-serif">Tracé de la marche</text>
+          </g>
 
           <!-- Note MED -->
-          <text x="280" y="300" fill="rgba(255,255,255,0.15)" font-size="11" font-family="sans-serif" text-anchor="middle">MER MÉDITERRANÉE</text>
+          <text x="290" y="320" fill="rgba(255,255,255,0.18)" font-size="12" font-family="sans-serif" letter-spacing="3" text-anchor="middle">MER MÉDITERRANÉE</text>
         </svg>
         <style>
           .pulse-ring { animation: pulseRing 2.5s ease-out infinite; }
@@ -477,28 +550,28 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
         <div style="margin-bottom:28px;">
           <div style="font-size:7.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--foam);margin-bottom:14px;">● Partenaires confirmés</div>
           <div style="display:flex;flex-direction:column;gap:10px;">
-            <div style="background:rgba(58,180,212,0.08);border:1px solid rgba(58,180,212,0.3);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
+            <div style="background:rgba(200,90,60,0.08);border:1px solid rgba(200,90,60,0.3);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
               <span style="font-size:16pt;">🏕️</span>
               <div>
                 <div style="font-size:9.5pt;font-weight:600;color:var(--white);">Camping partenaire · Pyrénées-Orientales</div>
                 <div style="font-size:8pt;color:rgba(255,255,255,0.5);">66 · Hébergement + intervention sensibilisation</div>
               </div>
-              <span style="margin-left:auto;background:rgba(58,180,212,0.2);color:var(--foam);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">CONFIRMÉ</span>
+              <span style="margin-left:auto;background:rgba(200,90,60,0.2);color:var(--foam);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">CONFIRMÉ</span>
             </div>
-            <div style="background:rgba(58,180,212,0.08);border:1px solid rgba(58,180,212,0.3);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
+            <div style="background:rgba(200,90,60,0.08);border:1px solid rgba(200,90,60,0.3);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
               <span style="font-size:16pt;">🏕️</span>
               <div>
                 <div style="font-size:9.5pt;font-weight:600;color:var(--white);">Camping partenaire · Hérault</div>
                 <div style="font-size:8pt;color:rgba(255,255,255,0.5);">34 · Hébergement + étude littorale</div>
               </div>
-              <span style="margin-left:auto;background:rgba(58,180,212,0.2);color:var(--foam);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">CONFIRMÉ</span>
+              <span style="margin-left:auto;background:rgba(200,90,60,0.2);color:var(--foam);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">CONFIRMÉ</span>
             </div>
           </div>
         </div>
 
         <!-- Contacts établis par type -->
         <div style="margin-bottom:24px;">
-          <div style="font-size:7.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,64,96,0.9);margin-bottom:14px;">● Contacts actifs (en cours)</div>
+          <div style="font-size:7.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(221,125,95,0.9);margin-bottom:14px;">● Contacts actifs (en cours)</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
             <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
               <div style="font-size:18pt;margin-bottom:6px;">🏫</div>
@@ -525,8 +598,8 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 
         <!-- Photo conférence amphi -->
         <div style="border-radius:10px;overflow:hidden;position:relative;">
-          <img src="images/conference-lycee-feuillade.jpg" alt="Conférence Semaine des Sciences — Lycée Louis Feuillade, Lunel" style="width:100%;display:block;object-fit:cover;border-radius:10px;"/>
-          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(6,30,42,0.92),transparent);padding:14px 16px 12px;">
+          <img src="images/conference-lycee-feuillade.jpg" alt="Conférence Semaine des Sciences · Lycée Louis Feuillade, Lunel" style="width:100%;display:block;object-fit:cover;border-radius:10px;"/>
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(8,31,54,0.92),transparent);padding:14px 16px 12px;">
             <div style="font-size:8pt;font-weight:600;color:var(--foam);">📚 Conférence · Semaine des Sciences</div>
             <div style="font-size:7.5pt;color:rgba(255,255,255,0.65);margin-top:3px;">Lycée Louis Feuillade · Lunel · Terminales en amphithéâtre</div>
           </div>
@@ -548,22 +621,22 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
   <div class="terrain-grid">
     <div class="terrain-card">
       <h3>Suivi morphodynamique quotidien</h3>
-      <p>Profils de plage quotidiens sur transects fixes, mesure des bermes et scarpes, suivi du trait de côte sur 5 mois consécutifs. Application Clino pour géoréférencement de chaque mesure.</p>
+      <p>5 mois de profils de plage quotidiens, bermes et scarpes mesurées, géoréférencées via l'appli Clino.</p>
       <div class="terrain-tags"><span class="terrain-tag">Profils de plage</span><span class="terrain-tag">Bermes & scarpes</span><span class="terrain-tag">Géoréférencement</span><span class="terrain-tag">5 mois terrain</span></div>
     </div>
     <div class="terrain-card">
       <h3>Drone & photogrammétrie littorale</h3>
-      <p>Vols drone parallèles au rivage, panneaux photographiques exploitables sous QGIS. Bathymétrie exploratoire en kayak jusqu'à 60 m au large — localisation des barres sableuses et herbiers de posidonie.</p>
+      <p>Vols drone exploitables sous QGIS, bathymétrie kayak jusqu'à 60 m : barres sableuses et herbiers de posidonie localisés.</p>
       <div class="terrain-tags"><span class="terrain-tag">Photogrammétrie</span><span class="terrain-tag">MNT littoral</span><span class="terrain-tag">Bathymétrie kayak</span><span class="terrain-tag">QGIS SIG</span></div>
     </div>
     <div class="terrain-card">
       <h3>Analyses sédimentaires de laboratoire</h3>
-      <p>Prélèvements multi-sites sur 7 km. Granulométrie, susceptibilité magnétique (37–235 µS), préparation ICP-MS. Dérive littorale dominante Sud → Nord confirmée sur 9 jours sur 10.</p>
+      <p>Prélèvements sur 7 km : granulométrie, susceptibilité magnétique (37–235 µS), ICP-MS. Dérive Sud → Nord confirmée 9 jours sur 10.</p>
       <div class="terrain-tags"><span class="terrain-tag">Granulométrie</span><span class="terrain-tag">ICP-MS</span><span class="terrain-tag">Susceptibilité magnétique</span><span class="terrain-tag">Dérive littorale</span></div>
     </div>
     <div class="terrain-card">
-      <h3>Interface science — gestion locale</h3>
-      <p>Stage avec la Mairie de Ghisonaccia. Travail direct avec les élus sur les enjeux d'érosion côtière, posidonie et gestion du littoral. Résultats intégrés dans la prise de décision communale.</p>
+      <h3>Interface science et gestion locale</h3>
+      <p>Stage à la Mairie de Ghisonaccia : travail avec les élus sur érosion et posidonie, résultats intégrés à la décision communale.</p>
       <div class="terrain-tags"><span class="terrain-tag">Mairie Ghisonaccia</span><span class="terrain-tag">Posidonie</span><span class="terrain-tag">Gestion littorale</span><span class="terrain-tag">Aide à la décision</span></div>
     </div>
   </div>
@@ -578,7 +651,7 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
   <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px;">
     <div style="background:var(--off);border-radius:12px;padding:24px 20px;border-top:3px solid var(--foam);">
       <div style="font-size:8pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mist);margin-bottom:10px;">Hérault · 2025</div>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:700;color:var(--ocean);margin-bottom:8px;">Étude hydraulique — Camping Bon Port</h3>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:700;color:var(--ocean);margin-bottom:8px;">Étude hydraulique · Camping Bon Port</h3>
       <p style="font-size:9pt;color:#3a4e58;line-height:1.7;">Dossier Loi sur l'Eau, diagnostic des risques d'inondation et cartographie SIG LiDAR HD pour un établissement de plein air à Lunel.</p>
       <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:5px;">
         <span class="exp-tag">Loi sur l'Eau</span><span class="exp-tag">LiDAR HD</span><span class="exp-tag">QGIS</span><span class="exp-tag">ERP</span>
@@ -586,7 +659,7 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
     </div>
     <div style="background:var(--off);border-radius:12px;padding:24px 20px;border-top:3px solid var(--foam);">
       <div style="font-size:8pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mist);margin-bottom:10px;">Haute-Corse · 2025</div>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:700;color:var(--ocean);margin-bottom:8px;">Suivi littoral — Commune de Ghisonaccia</h3>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:700;color:var(--ocean);margin-bottom:8px;">Suivi littoral · Commune de Ghisonaccia</h3>
       <p style="font-size:9pt;color:#3a4e58;line-height:1.7;">Suivi morphodynamique quotidien, photogrammétrie drone, bathymétrie et analyses sédimentaires sur 7 km de littoral méditerranéen. Sensibilisation des campings littoraux exposés aux risques d'érosion et de submersion dans le cadre de la mission communale.</p>
       <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:5px;">
         <span class="exp-tag">Drone</span><span class="exp-tag">Bathymétrie</span><span class="exp-tag">Sédimentologie</span><span class="exp-tag">Érosion côtière</span><span class="exp-tag">Campings littoraux</span>
@@ -594,8 +667,8 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
     </div>
     <div style="background:var(--off);border-radius:12px;padding:24px 20px;border-top:3px solid var(--foam);">
       <div style="font-size:8pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mist);margin-bottom:10px;">Hérault · Depuis 2021</div>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:700;color:var(--ocean);margin-bottom:8px;">Sensibilisation scolaire — Lycée Louis Feuillade, Lunel</h3>
-      <p style="font-size:9pt;color:#3a4e58;line-height:1.7;">Interventions régulières en classes depuis 2021 sur les risques hydrauliques et littoraux. Conférence en amphithéâtre devant des classes de Terminale lors de la Semaine des Sciences — février 2025.</p>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:700;color:var(--ocean);margin-bottom:8px;">Sensibilisation scolaire · Lycée Louis Feuillade, Lunel</h3>
+      <p style="font-size:9pt;color:#3a4e58;line-height:1.7;">Interventions régulières en classes depuis 2021 sur les risques hydrauliques et littoraux. Conférence en amphithéâtre devant des classes de Terminale lors de la Semaine des Sciences, en février 2025.</p>
       <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:5px;">
         <span class="exp-tag">Sensibilisation</span><span class="exp-tag">Lycée</span><span class="exp-tag">Semaine des Sciences</span><span class="exp-tag">Risques naturels</span>
       </div>
@@ -614,16 +687,15 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 <section class="expertises" id="expertises">
   <div class="section-eyebrow">Expertises</div>
   <h2 class="section-title">Ce que je fais,<br>concrètement</h2>
-  <p class="section-lead">Des prestations techniques précises, livrées avec clarté — pour des clients qui n'ont pas besoin de jargon, mais de solutions.</p>
+  <p class="section-lead">Des prestations techniques précises, livrées avec clarté, pour des clients qui n'ont pas besoin de jargon mais de solutions.</p>
   <div class="exp-grid">
-    <div class="exp-card"><span class="exp-icon">🌊</span><h3>Hydraulique fluviale & Inondations</h3><p>Modélisation des écoulements, cartographie des zones inondables, diagnostics de vulnérabilité. Appui réglementaire PPRI, GEMAPI, PAPI.</p><div class="exp-tags"><span class="exp-tag">HEC-RAS</span><span class="exp-tag">RAS Mapper</span><span class="exp-tag">PPRI</span><span class="exp-tag">PAPI</span></div></div>
-    <div class="exp-card"><span class="exp-icon">🏖️</span><h3>Risques côtiers & Submersions</h3><p>Érosion du trait de côte, submersions marines, dynamiques littorales. Études PPRL, suivi morphologique côtier.</p><div class="exp-tags"><span class="exp-tag">PPRL</span><span class="exp-tag">Érosion</span><span class="exp-tag">Submersion</span><span class="exp-tag">Loi Littoral</span></div></div>
-    <div class="exp-card"><span class="exp-icon">🗺️</span><h3>Cartographie SIG & LiDAR HD</h3><p>MNT haute résolution à partir de LiDAR HD IGN. Cartographie d'aléas, orthophotos, analyses spatiales QGIS.</p><div class="exp-tags"><span class="exp-tag">QGIS</span><span class="exp-tag">LiDAR HD</span><span class="exp-tag">IGN</span><span class="exp-tag">MNT</span></div></div>
-    <div class="exp-card"><span class="exp-icon">🚁</span><h3>Levés topographiques par drone</h3><p>Photogrammétrie aérienne, modèles 3D et orthophotos haute précision. Littoraux, zones humides, sites difficiles d'accès.</p><div class="exp-tags"><span class="exp-tag">Drone</span><span class="exp-tag">Photogrammétrie</span><span class="exp-tag">MNT 3D</span></div></div>
-    <div class="exp-card"><span class="exp-icon">🏛️</span><h3>Conseil & Appui réglementaire</h3><p>Cahiers des charges, dossiers Loi sur l'Eau, PPRI/PPRL. Interface collectivités, BET et services de l'État.</p><div class="exp-tags"><span class="exp-tag">GEMAPI</span><span class="exp-tag">Loi sur l'Eau</span><span class="exp-tag">Marchés publics</span></div></div>
-    <div class="exp-card"><span class="exp-icon">🎓</span><h3>Sensibilisation & Formation</h3><p>Interventions élus, équipes et lycées. Vulgarisation des risques naturels adaptée à chaque public.</p><div class="exp-tags"><span class="exp-tag">Élus</span><span class="exp-tag">Lycées</span><span class="exp-tag">ERP</span><span class="exp-tag">Campings</span></div></div>
-    <!-- Nouveau service : Cartographie & Conseil Prévention Incendie -->
-    <div class="exp-card" style="border-top:3px solid #E76F51;"><span class="exp-icon">🔥</span><h3>Cartographie & Conseil — Prévention des Risques Incendie</h3><p>Les incendies de forêt méditerranéens déstabilisent les bassins versants et accélèrent l'érosion côtière en aval. Cartographie des zones à risque, diagnostic post-incendie du trait de côte, conseil en gestion préventive et intégration dans les documents d'urbanisme (PLU, PPRI, PPRL).</p><div class="exp-tags"><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Feux de forêt</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Bassins versants</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Var · 13 · 34 · 06</span></div></div>
+    <div class="exp-card"><span class="exp-icon">🌊</span><h3>Hydraulique fluviale & Inondations</h3><p>Modélisation des écoulements, zones inondables, diagnostics de vulnérabilité. Appui réglementaire PPRI, GEMAPI, PAPI.</p><div class="exp-tags"><span class="exp-tag">HEC-RAS</span><span class="exp-tag">RAS Mapper</span><span class="exp-tag">PPRI</span><span class="exp-tag">PAPI</span></div></div>
+    <div class="exp-card"><span class="exp-icon">🏖️</span><h3>Risques côtiers & Submersions</h3><p>Érosion, submersion, dynamiques littorales. Études PPRL et suivi morphologique côtier.</p><div class="exp-tags"><span class="exp-tag">PPRL</span><span class="exp-tag">Érosion</span><span class="exp-tag">Submersion</span><span class="exp-tag">Loi Littoral</span></div></div>
+    <div class="exp-card"><span class="exp-icon">🗺️</span><h3>Cartographie SIG, LiDAR & Drone</h3><p>MNT haute résolution (LiDAR HD IGN), photogrammétrie aérienne, orthophotos et modèles 3D. Cartographie d'aléas, analyses QGIS, sites difficiles d'accès.</p><div class="exp-tags"><span class="exp-tag">QGIS</span><span class="exp-tag">LiDAR HD</span><span class="exp-tag">Drone</span><span class="exp-tag">MNT 3D</span></div></div>
+    <div class="exp-card"><span class="exp-icon">🏛️</span><h3>Conseil & Appui réglementaire</h3><p>Dossiers Loi sur l'Eau, PPRI/PPRL. Interface collectivités, BET et services de l'État.</p><div class="exp-tags"><span class="exp-tag">GEMAPI</span><span class="exp-tag">Loi sur l'Eau</span><span class="exp-tag">Marchés publics</span></div></div>
+    <div class="exp-card"><span class="exp-icon">🎓</span><h3>Sensibilisation & Formation</h3><p>Interventions élus, équipes, lycées. Risques naturels vulgarisés pour chaque public.</p><div class="exp-tags"><span class="exp-tag">Élus</span><span class="exp-tag">Lycées</span><span class="exp-tag">ERP</span><span class="exp-tag">Campings</span></div></div>
+    <!-- Service Prévention Incendie : fusionné visuellement avec Cartographie SIG/LiDAR/Drone ci-dessus pour revenir à 6 cartes (grille 3x2) -->
+    <div class="exp-card" style="border-top:3px solid #E76F51;"><span class="exp-icon">🔥</span><h3>Prévention des Risques Incendie</h3><p>Les incendies déstabilisent les bassins versants et accélèrent l'érosion en aval. Cartographie des zones à risque, diagnostic post-incendie, intégration aux PLU/PPRI/PPRL.</p><div class="exp-tags"><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Feux de forêt</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Bassins versants</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Var · 13 · 34 · 06</span></div></div>
   </div>
 </section>
 
@@ -673,16 +745,16 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
       <div class="map-title">Sud de la France</div>
       <div class="map-sub">Zone d'intervention principale</div>
       <div class="map-depts">
-        <span class="dept">34 — Hérault</span><span class="dept">30 — Gard</span>
-        <span class="dept">11 — Aude</span><span class="dept">66 — Pyrénées-Or.</span>
-        <span class="dept">13 — BdR</span><span class="dept">83 — Var</span>
+        <span class="dept">34 · Hérault</span><span class="dept">30 · Gard</span>
+        <span class="dept">11 · Aude</span><span class="dept">66 · Pyrénées-Or.</span>
+        <span class="dept">13 · BdR</span><span class="dept">83 · Var</span>
         <span class="dept">+ livraisons à distance</span>
       </div>
     </div>
     <div class="territoire-text">
-      <p>Le Sud de la France concentre certains des <strong>territoires les plus exposés aux risques naturels</strong> : épisodes méditerranéens intenses, crues éclair, submersions marines, érosion du trait de côte.</p>
-      <p>Je connais les acteurs locaux, les services instructeurs, les dynamiques hydrauliques de ce territoire. En mai 2025, <strong>je longerai l'intégralité du littoral méditerranéen</strong> pour cartographier ce que personne ne cartographie encore.</p>
-      <p>Les prestations de <strong>cartographie, modélisation et rapports</strong> sont réalisables à distance — zone d'intervention étendue à tout le territoire national.</p>
+      <p>Le Sud de la France concentre les <strong>territoires les plus exposés aux risques naturels</strong> : crues éclair, submersion marine, érosion du littoral.</p>
+      <p>J'y connais les acteurs locaux, les services instructeurs et les dynamiques hydrauliques. La Marche Méditerranée 2026 le confirme.</p>
+      <p><strong>Cartographie, modélisation, rapports</strong> : aussi réalisables à distance, sur tout le territoire national.</p>
     </div>
   </div>
 </section>
@@ -731,7 +803,7 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
           <div class="contact-item-icon">📍</div>
           <div class="contact-item-text">
             <div class="label">Localisation</div>
-            <div class="value">Montpellier (34) — Sud de la France</div>
+            <div class="value">Montpellier (34), Sud de la France</div>
           </div>
         </div>
         <div class="contact-item">
@@ -747,7 +819,7 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
       <div class="badge-available"><div class="dot-pulse"></div>Disponible pour nouvelles missions</div>
       <h3>Demandez votre devis gratuit</h3>
       <form id="contactForm" action="https://formspree.io/f/mbdpkerl" method="POST" onsubmit="handleSubmit(event)">
-        <input type="hidden" name="_subject" value="Nouveau message — Littor'eau">
+        <input type="hidden" name="_subject" value="Nouveau message · Littor'eau">
         <input type="hidden" name="_language" value="fr">
         <div class="form-group">
           <label>Votre nom *</label>
@@ -802,7 +874,7 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
     </div>
   </div>
   <p>© 2025 Littor'eau · Alexis Camand · Montpellier</p>
-  <p>TVA non applicable — Art. 293 B CGI</p>
+  <p>TVA non applicable (Art. 293 B CGI)</p>
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
@@ -821,6 +893,23 @@ const nav = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 });
+
+// Galerie : afficher/masquer les 5 photos supplémentaires
+const galerieToggle = document.getElementById('galerieToggle');
+const galerieMore = document.getElementById('galerieMore');
+if (galerieToggle && galerieMore) {
+  galerieToggle.addEventListener('click', () => {
+    const show = galerieMore.style.display !== 'grid';
+    galerieMore.style.display = show ? 'grid' : 'none';
+    galerieToggle.textContent = show ? 'Voir moins de photos ↑' : 'Voir 5 photos supplémentaires →';
+    if (show) {
+      galerieMore.querySelectorAll('.galerie-item').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      });
+    }
+  });
+}
 
 // Scroll animations
 const observer = new IntersectionObserver((entries) => {
@@ -869,13 +958,6 @@ async function handleSubmit(e) {
     alert('Une erreur est survenue. Contactez-moi directement : alexis.camand@littor-eau.fr');
   }
 }
-// END
-function sendForm(e) {
-  e.preventDefault();
-  const form = e.target;
-  const nom = form.nom.value;
-  const email = form.email.value;
-  const objet = form.objet.value;
-  const message = form.message.value;
-  
-  const subject = encodeURIComponent('Litto
+</script>
+</body>
+</html>
