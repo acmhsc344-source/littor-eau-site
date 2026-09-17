@@ -65,6 +65,14 @@ section{padding:90px 8vw;}
 .stat-n{font-family:'Cormorant Garamond',serif;font-size:26pt;font-weight:700;color:var(--ocean);line-height:1;}
 .stat-l{font-size:8pt;color:var(--mist);margin-top:4px;line-height:1.4;}
 
+/* TEMOIGNAGES */
+.temoignages{background:var(--off);}
+.temoignages-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px;}
+.temoignage-card{background:var(--white);border-radius:12px;padding:26px 22px;border-left:4px solid var(--foam);box-shadow:0 2px 16px rgba(10,61,85,0.06);min-height:60px;}
+.temoignage-quote{font-size:10.5pt;font-style:italic;line-height:1.8;color:#3a4e58;}
+.temoignage-author{margin-top:14px;font-size:9pt;font-weight:600;color:var(--ocean);}
+.temoignage-role{font-size:8pt;color:var(--mist);}
+
 /* GALERIE TECHNIQUE */
 .galerie{background:var(--deep);padding:70px 8vw;}
 .galerie .section-eyebrow{color:var(--foam);}
@@ -215,7 +223,7 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
   .exp-grid,.galerie-grid{grid-template-columns:1fr 1fr;}
   .galerie-grid .wide{grid-column:span 1;}
   .cibles-grid,.marche-stats{grid-template-columns:1fr 1fr;}
-  .about-grid,.territoire-inner,.contact-inner,.marche-body,.terrain-grid{grid-template-columns:1fr;gap:36px;}
+  .about-grid,.territoire-inner,.contact-inner,.marche-body,.terrain-grid,.temoignages-grid{grid-template-columns:1fr;gap:36px;}
   nav{padding:10px 5vw;}
   .nav-links{display:none;}
   .hero-logo{display:none;}
@@ -232,6 +240,7 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 <nav id="navbar">
   <div class="nav-logo"><img src="images/logo.jpg" alt="Littor'eau"></div>
   <ul class="nav-links">
+    <li><a href="#parcours">Parcours</a></li>
     <li><a href="#marche">La Marche</a></li>
     <li><a href="#reseau">Réseau</a></li>
     <li><a href="#galerie">Terrain</a></li>
@@ -274,10 +283,40 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
       <p>Du diagnostic terrain à la modélisation hydraulique, de la cartographie LiDAR HD aux levés drone — une expertise complète, réactive, ancrée dans le Sud de la France.</p>
     </div>
     <div class="about-stats">
-      <div class="stat-card"><div class="stat-n">2</div><div class="stat-l">Masters spécialisés<br>Eau + Littoral</div></div>
+      <!-- Correction : un seul Master, 2 spécialisations (et non 2 Masters) -->
+      <div class="stat-card"><div class="stat-n">1</div><div class="stat-l">Master · 2 spécialisations<br>Eau & Littoral + Gestion des Mers</div></div>
       <div class="stat-card"><div class="stat-n">5+</div><div class="stat-l">Expériences terrain<br>en hydraulique</div></div>
       <div class="stat-card"><div class="stat-n">360°</div><div class="stat-l">Diagnostic → Carto<br>→ Rapport → Formation</div></div>
       <div class="stat-card"><div class="stat-n">5 mois</div><div class="stat-l">Terrain Corse<br>Ghisonaccia 2025</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARCOURS & CONFIANCE : gage de sérieux au-delà du diplôme -->
+<section id="parcours" style="background:var(--white);">
+  <div class="section-eyebrow">Parcours</div>
+  <h2 class="section-title">Une expertise de terrain,<br>pas seulement de diplôme</h2>
+  <p class="section-lead">Avant d'être un rapport, la connaissance du littoral, c'est des heures passées dessus — à pied, en mer, sur les plages.</p>
+  <div class="terrain-grid" style="margin-top:48px;">
+    <div class="terrain-card">
+      <h3>🎓 Master Sciences de l'Eau et de l'Environnement</h3>
+      <p>Spécialisations <strong>Sciences de l'Eau et du Littoral</strong> et <strong>Gestion des Littoraux et des Mers</strong> — Université de Montpellier.</p>
+      <div class="terrain-tags"><span class="terrain-tag">Université de Montpellier</span><span class="terrain-tag">Eau & Littoral</span><span class="terrain-tag">Gestion des Mers</span></div>
+    </div>
+    <div class="terrain-card">
+      <h3>🛟 6 saisons sauveteur en mer</h3>
+      <p>Une connaissance directe du milieu littoral et de ses dangers — pas seulement en théorie.</p>
+      <div class="terrain-tags"><span class="terrain-tag">Sauvetage en mer</span><span class="terrain-tag">Sécurité littorale</span></div>
+    </div>
+    <div class="terrain-card">
+      <h3>🏝️ 5 mois de terrain continu — Ghisonaccia</h3>
+      <p>Suivi morphodynamique quotidien du littoral corse, 2024–2025. <a href="#galerie" style="color:var(--wave);font-weight:600;text-decoration:none;">Voir le terrain →</a></p>
+      <div class="terrain-tags"><span class="terrain-tag">Haute-Corse</span><span class="terrain-tag">2024–2025</span></div>
+    </div>
+    <div class="terrain-card">
+      <h3>🥾 La Marche Méditerranée 2026</h3>
+      <p>1 000 km à pied, 28 jours, tout le littoral méditerranéen français documenté sur le terrain. <a href="#marche" style="color:var(--wave);font-weight:600;text-decoration:none;">Découvrir la Marche →</a></p>
+      <div class="terrain-tags"><span class="terrain-tag">1 000 km</span><span class="terrain-tag">28 jours</span></div>
     </div>
   </div>
 </section>
@@ -644,6 +683,23 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
       <p>Le Sud de la France concentre certains des <strong>territoires les plus exposés aux risques naturels</strong> : épisodes méditerranéens intenses, crues éclair, submersions marines, érosion du trait de côte.</p>
       <p>Je connais les acteurs locaux, les services instructeurs, les dynamiques hydrauliques de ce territoire. En mai 2025, <strong>je longerai l'intégralité du littoral méditerranéen</strong> pour cartographier ce que personne ne cartographie encore.</p>
       <p>Les prestations de <strong>cartographie, modélisation et rapports</strong> sont réalisables à distance — zone d'intervention étendue à tout le territoire national.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEMOIGNAGES : structure prête, masquée tant qu'aucun témoignage client n'a été reçu -->
+<section class="temoignages" id="temoignages" style="display:none;">
+  <div class="section-eyebrow">Confiance</div>
+  <h2 class="section-title">Ils me font confiance</h2>
+  <p class="section-lead">La parole de ceux qui ont travaillé avec Littor'eau.</p>
+  <div class="temoignages-grid">
+    <div class="temoignage-card">
+      <!-- TODO: ajouter témoignage client une fois reçu -->
+      <!-- Structure attendue :
+      <p class="temoignage-quote">« ... »</p>
+      <div class="temoignage-author">Prénom Nom</div>
+      <div class="temoignage-role">Fonction, structure</div>
+      -->
     </div>
   </div>
 </section>
