@@ -479,16 +479,14 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 <section id="reseau" style="background:var(--deep);padding:80px 8vw;position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 100% 50%,rgba(200,90,60,0.06),transparent 60%);pointer-events:none;"></div>
   <div style="position:relative;z-index:1;">
-    <div class="section-eyebrow" style="color:var(--foam);">Réseau en cours de construction</div>
-    <h2 class="section-title" style="color:var(--white);">Le réseau littorale<br><em style="font-style:normal;color:var(--foam);">prend forme</em></h2>
-    <p class="section-lead" style="color:rgba(255,255,255,0.55);margin-bottom:48px;">De Cerbère à Menton, des établissements, mairies et campings rejoignent la Marche Méditerranée. Contacts actifs dans 3 départements.</p>
+    <div class="section-eyebrow" style="color:var(--foam);">Réseau · Construit pendant la Marche Méditerranée</div>
+    <h2 class="section-title" style="color:var(--white);">Un réseau littoral<br><em style="font-style:normal;color:var(--foam);">qui prend forme</em></h2>
+    <p class="section-lead" style="color:rgba(255,255,255,0.55);margin-bottom:48px;">De Cerbère à Menton, des établissements, mairies et campings ont rejoint la Marche Méditerranée. Contacts actifs dans 3 départements.</p>
 
-    <!-- CARTE SVG INTERACTIVE -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
-      <!-- Carte France côte med -->
-      <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px;position:relative;">
-        <div style="font-size:8pt;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--foam);margin-bottom:20px;">Carte du tracé · Littoral méditerranéen</div>
-        <svg viewBox="0 0 560 340" style="width:100%;height:auto;display:block;" xmlns="http://www.w3.org/2000/svg">
+    <!-- CARTE SVG, pleine largeur -->
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:36px;position:relative;">
+      <div style="font-size:8pt;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--foam);margin-bottom:20px;">Carte du tracé · Littoral méditerranéen</div>
+      <svg viewBox="0 0 560 340" style="width:100%;height:auto;display:block;max-height:420px;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="seaGrad" x1="0%" y1="0%" x2="60%" y2="100%">
               <stop offset="0%" stop-color="#0f3a5c"/>
@@ -555,66 +553,65 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
         </style>
       </div>
 
-      <!-- Liste partenaires et contacts -->
+    <!-- Partenaires confirmés | Contacts établis : même langage de carte, deux statuts -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px;">
       <div>
-        <!-- Partenaires confirmés -->
-        <div style="margin-bottom:28px;">
-          <div style="font-size:7.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--foam);margin-bottom:14px;">● Partenaires confirmés</div>
-          <div style="display:flex;flex-direction:column;gap:10px;">
-            <div style="background:rgba(200,90,60,0.08);border:1px solid rgba(200,90,60,0.3);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
-              <span style="font-size:16pt;">🏕️</span>
-              <div>
-                <div style="font-size:9.5pt;font-weight:600;color:var(--white);">Camping partenaire · Pyrénées-Orientales</div>
-                <div style="font-size:8pt;color:rgba(255,255,255,0.5);">66 · Hébergement + intervention sensibilisation</div>
-              </div>
-              <span style="margin-left:auto;background:rgba(200,90,60,0.2);color:var(--foam);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">CONFIRMÉ</span>
+        <div style="font-size:7.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--foam);margin-bottom:14px;">● Partenaires confirmés</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="background:rgba(200,90,60,0.08);border:1px solid rgba(200,90,60,0.3);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
+            <span style="font-size:16pt;">🏕️</span>
+            <div>
+              <div style="font-size:9.5pt;font-weight:600;color:var(--white);">Camping partenaire · Pyrénées-Orientales</div>
+              <div style="font-size:8pt;color:rgba(255,255,255,0.5);">66 · Hébergement + intervention sensibilisation</div>
             </div>
-            <div style="background:rgba(200,90,60,0.08);border:1px solid rgba(200,90,60,0.3);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
-              <span style="font-size:16pt;">🏕️</span>
-              <div>
-                <div style="font-size:9.5pt;font-weight:600;color:var(--white);">Camping partenaire · Hérault</div>
-                <div style="font-size:8pt;color:rgba(255,255,255,0.5);">34 · Hébergement + étude littorale</div>
-              </div>
-              <span style="margin-left:auto;background:rgba(200,90,60,0.2);color:var(--foam);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">CONFIRMÉ</span>
+            <span style="margin-left:auto;background:rgba(200,90,60,0.2);color:var(--foam);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">CONFIRMÉ</span>
+          </div>
+          <div style="background:rgba(200,90,60,0.08);border:1px solid rgba(200,90,60,0.3);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
+            <span style="font-size:16pt;">🏕️</span>
+            <div>
+              <div style="font-size:9.5pt;font-weight:600;color:var(--white);">Camping partenaire · Hérault</div>
+              <div style="font-size:8pt;color:rgba(255,255,255,0.5);">34 · Hébergement + étude littorale</div>
             </div>
+            <span style="margin-left:auto;background:rgba(200,90,60,0.2);color:var(--foam);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">CONFIRMÉ</span>
           </div>
         </div>
-
-        <!-- Contacts établis par type -->
-        <div style="margin-bottom:24px;">
-          <div style="font-size:7.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(221,125,95,0.9);margin-bottom:14px;">● Contacts actifs (en cours)</div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
-            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:16px 14px;transition:border-color 0.2s,background 0.2s;">
-              <div style="font-size:20pt;margin-bottom:8px;">🏫</div>
-              <div style="font-size:18pt;font-weight:700;font-family:'Cormorant Garamond',serif;color:var(--white);line-height:1;">15+</div>
-              <div style="font-size:8pt;color:rgba(255,255,255,0.4);margin-top:4px;">Lycées & collèges<br>66 · 11 · 34</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:16px 14px;transition:border-color 0.2s,background 0.2s;">
-              <div style="font-size:20pt;margin-bottom:8px;">🏕️</div>
-              <div style="font-size:18pt;font-weight:700;font-family:'Cormorant Garamond',serif;color:var(--white);line-height:1;">10+</div>
-              <div style="font-size:8pt;color:rgba(255,255,255,0.4);margin-top:4px;">Campings littoraux<br>66 · 11 · 34</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:16px 14px;transition:border-color 0.2s,background 0.2s;">
-              <div style="font-size:20pt;margin-bottom:8px;">🏛️</div>
-              <div style="font-size:18pt;font-weight:700;font-family:'Cormorant Garamond',serif;color:var(--white);line-height:1;">5+</div>
-              <div style="font-size:8pt;color:rgba(255,255,255,0.4);margin-top:4px;">Mairies & EPCI<br>Gruissan · Grand Narbonne…</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Photo conférence amphi -->
-        <div style="border-radius:10px;overflow:hidden;position:relative;">
-          <img src="images/conference-lycee-feuillade.jpg" alt="Conférence Semaine des Sciences · Lycée Louis Feuillade, Lunel" style="width:100%;display:block;object-fit:cover;border-radius:10px;"/>
-          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(8,31,54,0.92),transparent);padding:14px 16px 12px;">
-            <div style="font-size:8pt;font-weight:600;color:var(--foam);">📚 Conférence · Semaine des Sciences</div>
-            <div style="font-size:7.5pt;color:rgba(255,255,255,0.65);margin-top:3px;">Lycée Louis Feuillade · Lunel · Terminales en amphithéâtre</div>
-          </div>
-        </div>
-
-        <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;background:var(--foam);color:var(--deep);padding:12px 26px;border-radius:4px;text-decoration:none;font-weight:600;font-size:9.5pt;transition:background 0.2s,transform 0.2s;" onmouseover="this.style.background='var(--light)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='var(--foam)';this.style.transform=''">
-          Rejoindre le réseau →
-        </a>
       </div>
+
+      <div>
+        <div style="font-size:7.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--light);margin-bottom:14px;">● Contacts établis</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="background:rgba(221,125,95,0.06);border:1px solid rgba(221,125,95,0.25);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
+            <span style="font-size:16pt;">🏫</span>
+            <div>
+              <div style="font-size:9.5pt;font-weight:600;color:var(--white);">15+ lycées & collèges</div>
+              <div style="font-size:8pt;color:rgba(255,255,255,0.5);">66 · 11 · 34</div>
+            </div>
+            <span style="margin-left:auto;background:rgba(221,125,95,0.2);color:var(--light);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">EN COURS</span>
+          </div>
+          <div style="background:rgba(221,125,95,0.06);border:1px solid rgba(221,125,95,0.25);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
+            <span style="font-size:16pt;">🏕️</span>
+            <div>
+              <div style="font-size:9.5pt;font-weight:600;color:var(--white);">10+ campings littoraux</div>
+              <div style="font-size:8pt;color:rgba(255,255,255,0.5);">66 · 11 · 34</div>
+            </div>
+            <span style="margin-left:auto;background:rgba(221,125,95,0.2);color:var(--light);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">EN COURS</span>
+          </div>
+          <div style="background:rgba(221,125,95,0.06);border:1px solid rgba(221,125,95,0.25);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
+            <span style="font-size:16pt;">🏛️</span>
+            <div>
+              <div style="font-size:9.5pt;font-weight:600;color:var(--white);">5+ mairies & EPCI</div>
+              <div style="font-size:8pt;color:rgba(255,255,255,0.5);">Gruissan · Grand Narbonne…</div>
+            </div>
+            <span style="margin-left:auto;background:rgba(221,125,95,0.2);color:var(--light);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">EN COURS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:40px;">
+      <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;background:var(--foam);color:var(--deep);padding:12px 26px;border-radius:4px;text-decoration:none;font-weight:600;font-size:9.5pt;transition:background 0.2s,transform 0.2s;" onmouseover="this.style.background='var(--light)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='var(--foam)';this.style.transform=''">
+        Rejoindre le réseau →
+      </a>
     </div>
   </div>
 </section>
