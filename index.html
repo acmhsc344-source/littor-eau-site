@@ -77,10 +77,10 @@ section{padding:90px 8vw;}
 .galerie{background:var(--deep);padding:70px 8vw;}
 .galerie .section-eyebrow{color:var(--foam);}
 .galerie .section-title{color:var(--white);margin-bottom:36px;}
-.galerie-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
-.galerie-grid .wide{grid-column:span 2;}
-.galerie-item{border-radius:10px;overflow:hidden;position:relative;aspect-ratio:16/10;background:var(--ocean);}
-.galerie-item.tall{aspect-ratio:4/5;}
+.galerie-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:12px;}
+.galerie-grid.galerie-more{display:none;margin-top:12px;}
+.galerie-item{border-radius:10px;overflow:hidden;position:relative;background:var(--ocean);}
+.galerie-item.featured{grid-column:span 2;grid-row:span 2;}
 .galerie-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;}
 .galerie-item:hover img{transform:scale(1.04);}
 .galerie-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(6,30,42,0.9),transparent);padding:16px 14px 12px;font-size:8pt;color:rgba(255,255,255,0.8);font-weight:500;}
@@ -101,6 +101,9 @@ section{padding:90px 8vw;}
 .marche-text p{font-size:10.5pt;line-height:1.85;color:rgba(255,255,255,0.72);margin-bottom:14px;}
 .marche-text strong{color:var(--foam);}
 .marche-text .btn-red{margin-top:8px;}
+.marche-text ul{list-style:none;margin:0 0 14px 0;display:flex;flex-direction:column;gap:7px;}
+.marche-text ul li{font-size:10.5pt;line-height:1.6;color:rgba(255,255,255,0.72);padding-left:18px;position:relative;}
+.marche-text ul li::before{content:'—';position:absolute;left:0;color:var(--foam);}
 .marche-cards{display:flex;flex-direction:column;gap:12px;}
 .mcard{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:10px;padding:18px 16px;transition:background 0.2s,border-color 0.2s;}
 .mcard:hover{background:rgba(58,180,212,0.07);border-color:rgba(58,180,212,0.25);}
@@ -220,8 +223,8 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 .footer-logo-large img{height:60px;width:auto;border-radius:8px;}
 
 @media(max-width:900px){
-  .exp-grid,.galerie-grid{grid-template-columns:1fr 1fr;}
-  .galerie-grid .wide{grid-column:span 1;}
+  .exp-grid{grid-template-columns:1fr 1fr;}
+  .galerie-grid{grid-template-columns:1fr 1fr;grid-auto-rows:140px;}
   .cibles-grid,.marche-stats{grid-template-columns:1fr 1fr;}
   .about-grid,.territoire-inner,.contact-inner,.marche-body,.terrain-grid,.temoignages-grid{grid-template-columns:1fr;gap:36px;}
   nav{padding:10px 5vw;}
@@ -229,7 +232,9 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
   .hero-logo{display:none;}
 }
 @media(max-width:600px){
-  .exp-grid,.cibles-grid,.about-stats,.galerie-grid{grid-template-columns:1fr;}
+  .exp-grid,.cibles-grid,.about-stats{grid-template-columns:1fr;}
+  .galerie-grid{grid-template-columns:1fr;grid-auto-rows:220px;}
+  .galerie-item.featured{grid-column:span 1;grid-row:span 1;}
   .marche-stats{grid-template-columns:1fr 1fr;}
   section{padding:60px 6vw;}
 }
@@ -283,6 +288,13 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
 .expertises .exp-card h3{color:var(--d1-navy);}
 .expertises .exp-card p{font-size:9pt;}
 .expertises .exp-tag{background:#fbeee7;color:var(--d1-accent);}
+
+/* --- Galerie : même traitement duoton que le hero --- */
+.galerie{background:var(--d1-navy-deep);}
+.galerie .section-eyebrow{color:var(--d1-accent-light);}
+.galerie-item img{filter:grayscale(35%) contrast(1.05);}
+.galerie-item::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg, rgba(8,31,54,0.35), rgba(11,44,74,0.15));pointer-events:none;}
+.galerie .btn-outline:hover{border-color:var(--d1-accent-light);color:var(--d1-accent-light);}
 </style>
 </head>
 <body>
@@ -329,8 +341,8 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
   <h2 class="section-title">Une expertise rare,<br>un ancrage territorial fort</h2>
   <div class="about-grid">
     <div class="about-text">
-      <p>Littor'eau est une structure d'ingénierie indépendante spécialisée en <strong>hydraulique fluviale, risques côtiers et cartographie SIG</strong>. Fondée par Alexis Camand, double diplômé de l'Université de Montpellier.</p>
-      <p>Du diagnostic terrain à la modélisation hydraulique, de la cartographie LiDAR HD aux levés drone — une expertise complète, réactive, ancrée dans le Sud de la France.</p>
+      <p>Littor'eau est un cabinet d'ingénierie indépendant en <strong>hydraulique, risques côtiers et cartographie SIG</strong>, fondé par Alexis Camand, formé à l'Université de Montpellier.</p>
+      <p>Du diagnostic terrain à la modélisation, du LiDAR HD au drone — une expertise complète, réactive, ancrée dans le Sud de la France.</p>
     </div>
     <div class="about-stats">
       <!-- Correction : un seul Master, 2 spécialisations (et non 2 Masters) -->
@@ -350,7 +362,7 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
   <div class="terrain-grid" style="margin-top:48px;">
     <div class="terrain-card">
       <h3>🎓 Master Sciences de l'Eau et de l'Environnement</h3>
-      <p>Spécialisations <strong>Sciences de l'Eau et du Littoral</strong> et <strong>Gestion des Littoraux et des Mers</strong> — Université de Montpellier.</p>
+      <p>Spécialisations <strong>Eau & Littoral</strong> et <strong>Gestion des Mers</strong> — Université de Montpellier.</p>
       <div class="terrain-tags"><span class="terrain-tag">Université de Montpellier</span><span class="terrain-tag">Eau & Littoral</span><span class="terrain-tag">Gestion des Mers</span></div>
     </div>
     <div class="terrain-card">
@@ -381,7 +393,7 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
       <span class="exp-icon">📍</span>
       <h3>Étude de cas : suivi littoral, Ghisonaccia (Haute-Corse)</h3>
       <p style="font-weight:600;color:var(--wave);margin-bottom:8px;">5 mois de mission continue · 2024–2025</p>
-      <p>Suivi morphodynamique quotidien d'une plage méditerranéenne exposée à l'érosion : profils de plage, photogrammétrie drone, bathymétrie kayak et analyses sédimentaires sur 7 km de littoral, en lien direct avec la Mairie de Ghisonaccia.</p>
+      <p>Profils de plage, drone, bathymétrie, sédimentologie — 7 km de littoral suivis avec la Mairie de Ghisonaccia.</p>
       <div class="exp-tags"><span class="exp-tag">Suivi morphodynamique</span><span class="exp-tag">Photogrammétrie drone</span><span class="exp-tag">Bathymétrie</span></div>
       <p style="margin-top:14px;"><a href="#galerie" style="color:var(--wave);font-weight:600;text-decoration:none;">Voir le détail →</a></p>
     </div>
@@ -389,59 +401,64 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
       <span class="exp-icon">🏕️</span>
       <h3>Étude de cas : diagnostic camping littoral</h3>
       <p style="font-weight:600;color:var(--wave);margin-bottom:8px;">Note d'avis technique · Marche Méditerranée 2026</p>
-      <p>Pendant la Marche Méditerranée, rédaction d'une note d'avis technique pour un camping du littoral audois/héraultais exposé à l'érosion côtière — diagnostic de terrain et recommandations transmis directement à l'exploitant.</p>
+      <p>Note d'avis technique pour un camping audois/héraultais exposé à l'érosion — diagnostic et recommandations remis à l'exploitant.</p>
       <div class="exp-tags"><span class="exp-tag">Diagnostic érosion</span><span class="exp-tag">Note technique</span><span class="exp-tag">Camping littoral</span></div>
       <p style="margin-top:14px;"><a href="#marche" style="color:var(--wave);font-weight:600;text-decoration:none;">Voir le détail →</a></p>
     </div>
   </div>
 </section>
 
-<!-- GALERIE TECHNIQUE -->
+<!-- GALERIE TECHNIQUE : 5 photos mises en avant (1 grande + 4), 5 autres repliées sous "Voir plus" -->
 <section class="galerie" id="galerie">
   <div class="section-eyebrow">Terrain · Ghisonaccia, Haute-Corse · 2024–2025</div>
   <h2 class="section-title">5 mois sur le littoral corse</h2>
-  <p style="font-size:11pt;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.7;max-width:580px;margin-bottom:36px;">Commune de Ghisonaccia, Haute-Corse. Profils de plage quotidiens au niveau optique, photogrammétrie drone, bathymétrie kayak, analyses sédimentaires et suivi des mouvements du trait de côte sur 7 km de littoral méditerranéen.</p>
+  <p style="font-size:11pt;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.7;max-width:580px;margin-bottom:36px;">Ghisonaccia, Haute-Corse : profils de plage, drone, bathymétrie, sédimentologie — suivi du trait de côte sur 7 km.</p>
   <div class="galerie-grid">
-        <div class="galerie-item wide">
-          <img src="images/galerie-01-profil-plage.jpg" alt="Profil de plage au niveau optique" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Profil de plage au niveau optique</strong> — Ghisonaccia · Suivi morphodynamique quotidien</div>
-        </div>
-        <div class="galerie-item">
-          <img src="images/galerie-02-mesure-deferlement.jpg" alt="Mesure dans la zone de déferlement" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Mesure dans la zone de déferlement</strong> — Ghisonaccia · Mire tenue dans les vagues</div>
-        </div>
-        <div class="galerie-item tall">
-          <img src="images/galerie-03-vue-aerienne.jpg" alt="Vue aérienne du site d'étude" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Vue aérienne du site d'étude</strong> — Ghisonaccia · Herbiers de posidonie & barres sableuses</div>
-        </div>
-        <div class="galerie-item">
-          <img src="images/galerie-04-orthophoto-drone.jpg" alt="Orthophoto drone · Transects annotés" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Orthophoto drone · Transects annotés</strong> — Ghisonaccia · 3 transects côtiers</div>
-        </div>
-        <div class="galerie-item">
-          <img src="images/galerie-05-pendage-clino.jpg" alt="Pendage à l'application Clino" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Pendage à l'application Clino</strong> — Ghisonaccia · Géoréférencement terrain</div>
-        </div>
-        <div class="galerie-item tall">
-          <img src="images/galerie-06-piquets-suivi.jpg" alt="Piquets de suivi sédimentaire" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Piquets de suivi sédimentaire</strong> — Ghisonaccia · Mouvements de sable sur 7 km</div>
-        </div>
-        <div class="galerie-item wide">
-          <img src="images/galerie-07-rechargement-plage.jpg" alt="Rechargement mécanique de plage" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Rechargement mécanique de plage</strong> — Ghisonaccia · Gestion du trait de côte</div>
-        </div>
-        <div class="galerie-item">
-          <img src="images/galerie-08-station-debit.jpg" alt="Station de mesure de débit" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Station de mesure de débit</strong> — Ghisonaccia · Capteur Vortex · Vigilance crues</div>
-        </div>
-        <div class="galerie-item">
-          <img src="images/galerie-09-degats-erosion.jpg" alt="Dégâts d'érosion côtière" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+        <div class="galerie-item featured">
+          <img src="images/galerie-09-degats-erosion.jpg" alt="Dégâts d'érosion côtière" loading="lazy"/>
           <div class="galerie-caption"><strong>Dégâts d'érosion côtière</strong> — Ghisonaccia · Submersion marine · Infrastructures</div>
         </div>
         <div class="galerie-item">
-          <img src="images/galerie-10-releve-swash.jpg" alt="Relevé en zone de swash" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
-          <div class="galerie-caption"><strong>Relevé en zone de swash</strong> — Ghisonaccia · Limite de l'estran</div>
+          <img src="images/galerie-03-vue-aerienne.jpg" alt="Vue aérienne du site d'étude" loading="lazy"/>
+          <div class="galerie-caption"><strong>Vue aérienne</strong> — Posidonie & barres sableuses</div>
         </div>
+        <div class="galerie-item">
+          <img src="images/galerie-01-profil-plage.jpg" alt="Profil de plage au niveau optique" loading="lazy"/>
+          <div class="galerie-caption"><strong>Profil de plage</strong> — Suivi quotidien</div>
+        </div>
+        <div class="galerie-item">
+          <img src="images/galerie-04-orthophoto-drone.jpg" alt="Orthophoto drone · Transects annotés" loading="lazy"/>
+          <div class="galerie-caption"><strong>Orthophoto drone</strong> — 3 transects côtiers</div>
+        </div>
+        <div class="galerie-item">
+          <img src="images/galerie-08-station-debit.jpg" alt="Station de mesure de débit" loading="lazy"/>
+          <div class="galerie-caption"><strong>Station de débit</strong> — Vigilance crues</div>
+        </div>
+  </div>
+  <div class="galerie-grid galerie-more" id="galerieMore">
+        <div class="galerie-item">
+          <img src="images/galerie-02-mesure-deferlement.jpg" alt="Mesure dans la zone de déferlement" loading="lazy"/>
+          <div class="galerie-caption"><strong>Mesure de déferlement</strong> — Mire tenue dans les vagues</div>
+        </div>
+        <div class="galerie-item">
+          <img src="images/galerie-05-pendage-clino.jpg" alt="Pendage à l'application Clino" loading="lazy"/>
+          <div class="galerie-caption"><strong>Pendage Clino</strong> — Géoréférencement terrain</div>
+        </div>
+        <div class="galerie-item">
+          <img src="images/galerie-06-piquets-suivi.jpg" alt="Piquets de suivi sédimentaire" loading="lazy"/>
+          <div class="galerie-caption"><strong>Piquets de suivi</strong> — Mouvements de sable</div>
+        </div>
+        <div class="galerie-item">
+          <img src="images/galerie-07-rechargement-plage.jpg" alt="Rechargement mécanique de plage" loading="lazy"/>
+          <div class="galerie-caption"><strong>Rechargement de plage</strong> — Gestion du trait de côte</div>
+        </div>
+        <div class="galerie-item">
+          <img src="images/galerie-10-releve-swash.jpg" alt="Relevé en zone de swash" loading="lazy"/>
+          <div class="galerie-caption"><strong>Relevé de swash</strong> — Limite de l'estran</div>
+        </div>
+  </div>
+  <div style="text-align:center;margin-top:24px;">
+    <button type="button" class="btn-outline" id="galerieToggle" style="cursor:pointer;">Voir 5 photos supplémentaires →</button>
   </div>
 </section>
 
@@ -462,9 +479,14 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
 
     <div class="marche-body">
       <div class="marche-text">
-        <p>Du 11 mai au 7 juin 2026, j'ai parcouru à pied l'intégralité du littoral méditerranéen français — Côte Vermeille, Languedoc, Camargue, Provence, Var, Côte d'Azur — avec un drone, des carnets de terrain et une caméra.</p>
-        <p>Au programme : des dizaines de rencontres avec chercheurs, gestionnaires de campings, élus locaux, riverains, pêcheurs, sauveteurs en mer et enseignants, des interviews filmées pour la série documentaire <strong>« Voix du Littoral »</strong>, des interventions de sensibilisation en lycées, et un premier client accompagné dès le terrain.</p>
-        <p><strong>Ce que j'ai observé :</strong> les plages méditerranéennes reculent. Certaines disparaîtront dans 10 à 20 ans. Les gestionnaires savent, les données existent, mais le lien entre la science et la décision reste trop souvent absent. Littor'eau est ce lien.</p>
+        <p>Du 11 mai au 7 juin 2026, tout le littoral méditerranéen français parcouru à pied — Côte Vermeille, Languedoc, Camargue, Provence, Côte d'Azur — drone, carnets de terrain, caméra.</p>
+        <ul>
+          <li>Rencontres : chercheurs, élus, campings, pêcheurs, sauveteurs, enseignants</li>
+          <li>Série documentaire <strong>« Voix du Littoral »</strong></li>
+          <li>Interventions de sensibilisation en lycées</li>
+          <li>Premier client accompagné dès le terrain</li>
+        </ul>
+        <p><strong>Constat :</strong> les plages méditerranéennes reculent, certaines disparaîtront sous 10 à 20 ans. Littor'eau fait le lien entre donnée scientifique et décision locale.</p>
         <a href="#contact" class="btn-red" onclick="setTimeout(()=>{const s=document.querySelector('select[name=objet]');if(s){s.value='Suite Marche Méditerranée';}},200)">Échanger sur les données récoltées</a>
       </div>
       <div class="marche-cards">
@@ -623,22 +645,22 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
   <div class="terrain-grid">
     <div class="terrain-card">
       <h3>Suivi morphodynamique quotidien</h3>
-      <p>Profils de plage quotidiens sur transects fixes, mesure des bermes et scarpes, suivi du trait de côte sur 5 mois consécutifs. Application Clino pour géoréférencement de chaque mesure.</p>
+      <p>5 mois de profils de plage quotidiens, bermes et scarpes mesurées, géoréférencées via l'appli Clino.</p>
       <div class="terrain-tags"><span class="terrain-tag">Profils de plage</span><span class="terrain-tag">Bermes & scarpes</span><span class="terrain-tag">Géoréférencement</span><span class="terrain-tag">5 mois terrain</span></div>
     </div>
     <div class="terrain-card">
       <h3>Drone & photogrammétrie littorale</h3>
-      <p>Vols drone parallèles au rivage, panneaux photographiques exploitables sous QGIS. Bathymétrie exploratoire en kayak jusqu'à 60 m au large — localisation des barres sableuses et herbiers de posidonie.</p>
+      <p>Vols drone exploitables sous QGIS, bathymétrie kayak jusqu'à 60 m — barres sableuses et herbiers de posidonie localisés.</p>
       <div class="terrain-tags"><span class="terrain-tag">Photogrammétrie</span><span class="terrain-tag">MNT littoral</span><span class="terrain-tag">Bathymétrie kayak</span><span class="terrain-tag">QGIS SIG</span></div>
     </div>
     <div class="terrain-card">
       <h3>Analyses sédimentaires de laboratoire</h3>
-      <p>Prélèvements multi-sites sur 7 km. Granulométrie, susceptibilité magnétique (37–235 µS), préparation ICP-MS. Dérive littorale dominante Sud → Nord confirmée sur 9 jours sur 10.</p>
+      <p>Prélèvements sur 7 km : granulométrie, susceptibilité magnétique (37–235 µS), ICP-MS. Dérive Sud → Nord confirmée 9 jours sur 10.</p>
       <div class="terrain-tags"><span class="terrain-tag">Granulométrie</span><span class="terrain-tag">ICP-MS</span><span class="terrain-tag">Susceptibilité magnétique</span><span class="terrain-tag">Dérive littorale</span></div>
     </div>
     <div class="terrain-card">
       <h3>Interface science — gestion locale</h3>
-      <p>Stage avec la Mairie de Ghisonaccia. Travail direct avec les élus sur les enjeux d'érosion côtière, posidonie et gestion du littoral. Résultats intégrés dans la prise de décision communale.</p>
+      <p>Stage à la Mairie de Ghisonaccia : travail avec les élus sur érosion et posidonie, résultats intégrés à la décision communale.</p>
       <div class="terrain-tags"><span class="terrain-tag">Mairie Ghisonaccia</span><span class="terrain-tag">Posidonie</span><span class="terrain-tag">Gestion littorale</span><span class="terrain-tag">Aide à la décision</span></div>
     </div>
   </div>
@@ -691,14 +713,14 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
   <h2 class="section-title">Ce que je fais,<br>concrètement</h2>
   <p class="section-lead">Des prestations techniques précises, livrées avec clarté — pour des clients qui n'ont pas besoin de jargon, mais de solutions.</p>
   <div class="exp-grid">
-    <div class="exp-card"><span class="exp-icon">🌊</span><h3>Hydraulique fluviale & Inondations</h3><p>Modélisation des écoulements, cartographie des zones inondables, diagnostics de vulnérabilité. Appui réglementaire PPRI, GEMAPI, PAPI.</p><div class="exp-tags"><span class="exp-tag">HEC-RAS</span><span class="exp-tag">RAS Mapper</span><span class="exp-tag">PPRI</span><span class="exp-tag">PAPI</span></div></div>
-    <div class="exp-card"><span class="exp-icon">🏖️</span><h3>Risques côtiers & Submersions</h3><p>Érosion du trait de côte, submersions marines, dynamiques littorales. Études PPRL, suivi morphologique côtier.</p><div class="exp-tags"><span class="exp-tag">PPRL</span><span class="exp-tag">Érosion</span><span class="exp-tag">Submersion</span><span class="exp-tag">Loi Littoral</span></div></div>
-    <div class="exp-card"><span class="exp-icon">🗺️</span><h3>Cartographie SIG & LiDAR HD</h3><p>MNT haute résolution à partir de LiDAR HD IGN. Cartographie d'aléas, orthophotos, analyses spatiales QGIS.</p><div class="exp-tags"><span class="exp-tag">QGIS</span><span class="exp-tag">LiDAR HD</span><span class="exp-tag">IGN</span><span class="exp-tag">MNT</span></div></div>
-    <div class="exp-card"><span class="exp-icon">🚁</span><h3>Levés topographiques par drone</h3><p>Photogrammétrie aérienne, modèles 3D et orthophotos haute précision. Littoraux, zones humides, sites difficiles d'accès.</p><div class="exp-tags"><span class="exp-tag">Drone</span><span class="exp-tag">Photogrammétrie</span><span class="exp-tag">MNT 3D</span></div></div>
-    <div class="exp-card"><span class="exp-icon">🏛️</span><h3>Conseil & Appui réglementaire</h3><p>Cahiers des charges, dossiers Loi sur l'Eau, PPRI/PPRL. Interface collectivités, BET et services de l'État.</p><div class="exp-tags"><span class="exp-tag">GEMAPI</span><span class="exp-tag">Loi sur l'Eau</span><span class="exp-tag">Marchés publics</span></div></div>
-    <div class="exp-card"><span class="exp-icon">🎓</span><h3>Sensibilisation & Formation</h3><p>Interventions élus, équipes et lycées. Vulgarisation des risques naturels adaptée à chaque public.</p><div class="exp-tags"><span class="exp-tag">Élus</span><span class="exp-tag">Lycées</span><span class="exp-tag">ERP</span><span class="exp-tag">Campings</span></div></div>
+    <div class="exp-card"><span class="exp-icon">🌊</span><h3>Hydraulique fluviale & Inondations</h3><p>Modélisation des écoulements, zones inondables, diagnostics de vulnérabilité — appui réglementaire PPRI, GEMAPI, PAPI.</p><div class="exp-tags"><span class="exp-tag">HEC-RAS</span><span class="exp-tag">RAS Mapper</span><span class="exp-tag">PPRI</span><span class="exp-tag">PAPI</span></div></div>
+    <div class="exp-card"><span class="exp-icon">🏖️</span><h3>Risques côtiers & Submersions</h3><p>Érosion, submersion, dynamiques littorales — études PPRL et suivi morphologique côtier.</p><div class="exp-tags"><span class="exp-tag">PPRL</span><span class="exp-tag">Érosion</span><span class="exp-tag">Submersion</span><span class="exp-tag">Loi Littoral</span></div></div>
+    <div class="exp-card"><span class="exp-icon">🗺️</span><h3>Cartographie SIG & LiDAR HD</h3><p>MNT haute résolution (LiDAR HD IGN), cartographie d'aléas, orthophotos, analyses QGIS.</p><div class="exp-tags"><span class="exp-tag">QGIS</span><span class="exp-tag">LiDAR HD</span><span class="exp-tag">IGN</span><span class="exp-tag">MNT</span></div></div>
+    <div class="exp-card"><span class="exp-icon">🚁</span><h3>Levés topographiques par drone</h3><p>Photogrammétrie aérienne, modèles 3D, orthophotos haute précision — littoraux et sites difficiles d'accès.</p><div class="exp-tags"><span class="exp-tag">Drone</span><span class="exp-tag">Photogrammétrie</span><span class="exp-tag">MNT 3D</span></div></div>
+    <div class="exp-card"><span class="exp-icon">🏛️</span><h3>Conseil & Appui réglementaire</h3><p>Dossiers Loi sur l'Eau, PPRI/PPRL — interface collectivités, BET et services de l'État.</p><div class="exp-tags"><span class="exp-tag">GEMAPI</span><span class="exp-tag">Loi sur l'Eau</span><span class="exp-tag">Marchés publics</span></div></div>
+    <div class="exp-card"><span class="exp-icon">🎓</span><h3>Sensibilisation & Formation</h3><p>Interventions élus, équipes, lycées — risques naturels vulgarisés pour chaque public.</p><div class="exp-tags"><span class="exp-tag">Élus</span><span class="exp-tag">Lycées</span><span class="exp-tag">ERP</span><span class="exp-tag">Campings</span></div></div>
     <!-- Nouveau service : Cartographie & Conseil Prévention Incendie -->
-    <div class="exp-card" style="border-top:3px solid #E76F51;"><span class="exp-icon">🔥</span><h3>Cartographie & Conseil — Prévention des Risques Incendie</h3><p>Les incendies de forêt méditerranéens déstabilisent les bassins versants et accélèrent l'érosion côtière en aval. Cartographie des zones à risque, diagnostic post-incendie du trait de côte, conseil en gestion préventive et intégration dans les documents d'urbanisme (PLU, PPRI, PPRL).</p><div class="exp-tags"><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Feux de forêt</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Bassins versants</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Var · 13 · 34 · 06</span></div></div>
+    <div class="exp-card" style="border-top:3px solid #E76F51;"><span class="exp-icon">🔥</span><h3>Cartographie & Conseil — Prévention des Risques Incendie</h3><p>Les incendies déstabilisent les bassins versants et accélèrent l'érosion en aval — cartographie des zones à risque, diagnostic post-incendie, intégration aux PLU/PPRI/PPRL.</p><div class="exp-tags"><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Feux de forêt</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Bassins versants</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Var · 13 · 34 · 06</span></div></div>
   </div>
 </section>
 
@@ -755,9 +777,9 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
       </div>
     </div>
     <div class="territoire-text">
-      <p>Le Sud de la France concentre certains des <strong>territoires les plus exposés aux risques naturels</strong> : épisodes méditerranéens intenses, crues éclair, submersions marines, érosion du trait de côte.</p>
-      <p>Je connais les acteurs locaux, les services instructeurs, les dynamiques hydrauliques de ce territoire. En mai 2025, <strong>je longerai l'intégralité du littoral méditerranéen</strong> pour cartographier ce que personne ne cartographie encore.</p>
-      <p>Les prestations de <strong>cartographie, modélisation et rapports</strong> sont réalisables à distance — zone d'intervention étendue à tout le territoire national.</p>
+      <p>Le Sud de la France concentre les <strong>territoires les plus exposés aux risques naturels</strong> : crues éclair, submersion marine, érosion du littoral.</p>
+      <p>J'y connais les acteurs locaux, les services instructeurs et les dynamiques hydrauliques — confirmé par la Marche Méditerranée 2026.</p>
+      <p><strong>Cartographie, modélisation, rapports</strong> : aussi réalisables à distance, sur tout le territoire national.</p>
     </div>
   </div>
 </section>
@@ -896,6 +918,23 @@ const nav = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 });
+
+// Galerie : afficher/masquer les 5 photos supplémentaires
+const galerieToggle = document.getElementById('galerieToggle');
+const galerieMore = document.getElementById('galerieMore');
+if (galerieToggle && galerieMore) {
+  galerieToggle.addEventListener('click', () => {
+    const show = galerieMore.style.display !== 'grid';
+    galerieMore.style.display = show ? 'grid' : 'none';
+    galerieToggle.textContent = show ? 'Voir moins de photos ↑' : 'Voir 5 photos supplémentaires →';
+    if (show) {
+      galerieMore.querySelectorAll('.galerie-item').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      });
+    }
+  });
+}
 
 // Scroll animations
 const observer = new IntersectionObserver((entries) => {
