@@ -127,6 +127,11 @@ section{padding:90px 8vw;}
 .mcard h4{font-size:9.5pt;font-weight:600;color:var(--white);margin-bottom:4px;}
 .mcard p{font-size:8.5pt;color:rgba(255,255,255,0.4);line-height:1.55;}
 
+/* RESEAU */
+.reseau-hero-grid{display:grid;grid-template-columns:3fr 2fr;gap:24px;}
+.reseau-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px;}
+.reseau-photo{min-height:340px;}
+
 /* TERRAIN */
 .terrain{background:var(--white);}
 .terrain-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:48px;}
@@ -238,7 +243,7 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
   .exp-grid{grid-template-columns:1fr 1fr;}
   .galerie-grid{grid-template-columns:1fr 1fr;grid-auto-rows:140px;}
   .cibles-grid,.marche-stats{grid-template-columns:1fr 1fr;}
-  .about-grid,.territoire-inner,.contact-inner,.marche-body,.terrain-grid,.temoignages-grid{grid-template-columns:1fr;gap:36px;}
+  .about-grid,.territoire-inner,.contact-inner,.marche-body,.terrain-grid,.temoignages-grid,.reseau-hero-grid,.reseau-cards-grid{grid-template-columns:1fr;gap:36px;}
   nav{padding:10px 5vw;}
   .nav-links{display:none;}
   .hero-logo{display:none;}
@@ -483,10 +488,11 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
     <h2 class="section-title" style="color:var(--white);">Un réseau littoral<br><em style="font-style:normal;color:var(--foam);">qui prend forme</em></h2>
     <p class="section-lead" style="color:rgba(255,255,255,0.55);margin-bottom:48px;">De Cerbère à Menton, des établissements, mairies et campings ont rejoint la Marche Méditerranée. Contacts actifs dans 3 départements.</p>
 
-    <!-- CARTE SVG, pleine largeur -->
-    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:36px;position:relative;">
+    <!-- Duo d'ouverture : la trace (carte) et la preuve humaine (photo), côte à côte -->
+    <div class="reseau-hero-grid">
+    <div class="reseau-panel" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:36px;position:relative;display:flex;flex-direction:column;">
       <div style="font-size:8pt;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--foam);margin-bottom:20px;">Carte du tracé · Littoral méditerranéen</div>
-      <svg viewBox="0 0 560 340" style="width:100%;height:auto;display:block;max-height:420px;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 560 340" style="width:100%;height:auto;display:block;margin:auto 0;" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="seaGrad" x1="0%" y1="0%" x2="60%" y2="100%">
               <stop offset="0%" stop-color="#0f3a5c"/>
@@ -553,8 +559,18 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
         </style>
       </div>
 
+      <!-- Preuve humaine, sans mention de date/événement pour ne pas la lier chronologiquement à la Marche -->
+      <div class="reseau-panel reseau-photo" style="border-radius:16px;overflow:hidden;position:relative;">
+        <img src="images/conference-lycee-feuillade.jpg" alt="Intervention en lycée, Lycée Louis Feuillade, Lunel" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(8,31,54,0.92),transparent);padding:18px 20px 16px;">
+          <div style="font-size:8pt;font-weight:600;color:var(--foam);">📚 Intervention en lycée</div>
+          <div style="font-size:7.5pt;color:rgba(255,255,255,0.65);margin-top:3px;">Lycée Louis Feuillade · Lunel · Terminales en amphithéâtre</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Partenaires confirmés | Contacts établis : même langage de carte, deux statuts -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px;">
+    <div class="reseau-cards-grid">
       <div>
         <div style="font-size:7.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--foam);margin-bottom:14px;">● Partenaires confirmés</div>
         <div style="display:flex;flex-direction:column;gap:10px;">
@@ -605,15 +621,6 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
             <span style="margin-left:auto;background:rgba(221,125,95,0.2);color:var(--light);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">EN COURS</span>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Photo de crédibilité : aucune mention de date/événement pour ne pas la lier chronologiquement à la Marche -->
-    <div style="margin-top:40px;border-radius:16px;overflow:hidden;position:relative;height:220px;">
-      <img src="images/conference-lycee-feuillade.jpg" alt="Intervention en lycée, Lycée Louis Feuillade, Lunel" style="width:100%;height:100%;object-fit:cover;display:block;"/>
-      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(8,31,54,0.92),transparent);padding:18px 22px 16px;">
-        <div style="font-size:8pt;font-weight:600;color:var(--foam);">📚 Intervention en lycée</div>
-        <div style="font-size:7.5pt;color:rgba(255,255,255,0.65);margin-top:3px;">Lycée Louis Feuillade · Lunel · Terminales en amphithéâtre</div>
       </div>
     </div>
 
@@ -935,7 +942,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {threshold: 0.08});
-document.querySelectorAll('.exp-card,.cible-card,.stat-card,.outil-pill,.mstat,.mcard,.terrain-card,.galerie-item').forEach(el => {
+document.querySelectorAll('.exp-card,.cible-card,.stat-card,.outil-pill,.mstat,.mcard,.terrain-card,.galerie-item,.reseau-panel').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
