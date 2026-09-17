@@ -8,16 +8,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ocean:#0a3d55;--deep:#061e2a;--wave:#1470a0;--foam:#3ab4d4;
-  --light:#7fd4e8;--sand:#f2ece0;--sand2:#e8dfc8;--ink:#0d1e28;
-  --mist:#5a8090;--white:#ffffff;--off:#f8f5ef;--red:#e8003d;
+  /* Direction 1 "Cabinet d'ingénierie" : navy + un seul accent chaud (terracotta) */
+  --ocean:#0b2c4a;--deep:#081f36;--wave:#a8492f;--foam:#c85a3c;
+  --light:#dd7d5f;--sand:#e8dcc4;--sand2:#ddcda8;--ink:#0d1e28;
+  --mist:#5a7590;--white:#ffffff;--off:#f5f3ef;--red:#c85a3c;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--white);overflow-x:hidden;}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:10px 6vw;display:flex;justify-content:space-between;align-items:center;transition:background 0.4s,box-shadow 0.4s;}
-nav.scrolled{background:rgba(6,30,42,0.97);box-shadow:0 2px 30px rgba(0,0,0,0.3);backdrop-filter:blur(10px);}
+nav.scrolled{background:rgba(8,31,54,0.97);box-shadow:0 2px 30px rgba(0,0,0,0.3);backdrop-filter:blur(10px);}
 .nav-logo img{height:70px;width:auto;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.2);}
 .nav-links{display:flex;gap:28px;list-style:none;}
 .nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:9pt;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:color 0.2s;}
@@ -25,7 +26,7 @@ nav.scrolled{background:rgba(6,30,42,0.97);box-shadow:0 2px 30px rgba(0,0,0,0.3)
 .nav-cta{background:var(--foam);color:var(--deep)!important;padding:8px 18px;border-radius:4px;font-weight:600!important;}
 
 .hero{min-height:100vh;background:var(--deep);position:relative;display:flex;align-items:center;overflow:hidden;}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 110%,rgba(52,180,212,0.12) 0%,transparent 60%),radial-gradient(ellipse 60% 80% at -10% 50%,rgba(20,112,160,0.2) 0%,transparent 60%),linear-gradient(160deg,#061e2a 0%,#0a3d55 50%,#061e2a 100%);}
+.hero::before{content:'';position:absolute;inset:0;}
 .wave-lines{position:absolute;right:-60px;bottom:-40px;width:65vw;height:65vw;opacity:0.06;pointer-events:none;}
 .wave-lines circle{fill:none;stroke:var(--foam);stroke-width:1;}
 .hero-content{position:relative;z-index:2;padding:0 8vw;max-width:760px;animation:fadeUp 1s ease both;}
@@ -86,15 +87,15 @@ section{padding:90px 8vw;}
 .galerie-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(6,30,42,0.9),transparent);padding:16px 14px 12px;font-size:8pt;color:rgba(255,255,255,0.8);font-weight:500;}
 
 /* MARCHE */
-.marche{background:linear-gradient(160deg,#08151e 0%,#0d2d3d 50%,#08151e 100%);position:relative;overflow:hidden;}
-.marche::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 80% 50%,rgba(232,0,61,0.07),transparent 60%),radial-gradient(ellipse 60% 40% at 20% 50%,rgba(58,180,212,0.07),transparent 60%);pointer-events:none;}
-.marche .section-eyebrow{color:#ff4060;}
+.marche{background:linear-gradient(160deg,#081f36 0%,#0f2e4a 50%,#081f36 100%);position:relative;overflow:hidden;}
+.marche::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 80% 50%,rgba(200,90,60,0.10),transparent 60%),radial-gradient(ellipse 60% 40% at 20% 50%,rgba(200,90,60,0.06),transparent 60%);pointer-events:none;}
+.marche .section-eyebrow{color:var(--light);}
 .marche .section-title{color:var(--white);}
 .marche .section-lead{color:rgba(255,255,255,0.55);max-width:640px;}
 .marche-inner{position:relative;z-index:1;}
 .marche-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:40px 0;}
 .mstat{text-align:center;border:1px solid rgba(255,255,255,0.09);border-radius:10px;padding:20px 12px;transition:border-color 0.2s,background 0.2s;}
-.mstat:hover{border-color:rgba(58,180,212,0.35);background:rgba(58,180,212,0.05);}
+.mstat:hover{border-color:rgba(200,90,60,0.35);background:rgba(200,90,60,0.06);}
 .mstat .n{font-family:'Cormorant Garamond',serif;font-size:26pt;font-weight:700;color:var(--foam);line-height:1;}
 .mstat .l{font-size:7.5pt;color:rgba(255,255,255,0.45);margin-top:6px;line-height:1.4;text-transform:uppercase;}
 .marche-body{display:grid;grid-template-columns:3fr 2fr;gap:56px;align-items:start;}
@@ -106,7 +107,7 @@ section{padding:90px 8vw;}
 .marche-text ul li::before{content:'—';position:absolute;left:0;color:var(--foam);}
 .marche-cards{display:flex;flex-direction:column;gap:12px;}
 .mcard{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:10px;padding:18px 16px;transition:background 0.2s,border-color 0.2s;}
-.mcard:hover{background:rgba(58,180,212,0.07);border-color:rgba(58,180,212,0.25);}
+.mcard:hover{background:rgba(200,90,60,0.07);border-color:rgba(200,90,60,0.25);}
 .mcard .icon{font-size:18pt;margin-bottom:8px;display:block;}
 .mcard h4{font-size:9.5pt;font-weight:600;color:var(--white);margin-bottom:4px;}
 .mcard p{font-size:8.5pt;color:rgba(255,255,255,0.4);line-height:1.55;}
@@ -122,7 +123,7 @@ section{padding:90px 8vw;}
 .terrain-card h3{font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:700;color:var(--ocean);margin-bottom:10px;}
 .terrain-card p{font-size:9.5pt;color:#3a4e58;line-height:1.7;margin-bottom:8px;}
 .terrain-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
-.terrain-tag{background:#eaf4f8;color:var(--wave);font-size:7.5pt;font-weight:600;padding:2px 9px;border-radius:20px;}
+.terrain-tag{background:#fbeee7;color:var(--wave);font-size:7.5pt;font-weight:600;padding:2px 9px;border-radius:20px;}
 
 /* EXPERTISES */
 .expertises{background:var(--off);}
@@ -133,9 +134,9 @@ section{padding:90px 8vw;}
 .exp-card:hover::before{transform:scaleX(1);}
 .exp-icon{font-size:24pt;margin-bottom:14px;display:block;}
 .exp-card h3{font-family:'Cormorant Garamond',serif;font-size:13pt;font-weight:700;color:var(--ocean);margin-bottom:8px;}
-.exp-card p{font-size:8.5pt;color:var(--mist);line-height:1.7;}
+.exp-card p{font-size:9pt;color:var(--mist);line-height:1.7;}
 .exp-tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:5px;}
-.exp-tag{background:#eaf4f8;color:var(--wave);font-size:7.5pt;font-weight:600;padding:2px 9px;border-radius:20px;}
+.exp-tag{background:#fbeee7;color:var(--wave);font-size:7.5pt;font-weight:600;padding:2px 9px;border-radius:20px;}
 
 /* CIBLES */
 .cibles{background:var(--deep);}
@@ -143,7 +144,7 @@ section{padding:90px 8vw;}
 .cibles .section-lead{color:rgba(255,255,255,0.5);}
 .cibles-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px;}
 .cible-card{border:1px solid rgba(255,255,255,0.09);border-radius:10px;padding:22px 16px;transition:background 0.2s,border-color 0.2s,transform 0.2s;}
-.cible-card:hover{background:rgba(58,180,212,0.08);border-color:rgba(58,180,212,0.3);transform:translateY(-4px);}
+.cible-card:hover{background:rgba(200,90,60,0.08);border-color:rgba(200,90,60,0.3);transform:translateY(-4px);}
 .cible-icon{font-size:20pt;margin-bottom:10px;display:block;}
 .cible-card h4{font-size:9.5pt;font-weight:600;color:var(--white);margin-bottom:5px;}
 .cible-card p{font-size:8pt;color:rgba(255,255,255,0.4);line-height:1.6;}
@@ -159,7 +160,7 @@ section{padding:90px 8vw;}
 .territoire{background:var(--white);}
 .territoire-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:48px;}
 .territoire-map{background:linear-gradient(135deg,var(--ocean),var(--deep));border-radius:16px;padding:44px;text-align:center;position:relative;overflow:hidden;}
-.territoire-map::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 80%,rgba(58,180,212,0.15),transparent 60%);}
+.territoire-map::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 80%,rgba(200,90,60,0.15),transparent 60%);}
 .map-logo{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.10;}
 .map-logo img{height:160px;width:auto;filter:brightness(0) invert(1);}
 .map-icon{font-size:52pt;display:block;margin-bottom:12px;position:relative;z-index:1;}
@@ -172,7 +173,7 @@ section{padding:90px 8vw;}
 
 /* CONTACT */
 .contact{background:var(--ocean);position:relative;overflow:hidden;}
-.contact::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(58,180,212,0.12),transparent 70%);}
+.contact::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(200,90,60,0.12),transparent 70%);}
 .contact-logo{position:absolute;bottom:-30px;left:6vw;opacity:0.05;}
 .contact-logo img{height:200px;width:auto;filter:brightness(0) invert(1);}
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1;}
@@ -180,7 +181,7 @@ section{padding:90px 8vw;}
 .contact .section-lead{color:rgba(255,255,255,0.6);margin-bottom:32px;}
 .contact-items{display:flex;flex-direction:column;gap:16px;}
 .contact-item{display:flex;align-items:center;gap:14px;}
-.contact-item-icon{width:44px;height:44px;background:rgba(58,180,212,0.15);border:1px solid rgba(58,180,212,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14pt;flex-shrink:0;}
+.contact-item-icon{width:44px;height:44px;background:rgba(200,90,60,0.15);border:1px solid rgba(200,90,60,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14pt;flex-shrink:0;}
 .contact-item-text .label{font-size:7pt;color:rgba(255,255,255,0.4);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1px;}
 .contact-item-text .value{font-size:10.5pt;font-weight:500;color:var(--white);}
 .contact-item-text a{color:var(--foam);text-decoration:none;}
@@ -188,7 +189,7 @@ section{padding:90px 8vw;}
 
 /* FORM CONTACT */
 .contact-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:34px;backdrop-filter:blur(10px);}
-.badge-available{display:inline-flex;align-items:center;gap:7px;background:rgba(58,180,212,0.15);border:1px solid rgba(58,180,212,0.3);color:var(--foam);border-radius:20px;padding:5px 14px;font-size:8pt;font-weight:600;margin-bottom:20px;}
+.badge-available{display:inline-flex;align-items:center;gap:7px;background:rgba(200,90,60,0.15);border:1px solid rgba(200,90,60,0.3);color:var(--foam);border-radius:20px;padding:5px 14px;font-size:8pt;font-weight:600;margin-bottom:20px;}
 .dot-pulse{width:8px;height:8px;background:var(--foam);border-radius:50%;animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(0.8);}}
 .contact-card h3{font-family:'Cormorant Garamond',serif;font-size:17pt;color:#fff;font-weight:700;margin-bottom:18px;line-height:1.2;}
@@ -209,7 +210,7 @@ section{padding:90px 8vw;}
 .objet-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px;}
 .objet-chip{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);border-radius:20px;padding:6px 13px;font-size:8pt;font-weight:500;cursor:pointer;transition:background 0.2s,border-color 0.2s,color 0.2s;}
 .objet-chip:hover{border-color:var(--foam);color:var(--foam);}
-.objet-chip.active{background:rgba(58,180,212,0.18);border-color:var(--foam);color:var(--foam);}
+.objet-chip.active{background:rgba(200,90,60,0.18);border-color:var(--foam);color:var(--foam);}
 .contact-alt{display:flex;align-items:center;gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1);}
 .contact-alt p{font-size:8.5pt;color:rgba(255,255,255,0.45);}
 .contact-alt a{color:var(--foam);font-weight:600;text-decoration:none;}
@@ -240,25 +241,11 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 }
 
 /* ==========================================================================
-   APERÇU DE TEST — Direction 1 "Cabinet d'ingénierie"
-   Portée volontairement limitée à la navigation, au hero et à Expertises,
-   pour validation avant extension au reste du site. Ne pas fusionner en l'état.
+   Direction 1 "Cabinet d'ingénierie" — traitements photo (au-delà d'une
+   simple couleur, donc non couverts par les variables de :root ci-dessus)
    ========================================================================== */
-:root{
-  --d1-navy:#0B2C4A;
-  --d1-navy-deep:#081f36;
-  --d1-accent:#C85A3C;
-  --d1-accent-light:#dd7d5f;
-}
 
-/* --- Navigation : un seul accent chaud au lieu du cyan --- */
-nav.scrolled{background:rgba(11,44,74,0.97);}
-.nav-links a:hover{color:var(--d1-accent-light);}
-.nav-cta{background:var(--d1-accent);color:#fff!important;}
-.nav-cta:hover{background:var(--d1-accent-light);}
-
-/* --- Hero : vraie photo de terrain en duoton marine, au lieu du dégradé abstrait --- */
-.hero{background:var(--d1-navy-deep);}
+/* Hero : vraie photo de terrain en duoton marine, au lieu du dégradé abstrait */
 .hero::before{
   background-image:
     linear-gradient(160deg, rgba(8,31,54,0.90) 0%, rgba(11,44,74,0.68) 55%, rgba(8,31,54,0.92) 100%),
@@ -268,33 +255,11 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
   background-repeat:no-repeat;
   filter:grayscale(35%) contrast(1.05);
 }
-.hero .hero-eyebrow{color:var(--d1-accent-light);}
-.hero-title em{color:var(--d1-accent-light);}
 .hero .hero-sub{font-size:12pt;}
-.hero .btn-primary{background:var(--d1-accent);color:#fff;}
-.hero .btn-primary:hover{background:var(--d1-accent-light);}
-.hero .btn-outline:hover{border-color:var(--d1-accent-light);color:var(--d1-accent-light);}
-.hero .btn-red{background:var(--d1-accent);}
-.hero .btn-red:hover{opacity:1;background:var(--d1-accent-light);}
 
-/* --- Expertises : cartes unifiées sur l'accent chaud, scoping strict à cette section
-   (les classes .exp-card/.exp-tag sont partagées avec Portfolio et Références,
-   volontairement non modifiées ici) --- */
-.expertises .section-eyebrow{color:var(--d1-accent);}
-.expertises .section-title{color:var(--d1-navy);}
-.expertises .exp-card{border-color:#e6dcd3;}
-.expertises .exp-card::before{background:linear-gradient(90deg,var(--d1-navy),var(--d1-accent));}
-.expertises .exp-card:hover{box-shadow:0 14px 36px rgba(11,44,74,0.14);}
-.expertises .exp-card h3{color:var(--d1-navy);}
-.expertises .exp-card p{font-size:9pt;}
-.expertises .exp-tag{background:#fbeee7;color:var(--d1-accent);}
-
-/* --- Galerie : même traitement duoton que le hero --- */
-.galerie{background:var(--d1-navy-deep);}
-.galerie .section-eyebrow{color:var(--d1-accent-light);}
+/* Galerie : même traitement duoton que le hero */
 .galerie-item img{filter:grayscale(35%) contrast(1.05);}
 .galerie-item::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg, rgba(8,31,54,0.35), rgba(11,44,74,0.15));pointer-events:none;}
-.galerie .btn-outline:hover{border-color:var(--d1-accent-light);color:var(--d1-accent-light);}
 </style>
 </head>
 <body>
@@ -501,7 +466,7 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
 
 <!-- RÉSEAU PARTENAIRES & CARTE -->
 <section id="reseau" style="background:var(--deep);padding:80px 8vw;position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 100% 50%,rgba(58,180,212,0.06),transparent 60%);pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 100% 50%,rgba(200,90,60,0.06),transparent 60%);pointer-events:none;"></div>
   <div style="position:relative;z-index:1;">
     <div class="section-eyebrow" style="color:var(--foam);">Réseau en cours de construction</div>
     <h2 class="section-title" style="color:var(--white);">Le réseau littorale<br><em style="font-style:normal;color:var(--foam);">prend forme</em></h2>
@@ -514,9 +479,9 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
         <div style="font-size:8pt;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--foam);margin-bottom:20px;">Carte du tracé · Littoral méditerranéen</div>
         <svg viewBox="0 0 560 320" style="width:100%;height:auto;display:block;" xmlns="http://www.w3.org/2000/svg">
           <!-- Fond mer -->
-          <rect width="560" height="320" fill="rgba(10,61,85,0.4)" rx="10"/>
+          <rect width="560" height="320" fill="rgba(11,44,74,0.4)" rx="10"/>
           <!-- Trait de côte schématique -->
-          <path d="M 40 280 C 60 270, 90 260, 130 255 C 160 252, 180 248, 210 240 C 240 232, 260 230, 290 225 C 320 218, 345 215, 380 210 C 410 206, 440 208, 470 205 C 500 202, 525 195, 540 190" stroke="rgba(58,180,212,0.5)" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+          <path d="M 40 280 C 60 270, 90 260, 130 255 C 160 252, 180 248, 210 240 C 240 232, 260 230, 290 225 C 320 218, 345 215, 380 210 C 410 206, 440 208, 470 205 C 500 202, 525 195, 540 190" stroke="rgba(200,90,60,0.5)" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
           <!-- Tracé de la marche avec animation -->
           <path id="traceMarche" d="M 40 280 C 60 270, 90 260, 130 255 C 160 252, 180 248, 210 240 C 240 232, 260 230, 290 225 C 320 218, 345 215, 380 210 C 410 206, 440 208, 470 205 C 500 202, 525 195, 540 190" stroke="var(--foam)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
 
@@ -528,31 +493,31 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
           <text x="460" y="210" fill="rgba(255,255,255,0.3)" font-size="9" font-family="sans-serif">06</text>
 
           <!-- Départ Port-Bou -->
-          <circle cx="40" cy="280" r="7" fill="#ff4060" opacity="0.9"/>
+          <circle cx="40" cy="280" r="7" fill="#dd7d5f" opacity="0.9"/>
           <text x="48" y="276" fill="rgba(255,255,255,0.8)" font-size="8" font-family="sans-serif">🇪🇸 Port-Bou</text>
 
           <!-- Points contacts en cours (écoles, mairies, campings) - sans noms -->
-          <circle cx="90" cy="267" r="4" fill="rgba(58,180,212,0.7)"/>
-          <circle cx="128" cy="255" r="7" fill="#3ab4d4" opacity="1"/>
-          <circle cx="128" cy="255" r="12" fill="rgba(58,180,212,0.25)" class="pulse-ring"/>
-          <circle cx="155" cy="252" r="4" fill="rgba(255,64,96,0.6)"/>
-          <circle cx="195" cy="243" r="4" fill="rgba(255,64,96,0.6)"/>
-          <circle cx="240" cy="234" r="4" fill="rgba(255,64,96,0.6)"/>
-          <circle cx="270" cy="229" r="4" fill="rgba(255,64,96,0.6)"/>
-          <circle cx="295" cy="224" r="7" fill="#3ab4d4" opacity="1"/>
-          <circle cx="295" cy="224" r="12" fill="rgba(58,180,212,0.25)" class="pulse-ring"/>
-          <circle cx="315" cy="222" r="4" fill="rgba(255,64,96,0.6)"/>
-          <circle cx="345" cy="217" r="4" fill="rgba(255,64,96,0.6)"/>
-          <circle cx="390" cy="211" r="4" fill="rgba(255,64,96,0.6)"/>
+          <circle cx="90" cy="267" r="4" fill="rgba(200,90,60,0.7)"/>
+          <circle cx="128" cy="255" r="7" fill="#c85a3c" opacity="1"/>
+          <circle cx="128" cy="255" r="12" fill="rgba(200,90,60,0.25)" class="pulse-ring"/>
+          <circle cx="155" cy="252" r="4" fill="rgba(221,125,95,0.6)"/>
+          <circle cx="195" cy="243" r="4" fill="rgba(221,125,95,0.6)"/>
+          <circle cx="240" cy="234" r="4" fill="rgba(221,125,95,0.6)"/>
+          <circle cx="270" cy="229" r="4" fill="rgba(221,125,95,0.6)"/>
+          <circle cx="295" cy="224" r="7" fill="#c85a3c" opacity="1"/>
+          <circle cx="295" cy="224" r="12" fill="rgba(200,90,60,0.25)" class="pulse-ring"/>
+          <circle cx="315" cy="222" r="4" fill="rgba(221,125,95,0.6)"/>
+          <circle cx="345" cy="217" r="4" fill="rgba(221,125,95,0.6)"/>
+          <circle cx="390" cy="211" r="4" fill="rgba(221,125,95,0.6)"/>
 
           <!-- Arrivée Vintimille -->
-          <circle cx="540" cy="190" r="7" fill="rgba(58,180,212,0.4)" stroke="var(--foam)" stroke-width="1.5"/>
+          <circle cx="540" cy="190" r="7" fill="rgba(200,90,60,0.4)" stroke="var(--foam)" stroke-width="1.5"/>
           <text x="482" y="185" fill="rgba(255,255,255,0.6)" font-size="8" font-family="sans-serif">Vintimille 🇮🇹</text>
 
           <!-- Légende -->
-          <circle cx="30" cy="30" r="5" fill="#3ab4d4"/>
+          <circle cx="30" cy="30" r="5" fill="#c85a3c"/>
           <text x="40" y="34" fill="rgba(255,255,255,0.7)" font-size="8" font-family="sans-serif">Partenaire confirmé</text>
-          <circle cx="30" cy="50" r="4" fill="rgba(255,64,96,0.7)"/>
+          <circle cx="30" cy="50" r="4" fill="rgba(221,125,95,0.7)"/>
           <text x="40" y="54" fill="rgba(255,255,255,0.7)" font-size="8" font-family="sans-serif">Contact établi</text>
           <line x1="22" y1="70" x2="38" y2="70" stroke="var(--foam)" stroke-width="2.5"/>
           <text x="40" y="74" fill="rgba(255,255,255,0.7)" font-size="8" font-family="sans-serif">Tracé de la marche</text>
@@ -574,28 +539,28 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
         <div style="margin-bottom:28px;">
           <div style="font-size:7.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--foam);margin-bottom:14px;">● Partenaires confirmés</div>
           <div style="display:flex;flex-direction:column;gap:10px;">
-            <div style="background:rgba(58,180,212,0.08);border:1px solid rgba(58,180,212,0.3);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
+            <div style="background:rgba(200,90,60,0.08);border:1px solid rgba(200,90,60,0.3);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
               <span style="font-size:16pt;">🏕️</span>
               <div>
                 <div style="font-size:9.5pt;font-weight:600;color:var(--white);">Camping partenaire · Pyrénées-Orientales</div>
                 <div style="font-size:8pt;color:rgba(255,255,255,0.5);">66 · Hébergement + intervention sensibilisation</div>
               </div>
-              <span style="margin-left:auto;background:rgba(58,180,212,0.2);color:var(--foam);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">CONFIRMÉ</span>
+              <span style="margin-left:auto;background:rgba(200,90,60,0.2);color:var(--foam);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">CONFIRMÉ</span>
             </div>
-            <div style="background:rgba(58,180,212,0.08);border:1px solid rgba(58,180,212,0.3);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
+            <div style="background:rgba(200,90,60,0.08);border:1px solid rgba(200,90,60,0.3);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
               <span style="font-size:16pt;">🏕️</span>
               <div>
                 <div style="font-size:9.5pt;font-weight:600;color:var(--white);">Camping partenaire · Hérault</div>
                 <div style="font-size:8pt;color:rgba(255,255,255,0.5);">34 · Hébergement + étude littorale</div>
               </div>
-              <span style="margin-left:auto;background:rgba(58,180,212,0.2);color:var(--foam);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">CONFIRMÉ</span>
+              <span style="margin-left:auto;background:rgba(200,90,60,0.2);color:var(--foam);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">CONFIRMÉ</span>
             </div>
           </div>
         </div>
 
         <!-- Contacts établis par type -->
         <div style="margin-bottom:24px;">
-          <div style="font-size:7.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,64,96,0.9);margin-bottom:14px;">● Contacts actifs (en cours)</div>
+          <div style="font-size:7.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(221,125,95,0.9);margin-bottom:14px;">● Contacts actifs (en cours)</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
             <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
               <div style="font-size:18pt;margin-bottom:6px;">🏫</div>
@@ -623,7 +588,7 @@ nav.scrolled{background:rgba(11,44,74,0.97);}
         <!-- Photo conférence amphi -->
         <div style="border-radius:10px;overflow:hidden;position:relative;">
           <img src="images/conference-lycee-feuillade.jpg" alt="Conférence Semaine des Sciences — Lycée Louis Feuillade, Lunel" style="width:100%;display:block;object-fit:cover;border-radius:10px;"/>
-          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(6,30,42,0.92),transparent);padding:14px 16px 12px;">
+          <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(8,31,54,0.92),transparent);padding:14px 16px 12px;">
             <div style="font-size:8pt;font-weight:600;color:var(--foam);">📚 Conférence · Semaine des Sciences</div>
             <div style="font-size:7.5pt;color:rgba(255,255,255,0.65);margin-top:3px;">Lycée Louis Feuillade · Lunel · Terminales en amphithéâtre</div>
           </div>
