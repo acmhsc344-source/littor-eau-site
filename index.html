@@ -233,6 +233,56 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
   .marche-stats{grid-template-columns:1fr 1fr;}
   section{padding:60px 6vw;}
 }
+
+/* ==========================================================================
+   APERÇU DE TEST — Direction 1 "Cabinet d'ingénierie"
+   Portée volontairement limitée à la navigation, au hero et à Expertises,
+   pour validation avant extension au reste du site. Ne pas fusionner en l'état.
+   ========================================================================== */
+:root{
+  --d1-navy:#0B2C4A;
+  --d1-navy-deep:#081f36;
+  --d1-accent:#C85A3C;
+  --d1-accent-light:#dd7d5f;
+}
+
+/* --- Navigation : un seul accent chaud au lieu du cyan --- */
+nav.scrolled{background:rgba(11,44,74,0.97);}
+.nav-links a:hover{color:var(--d1-accent-light);}
+.nav-cta{background:var(--d1-accent);color:#fff!important;}
+.nav-cta:hover{background:var(--d1-accent-light);}
+
+/* --- Hero : vraie photo de terrain en duoton marine, au lieu du dégradé abstrait --- */
+.hero{background:var(--d1-navy-deep);}
+.hero::before{
+  background-image:
+    linear-gradient(160deg, rgba(8,31,54,0.90) 0%, rgba(11,44,74,0.68) 55%, rgba(8,31,54,0.92) 100%),
+    url('images/galerie-07-rechargement-plage.jpg');
+  background-size:cover;
+  background-position:center 35%;
+  background-repeat:no-repeat;
+  filter:grayscale(35%) contrast(1.05);
+}
+.hero .hero-eyebrow{color:var(--d1-accent-light);}
+.hero-title em{color:var(--d1-accent-light);}
+.hero .hero-sub{font-size:12pt;}
+.hero .btn-primary{background:var(--d1-accent);color:#fff;}
+.hero .btn-primary:hover{background:var(--d1-accent-light);}
+.hero .btn-outline:hover{border-color:var(--d1-accent-light);color:var(--d1-accent-light);}
+.hero .btn-red{background:var(--d1-accent);}
+.hero .btn-red:hover{opacity:1;background:var(--d1-accent-light);}
+
+/* --- Expertises : cartes unifiées sur l'accent chaud, scoping strict à cette section
+   (les classes .exp-card/.exp-tag sont partagées avec Portfolio et Références,
+   volontairement non modifiées ici) --- */
+.expertises .section-eyebrow{color:var(--d1-accent);}
+.expertises .section-title{color:var(--d1-navy);}
+.expertises .exp-card{border-color:#e6dcd3;}
+.expertises .exp-card::before{background:linear-gradient(90deg,var(--d1-navy),var(--d1-accent));}
+.expertises .exp-card:hover{box-shadow:0 14px 36px rgba(11,44,74,0.14);}
+.expertises .exp-card h3{color:var(--d1-navy);}
+.expertises .exp-card p{font-size:9pt;}
+.expertises .exp-tag{background:#fbeee7;color:var(--d1-accent);}
 </style>
 </head>
 <body>
