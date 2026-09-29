@@ -201,7 +201,10 @@ section{padding:90px 8vw;}
 
 /* EXPERTISES */
 .expertises{background:var(--off);}
-.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;}
+.exp-domain{margin-top:44px;}
+.exp-domain:first-of-type{margin-top:48px;}
+.exp-domain-title{font-size:8pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--foam);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #e0eaf0;}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px;}
 .exp-card{border:1px solid #e0eaf0;border-radius:12px;padding:26px 22px;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;background:var(--white);}
 .exp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--wave),var(--foam));transform:scaleX(0);transition:transform 0.3s;transform-origin:left;}
 .exp-card:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(10,61,85,0.1);}
@@ -341,13 +344,10 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 <nav id="navbar">
   <div class="nav-logo"><img src="images/logo.jpg" alt="Littor'eau"></div>
   <ul class="nav-links">
-    <li><a href="#parcours">Parcours</a></li>
+    <li><a href="#parcours">À propos</a></li>
     <li><a href="#marche">La Marche</a></li>
     <li><a href="#reseau">Réseau</a></li>
-    <li><a href="#terrain">Terrain</a></li>
-    <li><a href="#references">Références</a></li>
     <li><a href="#expertises">Expertises</a></li>
-    <li><a href="#territoire">Territoire</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact" class="nav-cta">Devis gratuit</a></li>
   </ul>
@@ -381,13 +381,14 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
   <h2 class="section-title">Une expertise rare,<br>un ancrage territorial fort</h2>
   <div class="about-grid">
     <div class="about-text">
-      <p>Littor'eau est un cabinet d'ingénierie indépendant en <strong>hydraulique, risques côtiers et cartographie SIG</strong>, fondé par Alexis Camand, formé à l'Université de Montpellier.</p>
+      <p><strong>Alexis Camand</strong>, ingénieur hydraulicien formé à l'Université de Montpellier, a fondé Littor'eau : un cabinet indépendant en <strong>hydraulique, risques côtiers et cartographie SIG</strong>.</p>
       <p>Du diagnostic terrain à la modélisation, du LiDAR HD au drone : une expertise complète, réactive, ancrée dans le Sud de la France.</p>
+      <p>Un seul interlocuteur du premier échange au rendu final : pas d'intermédiaire hiérarchique, une structure assez souple pour traiter aussi bien la demande d'une collectivité que celle d'un camping ou d'un propriétaire privé.</p>
     </div>
     <div class="about-stats">
       <!-- Correction : un seul Master, 2 spécialisations (et non 2 Masters) -->
       <div class="stat-card"><div class="stat-n">1</div><div class="stat-l">Master · 2 spécialisations<br>Eau & Littoral + Gestion des Mers</div></div>
-      <div class="stat-card"><div class="stat-n">5+</div><div class="stat-l">Expériences terrain<br>en hydraulique</div></div>
+      <div class="stat-card"><div class="stat-n">7 km</div><div class="stat-l">Littoral suivi<br>Ghisonaccia, Haute-Corse</div></div>
       <div class="stat-card"><div class="stat-n">360°</div><div class="stat-l">Diagnostic → Carto<br>→ Rapport → Formation</div></div>
       <div class="stat-card"><div class="stat-n">5 mois</div><div class="stat-l">Terrain Corse<br>Ghisonaccia 2025</div></div>
     </div>
@@ -738,20 +739,12 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
         <span class="exp-tag">Drone</span><span class="exp-tag">Bathymétrie</span><span class="exp-tag">Sédimentologie</span><span class="exp-tag">Érosion côtière</span><span class="exp-tag">Campings littoraux</span>
       </div>
     </div>
-    <div style="background:var(--off);border-radius:12px;padding:24px 20px;border-top:3px solid var(--foam);">
+    <div style="background:var(--off);border-radius:12px;padding:24px 20px;border-top:3px solid var(--foam);grid-column:1 / -1;">
       <div style="font-size:8pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mist);margin-bottom:10px;">Hérault · Depuis 2021</div>
       <h3 style="font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:700;color:var(--ocean);margin-bottom:8px;">Sensibilisation scolaire · Lycée Louis Feuillade, Lunel</h3>
       <p style="font-size:9pt;color:#3a4e58;line-height:1.7;">Interventions régulières en classes depuis 2021 sur les risques hydrauliques et littoraux. Conférence en amphithéâtre devant des classes de Terminale lors de la Semaine des Sciences, en février 2025.</p>
       <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:5px;">
         <span class="exp-tag">Sensibilisation</span><span class="exp-tag">Lycée</span><span class="exp-tag">Semaine des Sciences</span><span class="exp-tag">Risques naturels</span>
-      </div>
-    </div>
-    <div style="background:var(--off);border-radius:12px;padding:24px 20px;border-top:3px solid var(--foam);border:1px dashed #ccc;opacity:0.7;">
-      <div style="font-size:8pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mist);margin-bottom:10px;">En cours</div>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:700;color:var(--ocean);margin-bottom:8px;">Votre projet ici</h3>
-      <p style="font-size:9pt;color:#3a4e58;line-height:1.7;">Vous avez un territoire à diagnostiquer, une zone à cartographier ou une étude réglementaire à mener ? Discutons-en.</p>
-      <div style="margin-top:16px;">
-        <a href="#contact" style="background:var(--foam);color:var(--deep);padding:8px 16px;border-radius:4px;text-decoration:none;font-size:8.5pt;font-weight:600;">Nous contacter</a>
       </div>
     </div>
   </div>
@@ -761,17 +754,30 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
   <div class="section-eyebrow">Expertises</div>
   <h2 class="section-title">Ce que je fais,<br>concrètement</h2>
   <p class="section-lead">Des prestations techniques précises, livrées avec clarté, pour des clients qui n'ont pas besoin de jargon mais de solutions.</p>
-  <div class="exp-grid">
-    <div class="exp-card"><span class="exp-icon">🌊</span><h3>Hydraulique fluviale & Inondations</h3><p>Modélisation des écoulements sous HEC-RAS, cartographie des zones inondables, diagnostics de vulnérabilité des enjeux exposés. Appui réglementaire pour les dossiers PPRI, GEMAPI et PAPI.</p><div class="exp-tags"><span class="exp-tag">HEC-RAS</span><span class="exp-tag">RAS Mapper</span><span class="exp-tag">PPRI</span><span class="exp-tag">PAPI</span></div></div>
-    <div class="exp-card"><span class="exp-icon">🏖️</span><h3>Risques côtiers & Submersions</h3><p>Érosion du trait de côte, submersion marine, dynamiques littorales et sédimentaires. Études réglementaires PPRL et suivi morphologique du littoral dans la durée.</p><div class="exp-tags"><span class="exp-tag">PPRL</span><span class="exp-tag">Érosion</span><span class="exp-tag">Submersion</span><span class="exp-tag">Loi Littoral</span></div></div>
-    <!-- Carte dé-fusionnée (était "Cartographie SIG, LiDAR & Drone") : SIG/LiDAR d'un côté, Drone de l'autre -->
-    <div class="exp-card"><span class="exp-icon">🗺️</span><h3>Cartographie SIG & LiDAR HD</h3><p>MNT haute résolution à partir de LiDAR HD IGN, cartographie d'aléas naturels, orthophotos et analyses spatiales sous QGIS pour l'aide à la décision.</p><div class="exp-tags"><span class="exp-tag">QGIS</span><span class="exp-tag">LiDAR HD</span><span class="exp-tag">IGN</span><span class="exp-tag">MNT</span></div></div>
-    <div class="exp-card"><span class="exp-icon">🚁</span><h3>Cartographie & Photogrammétrie Drone</h3><p>Photogrammétrie aérienne, modèles 3D et orthophotos haute précision, pour les littoraux, zones humides et sites difficiles d'accès.</p><div class="exp-tags"><span class="exp-tag">Drone</span><span class="exp-tag">Photogrammétrie</span><span class="exp-tag">Orthophotos</span><span class="exp-tag">MNT 3D</span></div></div>
-    <div class="exp-card"><span class="exp-icon">🏛️</span><h3>Conseil & Appui réglementaire</h3><p>Rédaction de cahiers des charges et montage de dossiers Loi sur l'Eau, PPRI/PPRL. Interface technique entre collectivités, bureaux d'études et services de l'État.</p><div class="exp-tags"><span class="exp-tag">GEMAPI</span><span class="exp-tag">Loi sur l'Eau</span><span class="exp-tag">Marchés publics</span></div></div>
-    <div class="exp-card"><span class="exp-icon">🎓</span><h3>Sensibilisation & Formation</h3><p>Interventions de sensibilisation auprès des élus, des équipes techniques et des lycées. Risques naturels et littoraux vulgarisés, adaptés à chaque public.</p><div class="exp-tags"><span class="exp-tag">Élus</span><span class="exp-tag">Lycées</span><span class="exp-tag">ERP</span><span class="exp-tag">Campings</span></div></div>
-    <div class="exp-card" style="border-top:3px solid #E76F51;"><span class="exp-icon">🔥</span><h3>Prévention des Risques Incendie</h3><p>Les incendies déstabilisent les bassins versants et accélèrent l'érosion en aval. Étude de propagation (vent, pente, végétation, historique Prométhée) et diagnostic de conformité OLD.</p><div class="exp-tags"><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Feux de forêt</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">OLD</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Base Prométhée</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Var · 13 · 34 · 06</span></div></div>
-    <div class="exp-card"><span class="exp-icon">💧</span><h3>Étude hydrogéologique & Forage</h3><p>Étude hydrogéologique préalable et pilotage d'une prospection géophysique pour localiser la ressource avant tout forage. Montage du dossier loi sur l'eau, suivi de chantier confié à un foreur certifié Qualiforage.</p><div class="exp-tags"><span class="exp-tag">Hydrogéologie</span><span class="exp-tag">Géophysique</span><span class="exp-tag">Rubrique 1.1.1.0</span><span class="exp-tag">Qualiforage</span></div></div>
-    <div class="exp-card"><span class="exp-icon">📐</span><h3>Suivi morphodynamique du littoral & Bathymétrie</h3><p>Profils de plage et suivi du trait de côte sur transects fixes, bathymétrie légère en zone peu profonde, analyses sédimentaires (granulométrie, dérive littorale). Une méthodologie éprouvée sur le terrain corse pendant 5 mois.</p><div class="exp-tags"><span class="exp-tag">Profils de plage</span><span class="exp-tag">Bathymétrie</span><span class="exp-tag">Sédimentologie</span><span class="exp-tag">Suivi du trait de côte</span></div></div>
+  <div class="exp-domain">
+    <div class="exp-domain-title">Risques côtiers & Incendie</div>
+    <div class="exp-grid">
+      <div class="exp-card"><span class="exp-icon">🌊</span><h3>Hydraulique fluviale & Inondations</h3><p>Modélisation des écoulements sous HEC-RAS, cartographie des zones inondables, diagnostics de vulnérabilité des enjeux exposés. Appui réglementaire pour les dossiers PPRI, GEMAPI et PAPI.</p><div class="exp-tags"><span class="exp-tag">HEC-RAS</span><span class="exp-tag">RAS Mapper</span><span class="exp-tag">PPRI</span><span class="exp-tag">PAPI</span></div></div>
+      <div class="exp-card"><span class="exp-icon">🏖️</span><h3>Risques côtiers & Submersions</h3><p>Érosion du trait de côte, submersion marine, dynamiques littorales et sédimentaires. Études réglementaires PPRL et suivi morphologique du littoral dans la durée.</p><div class="exp-tags"><span class="exp-tag">PPRL</span><span class="exp-tag">Érosion</span><span class="exp-tag">Submersion</span><span class="exp-tag">Loi Littoral</span></div></div>
+      <div class="exp-card" style="border-top:3px solid #E76F51;"><span class="exp-icon">🔥</span><h3>Prévention des Risques Incendie</h3><p>Les incendies déstabilisent les bassins versants et accélèrent l'érosion en aval. Étude de propagation (vent, pente, végétation, historique Prométhée) et diagnostic de conformité OLD.</p><div class="exp-tags"><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Feux de forêt</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">OLD</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Base Prométhée</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Var · 13 · 34 · 06</span></div></div>
+    </div>
+  </div>
+  <div class="exp-domain">
+    <div class="exp-domain-title">Cartographie & Terrain</div>
+    <div class="exp-grid">
+      <!-- Carte dé-fusionnée (était "Cartographie SIG, LiDAR & Drone") : SIG/LiDAR d'un côté, Drone de l'autre -->
+      <div class="exp-card"><span class="exp-icon">🗺️</span><h3>Cartographie SIG & LiDAR HD</h3><p>MNT haute résolution à partir de LiDAR HD IGN, cartographie d'aléas naturels, orthophotos et analyses spatiales sous QGIS pour l'aide à la décision.</p><div class="exp-tags"><span class="exp-tag">QGIS</span><span class="exp-tag">LiDAR HD</span><span class="exp-tag">IGN</span><span class="exp-tag">MNT</span></div></div>
+      <div class="exp-card"><span class="exp-icon">🚁</span><h3>Cartographie & Photogrammétrie Drone</h3><p>Photogrammétrie aérienne, modèles 3D et orthophotos haute précision, pour les littoraux, zones humides et sites difficiles d'accès.</p><div class="exp-tags"><span class="exp-tag">Drone</span><span class="exp-tag">Photogrammétrie</span><span class="exp-tag">Orthophotos</span><span class="exp-tag">MNT 3D</span></div></div>
+      <div class="exp-card"><span class="exp-icon">📐</span><h3>Suivi morphodynamique du littoral & Bathymétrie</h3><p>Profils de plage et suivi du trait de côte sur transects fixes, bathymétrie légère en zone peu profonde, analyses sédimentaires (granulométrie, dérive littorale). Une méthodologie éprouvée sur le terrain corse pendant 5 mois.</p><div class="exp-tags"><span class="exp-tag">Profils de plage</span><span class="exp-tag">Bathymétrie</span><span class="exp-tag">Sédimentologie</span><span class="exp-tag">Suivi du trait de côte</span></div></div>
+    </div>
+  </div>
+  <div class="exp-domain">
+    <div class="exp-domain-title">Conseil & Ressources</div>
+    <div class="exp-grid">
+      <div class="exp-card"><span class="exp-icon">🏛️</span><h3>Conseil & Appui réglementaire</h3><p>Rédaction de cahiers des charges et montage de dossiers Loi sur l'Eau, PPRI/PPRL. Interface technique entre collectivités, bureaux d'études et services de l'État.</p><div class="exp-tags"><span class="exp-tag">GEMAPI</span><span class="exp-tag">Loi sur l'Eau</span><span class="exp-tag">Marchés publics</span></div></div>
+      <div class="exp-card"><span class="exp-icon">🎓</span><h3>Sensibilisation & Formation</h3><p>Interventions de sensibilisation auprès des élus, des équipes techniques et des lycées. Risques naturels et littoraux vulgarisés, adaptés à chaque public.</p><div class="exp-tags"><span class="exp-tag">Élus</span><span class="exp-tag">Lycées</span><span class="exp-tag">ERP</span><span class="exp-tag">Campings</span></div></div>
+      <div class="exp-card"><span class="exp-icon">💧</span><h3>Étude hydrogéologique & Forage</h3><p>Étude hydrogéologique préalable et pilotage d'une prospection géophysique pour localiser la ressource avant tout forage. Montage du dossier loi sur l'eau, suivi de chantier confié à un foreur certifié Qualiforage.</p><div class="exp-tags"><span class="exp-tag">Hydrogéologie</span><span class="exp-tag">Géophysique</span><span class="exp-tag">Rubrique 1.1.1.0</span><span class="exp-tag">Qualiforage</span></div></div>
+    </div>
   </div>
 </section>
 
@@ -906,18 +912,44 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 </section>
 
 <!-- TEMOIGNAGES : structure prête, masquée tant qu'aucun témoignage client n'a été reçu -->
-<section class="temoignages" id="temoignages" style="display:none;">
-  <div class="section-eyebrow">Confiance</div>
-  <h2 class="section-title">Ils me font confiance</h2>
-  <p class="section-lead">La parole de ceux qui ont travaillé avec Littor'eau.</p>
+<!-- Section témoignages textuels : réactivée automatiquement dès réception d'un premier avis client, structure conservée ci-dessous -->
+<!--
+<section class="temoignages" id="temoignages">
   <div class="temoignages-grid">
     <div class="temoignage-card">
-      <!-- TODO: ajouter témoignage client une fois reçu -->
-      <!-- Structure attendue :
       <p class="temoignage-quote">« ... »</p>
       <div class="temoignage-author">Prénom Nom</div>
       <div class="temoignage-role">Fonction, structure</div>
-      -->
+    </div>
+  </div>
+</section>
+-->
+
+<section class="temoignages" id="temoignages" style="background:var(--white);padding:70px 8vw;">
+  <div class="section-eyebrow">Confiance</div>
+  <h2 class="section-title">Ce qui est déjà engagé</h2>
+  <p class="section-lead">En attendant les premiers témoignages écrits, voici ce qui est aujourd'hui confirmé sur le terrain.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px;">
+    <div style="background:var(--off);border-radius:12px;padding:22px 20px;border-top:3px solid var(--foam);display:flex;align-items:center;gap:14px;">
+      <span style="font-size:22pt;">🏕️</span>
+      <div>
+        <div style="font-size:15pt;font-weight:700;color:var(--ocean);font-family:'Cormorant Garamond',serif;">2 campings</div>
+        <div style="font-size:8.5pt;color:var(--mist);">Partenaires confirmés · 66 · 34</div>
+      </div>
+    </div>
+    <div style="background:var(--off);border-radius:12px;padding:22px 20px;border-top:3px solid var(--foam);display:flex;align-items:center;gap:14px;">
+      <span style="font-size:22pt;">📋</span>
+      <div>
+        <div style="font-size:15pt;font-weight:700;color:var(--ocean);font-family:'Cormorant Garamond',serif;">3 missions</div>
+        <div style="font-size:8.5pt;color:var(--mist);">Réalisées et documentées <a href="#references" style="color:var(--wave);font-weight:600;text-decoration:none;">→ Voir</a></div>
+      </div>
+    </div>
+    <div style="background:var(--off);border-radius:12px;padding:22px 20px;border-top:3px solid var(--foam);display:flex;align-items:center;gap:14px;">
+      <span style="font-size:22pt;">🏛️</span>
+      <div>
+        <div style="font-size:15pt;font-weight:700;color:var(--ocean);font-family:'Cormorant Garamond',serif;">5+ mairies</div>
+        <div style="font-size:8.5pt;color:var(--mist);">Contacts établis · Marche Méditerranée</div>
+      </div>
     </div>
   </div>
 </section>
