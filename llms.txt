@@ -1,0 +1,30 @@
+# Littor'eau
+
+> Cabinet de conseil indépendant en ingénierie littorale et gestion des risques, fondé par Alexis Camand, ingénieur hydraulicien basé à Montpellier. Intervient dans le Sud de la France.
+
+## Qui
+
+Alexis Camand — ingénieur hydraulicien, Master Sciences de l'Eau et de l'Environnement (Université de Montpellier), spécialisations "Sciences de l'Eau et du Littoral" et "Gestion des Littoraux et des Mers". 6 saisons comme sauveteur en mer. 5 mois de mission terrain à Ghisonaccia, Haute-Corse (2024-2025).
+
+## Services
+
+- Hydraulique fluviale & inondations : modélisation HEC-RAS, cartographie des zones inondables, appui réglementaire PPRI, GEMAPI, PAPI.
+- Risques côtiers & submersions : érosion du trait de côte, submersion marine, études réglementaires PPRL, suivi morphologique du littoral.
+- Cartographie SIG & LiDAR HD : MNT haute résolution (LiDAR HD IGN), cartographie d'aléas, orthophotos, analyses QGIS.
+- Cartographie & photogrammétrie drone : modèles 3D et orthophotos haute précision pour littoraux et zones difficiles d'accès.
+- Conseil & appui réglementaire : cahiers des charges, dossiers Loi sur l'Eau, PPRI/PPRL, interface avec les services de l'État.
+- Prévention des risques incendie : étude de propagation, diagnostic de conformité OLD, pour campings, ERP et propriétés en zone boisée.
+- Étude hydrogéologique & forage : étude hydrogéologique préalable, prospection géophysique, montage du dossier loi sur l'eau.
+- Suivi morphodynamique du littoral & bathymétrie : profils de plage, suivi du trait de côte, bathymétrie légère, sédimentologie.
+
+## Zone d'intervention
+
+Sud de la France, basé à Montpellier — littoral méditerranéen en priorité (Occitanie, PACA, Corse).
+
+## Clients
+
+Collectivités, campings et hébergements touristiques, gestionnaires de sites naturels, particuliers exposés à un risque littoral ou incendie.
+
+## Contact
+
+alexis.camand@littor-eau.fr · 07 66 66 32 91 · https://www.littor-eau.fr/
