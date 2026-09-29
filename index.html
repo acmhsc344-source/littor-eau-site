@@ -93,6 +93,15 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--white);ov
 #backToTop{position:fixed;bottom:26px;right:26px;z-index:90;width:46px;height:46px;border-radius:50%;background:var(--foam);color:var(--deep);border:none;font-size:16pt;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,0.25);opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity 0.25s,transform 0.25s,visibility 0.25s;}
 #backToTop.visible{opacity:1;visibility:visible;transform:translateY(0);}
 #backToTop:hover{background:var(--light);}
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--deep);color:rgba(255,255,255,0.85);padding:18px 6vw;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;box-shadow:0 -4px 24px rgba(0,0,0,0.25);}
+.cookie-banner p{font-size:9pt;line-height:1.5;max-width:640px;margin:0;}
+.cookie-banner-actions{display:flex;gap:10px;flex-shrink:0;}
+.cookie-btn{padding:9px 20px;border-radius:4px;font-size:9pt;font-weight:600;cursor:pointer;border:1px solid transparent;font-family:'Outfit',sans-serif;}
+.cookie-btn-primary{background:var(--foam);color:var(--deep);}
+.cookie-btn-primary:hover{background:var(--light);}
+.cookie-btn-outline{background:transparent;color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.25);}
+.cookie-btn-outline:hover{border-color:rgba(255,255,255,0.5);color:#fff;}
+@media(max-width:600px){.cookie-banner{flex-direction:column;align-items:flex-start;}}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:10px 6vw;display:flex;justify-content:space-between;align-items:center;transition:background 0.4s,box-shadow 0.4s;}
 nav.scrolled{background:rgba(8,31,54,0.97);box-shadow:0 2px 30px rgba(0,0,0,0.3);backdrop-filter:blur(10px);}
 .nav-logo img{height:70px;width:auto;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.2);}
@@ -1088,6 +1097,14 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 
 <button id="backToTop" aria-label="Retour en haut de page">↑</button>
 
+<div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Consentement cookies" style="display:none;">
+  <p>Ce site utilise Google Analytics pour mesurer l'audience, uniquement après votre accord. Aucun cookie n'est déposé sans votre consentement.</p>
+  <div class="cookie-banner-actions">
+    <button id="cookieRefuse" class="cookie-btn cookie-btn-outline">Refuser</button>
+    <button id="cookieAccept" class="cookie-btn cookie-btn-primary">Accepter</button>
+  </div>
+</div>
+
 <script>
 // Quick-select "objet" chips
 const objetSelect = document.getElementById('objetSelect');
@@ -1201,6 +1218,47 @@ async function handleSubmit(e) {
     btn.disabled = false;
     alert('Une erreur est survenue. Contactez-moi directement : alexis.camand@littor-eau.fr');
   }
+}
+
+// Consentement cookies : Google Analytics ne se charge qu'après acceptation
+const GA_MEASUREMENT_ID = 'G-VJ692FHVEL';
+
+function loadGoogleAnalytics() {
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+  document.head.appendChild(script);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', GA_MEASUREMENT_ID);
+}
+
+const cookieBanner = document.getElementById('cookieBanner');
+const cookieAccept = document.getElementById('cookieAccept');
+const cookieRefuse = document.getElementById('cookieRefuse');
+let cookieChoice = null;
+try { cookieChoice = localStorage.getItem('cookieConsent'); } catch (e) {}
+
+if (cookieChoice === 'accepted') {
+  loadGoogleAnalytics();
+} else if (cookieChoice !== 'refused' && cookieBanner) {
+  cookieBanner.style.display = 'flex';
+}
+
+if (cookieAccept) {
+  cookieAccept.addEventListener('click', () => {
+    try { localStorage.setItem('cookieConsent', 'accepted'); } catch (e) {}
+    loadGoogleAnalytics();
+    cookieBanner.style.display = 'none';
+  });
+}
+if (cookieRefuse) {
+  cookieRefuse.addEventListener('click', () => {
+    try { localStorage.setItem('cookieConsent', 'refused'); } catch (e) {}
+    cookieBanner.style.display = 'none';
+  });
 }
 </script>
 </body>
