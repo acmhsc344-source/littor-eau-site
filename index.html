@@ -105,26 +105,24 @@
 
   <div class="hero-content">
     <p class="hero-eyebrow">Littor'eau, ingénierie des risques naturels à Montpellier</p>
-    <h1 class="hero-title">La mer qui monte, la rivière qui déborde, le feu qui approche.</h1>
-    <p class="hero-sub">J'évalue l'exposition de votre site à ces trois risques et je vous aide à vous y préparer : diagnostic sur le terrain, cartographie par drone et SIG, plan de mise en sûreté. Pour les campings, les collectivités et les propriétaires du Sud de la France.</p>
+    <h1 class="hero-title">Préparer votre site à la mer, aux crues et au feu.</h1>
+    <p class="hero-sub">Diagnostic sur le terrain, cartographie par drone et SIG, plan de mise en sûreté : je vous aide à connaître votre exposition et à agir au bon endroit. Pour les campings, les collectivités et les propriétaires du Sud de la France.</p>
 
-    <ul class="risk-lenses" aria-label="Les trois risques que je traite">
-      <li><a class="risk-lens" data-risk="submersion" href="erosion-cotiere.html" aria-pressed="true">
-        <span class="lens-name">Submersion &amp; érosion</span>
-        <span class="lens-text">Tempêtes marines, recul du trait de côte, PPRL</span>
-      </a></li>
-      <li><a class="risk-lens" data-risk="inondation" href="inondations.html" aria-pressed="false">
-        <span class="lens-name">Inondation</span>
-        <span class="lens-text">Crues, ruissellement, PPRI, modélisation HEC-RAS</span>
-      </a></li>
-      <li><a class="risk-lens" data-risk="incendie" href="prevention-incendie.html" aria-pressed="false">
-        <span class="lens-name">Feux de forêt</span>
-        <span class="lens-text">Débroussaillement obligatoire, mise en sécurité</span>
-      </a></li>
-    </ul>
+    <div class="risk-switch" role="group" aria-label="Choisir un risque">
+      <span class="risk-thumb" aria-hidden="true"></span>
+      <button type="button" class="risk-lens" data-risk="submersion" aria-pressed="true">Littoral</button>
+      <button type="button" class="risk-lens" data-risk="inondation" aria-pressed="false">Inondation</button>
+      <button type="button" class="risk-lens" data-risk="incendie" aria-pressed="false">Feux de forêt</button>
+    </div>
+    <p class="risk-detail" aria-live="polite">
+      <span class="risk-copy" data-risk="submersion">Érosion du trait de côte et submersion lors des tempêtes : suivi par drone, lecture du PPRL, mesures adaptées à votre terrain.</span>
+      <span class="risk-copy" data-risk="inondation" hidden>Crues et ruissellement : zones exposées, cotes de référence du PPRI, plan d'alerte et d'évacuation.</span>
+      <span class="risk-copy" data-risk="incendie" hidden>Abords boisés : obligations de débroussaillement, cartographie du site, mise en sécurité des installations.</span>
+      <a class="risk-more" href="erosion-cotiere.html">En savoir plus</a>
+    </p>
 
     <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Demander un devis gratuit</a>
+      <a href="#contact" class="btn-primary btn-shine">Demander un devis gratuit</a>
       <a href="#marche" class="btn-outline">La Marche Méditerranée</a>
     </div>
   </div>
@@ -145,20 +143,24 @@
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="section-eyebrow">À propos</div>
-  <h2 class="section-title">Une expertise rare,<br>un ancrage territorial fort</h2>
+  <h2 class="section-title">Un ingénieur de terrain,<br>un seul interlocuteur</h2>
   <div class="about-grid">
     <div class="about-text">
       <p><strong>Alexis Camand</strong>, ingénieur hydraulicien formé à l'Université de Montpellier, a fondé Littor'eau : un cabinet indépendant en <strong>hydraulique, risques côtiers et cartographie SIG</strong>.</p>
       <p>Du diagnostic terrain à la modélisation, du LiDAR HD au drone : une expertise complète, réactive, ancrée dans le Sud de la France.</p>
       <p>Un seul interlocuteur du premier échange au rendu final : pas d'intermédiaire hiérarchique, une structure assez souple pour traiter aussi bien la demande d'une collectivité que celle d'un camping ou d'un propriétaire privé.</p>
     </div>
-    <div class="about-stats">
-      <!-- Correction : un seul Master, 2 spécialisations (et non 2 Masters) -->
-      <div class="stat-card"><div class="stat-n">1</div><div class="stat-l">Master · 2 spécialisations<br>Eau & Littoral + Gestion des Mers</div></div>
-      <div class="stat-card"><div class="stat-n">7 km</div><div class="stat-l">Littoral suivi<br>Ghisonaccia, Haute-Corse</div></div>
-      <div class="stat-card"><div class="stat-n">360°</div><div class="stat-l">Diagnostic → Carto<br>→ Rapport → Formation</div></div>
-      <div class="stat-card"><div class="stat-n">5 mois</div><div class="stat-l">Terrain Corse<br>Ghisonaccia 2025</div></div>
-    </div>
+    <figure class="about-portrait">
+      <picture><source srcset="images/galerie-11-alexis-drone.webp" type="image/webp"><img src="images/galerie-11-alexis-drone.jpg" alt="Alexis Camand préparant un vol de drone sur une plage" loading="lazy"></picture>
+      <figcaption>
+        <ul class="about-facts">
+          <li>Master Sciences de l'eau et du littoral, Université de Montpellier</li>
+          <li>Cinq mois de suivi du littoral à Ghisonaccia, en Haute-Corse</li>
+          <li>Six saisons de sauveteur en mer</li>
+          <li>Le littoral méditerranéen français parcouru à pied en 2026</li>
+        </ul>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
