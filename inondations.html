@@ -34,7 +34,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="refined">
 
 <a href="#main" class="skip-link">Aller au contenu principal</a>
 <div id="scrollProgress"></div>
@@ -80,10 +80,7 @@
       <p>Diagnostic des risques d'inondation, modélisation des écoulements, cartographie des zones inondables : ces études s'inscrivent dans un cadre réglementaire précis (PPRI, GEMAPI, PAPI, Loi sur l'Eau) qui demande rigueur technique et connaissance des services instructeurs.</p>
       <p>Littor'eau accompagne collectivités et exploitants d'ERP de la modélisation hydraulique jusqu'au dossier réglementaire complet.</p>
     </div>
-    <div class="about-stats">
-      <div class="stat-card"><div class="stat-n">1</div><div class="stat-l">Interlocuteur unique<br>diagnostic → dossier</div></div>
-      <div class="stat-card"><div class="stat-n">HEC-RAS</div><div class="stat-l">Modélisation<br>des écoulements</div></div>
-    </div>
+    <ul class="about-facts"><li>Un seul interlocuteur, du diagnostic au dossier réglementaire</li><li>Modélisation des écoulements sous HEC-RAS</li></ul>
   </div>
 </section>
 
@@ -92,18 +89,18 @@
   <h2 class="section-title">De la modélisation<br>au dossier réglementaire</h2>
   <div class="terrain-grid" style="margin-top:48px;">
     <div class="terrain-card">
-      <h3>🌊 Modélisation hydraulique</h3>
+      <span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z" /><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97" /></svg></span><h3>Modélisation hydraulique</h3>
       <p>Modélisation des écoulements sous HEC-RAS et RAS Mapper, pour comprendre le comportement de la crue.</p>
       <div class="terrain-tags"><span class="terrain-tag">HEC-RAS</span><span class="terrain-tag">RAS Mapper</span></div>
     </div>
     <div class="terrain-card">
-      <h3>🗺️ Cartographie des zones inondables</h3>
+      <span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z" /><path d="M15 5.764v15" /><path d="M9 3.236v15" /></svg></span><h3>Cartographie des zones inondables</h3>
       <p>Cartographie SIG des zones inondables et diagnostic de vulnérabilité des enjeux exposés.</p>
       <div class="terrain-tags"><span class="terrain-tag">QGIS</span><span class="terrain-tag">LiDAR HD</span></div>
     </div>
-    <div class="terrain-card" style="grid-column:1 / -1;background:linear-gradient(135deg,var(--ocean),var(--deep));color:var(--white);">
-      <h3 style="color:var(--white);">📋 Appui réglementaire</h3>
-      <p style="color:rgba(255,255,255,0.75);">Rédaction de cahiers des charges et montage de dossiers Loi sur l'Eau, PPRI, GEMAPI, PAPI — interface technique entre collectivités, bureaux d'études et services de l'État.</p>
+    <div class="terrain-card terrain-wide">
+      <span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3v18" /><path d="m19 8 3 8a5 5 0 0 1-6 0zV7" /><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1" /><path d="m5 8 3 8a5 5 0 0 1-6 0zV7" /><path d="M7 21h10" /></svg></span><h3>Appui réglementaire</h3>
+      <p>Rédaction de cahiers des charges et montage de dossiers Loi sur l'Eau, PPRI, GEMAPI, PAPI — interface technique entre collectivités, bureaux d'études et services de l'État.</p>
       <div class="terrain-tags"><span class="terrain-tag">PPRI</span><span class="terrain-tag">GEMAPI</span><span class="terrain-tag">PAPI</span><span class="terrain-tag">Loi sur l'Eau</span></div>
     </div>
   </div>
@@ -112,9 +109,9 @@
 <section id="references" style="background:var(--off);">
   <div class="section-eyebrow">Référence</div>
   <h2 class="section-title">Une mission réelle</h2>
-  <div style="max-width:640px;margin-top:40px;background:var(--white);border-radius:12px;padding:24px 20px;border-top:3px solid var(--foam);">
-    <div style="font-size:8pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mist);margin-bottom:10px;">Hérault · 2025</div>
-    <h3 style="font-family:var(--font-display);font-size:14pt;font-weight:700;color:var(--ocean);margin-bottom:8px;">Étude hydraulique · Camping Bon Port</h3>
+  <div class="ref-card" style="max-width:640px;margin-top:40px;">
+    <div class="ref-meta">Hérault · 2025</div>
+    <span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M3.5 21 14 3" /><path d="M20.5 21 10 3" /><path d="M15.5 21 12 15l-3.5 6" /><path d="M2 21h20" /></svg></span><h3 style="font-family:var(--font-display);font-size:14pt;font-weight:700;color:var(--ocean);margin-bottom:8px;">Étude hydraulique · Camping Bon Port</h3>
     <p style="font-size:9pt;color:#3a4e58;line-height:1.7;">Dossier Loi sur l'Eau, diagnostic des risques d'inondation et cartographie SIG LiDAR HD pour un établissement de plein air à Lunel.</p>
     <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:5px;">
       <span class="exp-tag">Loi sur l'Eau</span><span class="exp-tag">LiDAR HD</span><span class="exp-tag">QGIS</span><span class="exp-tag">ERP</span>

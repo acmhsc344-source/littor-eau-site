@@ -154,7 +154,7 @@ if (cookieRefuse) {
 }
 
 // Halo qui suit le curseur sur les cartes de l'accueil (effet « spotlight » façon React Bits)
-document.querySelectorAll('.home .terrain-card, .home .exp-card, .home .cible-card, .home .mcard').forEach(card => {
+document.querySelectorAll('.refined .terrain-card, .refined .exp-card, .refined .cible-card, .refined .mcard, .ref-card').forEach(card => {
   card.addEventListener('pointermove', e => {
     const r = card.getBoundingClientRect();
     card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
