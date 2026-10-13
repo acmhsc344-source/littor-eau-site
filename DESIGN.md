@@ -9,7 +9,9 @@ colors:
   ink: "#0d1e28"          # texte très foncé
   body-text: "#3a4e58"    # texte courant sur fond clair
   mist: "#5a7590"         # texte secondaire, métadonnées
-  action: "#c85a3c"       # boutons et liens d'action (terre cuite de la marque)
+  brand-terracotta: "#c85a3c" # terre cuite de la marque (accents, icônes, liens sur fond sombre)
+  action: "#b9502f"       # fond des boutons, texte blanc : contraste 4,9:1 (AA)
+  action-hover: "#a8492f"
   action-deep: "#a8492f"  # liens sur fond clair, survol
   action-light: "#dd7d5f" # accent sur fond sombre
   off: "#f5f3ef"          # fond clair alterné
@@ -82,7 +84,7 @@ lignes en écran large. Rien de lisible sous 13 px ; texte courant à 16 px mini
 - **Cartes sombres** (`.cible-card`, `.mcard`) : fond translucide sur `deep`. En mobile, format
   liste : icône à gauche, texte à droite.
 - **Étiquettes** (`.exp-tag`) : contour fin, casse normale, 13 px.
-- **Boutons** : aplat `action`, rayon 4 px ; bouton secondaire en contour clair sur fond sombre.
+- **Boutons** : aplat `action` (#b9502f) avec texte blanc, rayon 4 px ; bouton secondaire en contour clair sur fond sombre. Jamais de texte foncé sur la terre cuite (contraste insuffisant).
 - **Sélecteur de risque** : verre liquide (filtre SVG `#liquid-glass`), curseur à ressort anime.js.
 - **FAQ** : `<details>` ; en écran large, titre à gauche, questions à droite.
 
@@ -102,6 +104,14 @@ L'inspecteur taste-skill signale encore ces points. Ce sont des choix d'Alexis :
 - Verre liquide du sélecteur de risque : demandé explicitement.
 - Cartes avec icône et ombre légère (style Kokonut/Bklit) : à améliorer, pas à supprimer.
 - Terre cuite `#c85a3c` sur fond crème `#f5f3ef` : couleurs de la marque.
+
+## Accessibilité et conformité
+
+- Contrastes WCAG AA vérifiés avec axe-core sur toutes les pages (0 erreur au 13/10/2026).
+- Chaque page a un `<main>`, une hiérarchie de titres sans saut, des textes alternatifs descriptifs.
+- Police hébergée sur le site (`fonts/`), aucune requête vers Google Fonts.
+- Google Analytics uniquement après consentement ; choix gardé 6 mois ; « Gérer les cookies » en pied de page.
+- Pages : `confidentialite.html`, `cookies.html`, `conditions-utilisation.html`. Mentions légales : à ajouter par Alexis.
 
 ## Responsive
 

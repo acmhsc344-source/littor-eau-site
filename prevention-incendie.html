@@ -32,9 +32,7 @@
   "description": "Étude de propagation d'incendie (vent, pente, végétation, historique Prométhée) et diagnostic de conformité OLD pour campings, ERP et propriétés en zone boisée."
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/archivo-latin-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="refined">
@@ -43,7 +41,7 @@
 <div id="scrollProgress"></div>
 
 <nav id="navbar">
-  <div class="nav-logo"><a href="index.html"><picture><source srcset="images/logo.webp" type="image/webp"><img width="400" height="400" src="images/logo.jpg" alt="Littor'eau"></picture></a></div>
+  <div class="nav-logo"><a href="index.html" aria-label="Littor'eau, retour à l'accueil"><picture><source srcset="images/logo.webp" type="image/webp"><img width="400" height="400" src="images/logo.jpg" alt="Littor'eau"></picture></a></div>
   <ul class="nav-links" id="navLinksMobile">
     <li><a href="index.html#about">À propos</a></li>
     <li><a href="index.html#expertises">Expertises</a></li>
@@ -58,8 +56,10 @@
   </button>
 </nav>
 
+<main id="contenu">
+
 <section class="hero" id="main" style="min-height:70vh;">
-  <svg class="wave-lines" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <svg class="wave-lines" aria-hidden="true" focusable="false" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
     <circle cx="300" cy="300" r="80"/><circle cx="300" cy="300" r="140"/>
     <circle cx="300" cy="300" r="200"/><circle cx="300" cy="300" r="260"/>
     <circle cx="300" cy="300" r="320"/><circle cx="300" cy="300" r="380"/>
@@ -111,9 +111,9 @@
 <section id="pour-qui" style="background:var(--off);">
   <h2 class="section-title">Campings, ERP<br>et propriétés en zone boisée</h2>
   <div class="cibles-grid" style="grid-template-columns:repeat(3,1fr);">
-    <div class="cible-card cible-light"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M3.5 21 14 3" /><path d="M20.5 21 10 3" /><path d="M15.5 21 12 15l-3.5 6" /><path d="M2 21h20" /></svg></span><h4>Campings & ERP</h4><p>Diagnostics de vulnérabilité, plans d'évacuation, sensibilisation.</p></div>
-    <div class="cible-card cible-light"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></span><h4>Propriétaires & Particuliers</h4><p>Diagnostic de vulnérabilité pour un bien exposé, avant travaux ou décision.</p></div>
-    <div class="cible-card cible-light"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M10 18v-7" /><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" /><path d="M14 18v-7" /><path d="M18 18v-7" /><path d="M3 22h18" /><path d="M6 18v-7" /></svg></span><h4>Collectivités</h4><p>Appui technique sur les secteurs à enjeux du territoire communal.</p></div>
+    <div class="cible-card cible-light"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M3.5 21 14 3" /><path d="M20.5 21 10 3" /><path d="M15.5 21 12 15l-3.5 6" /><path d="M2 21h20" /></svg></span><h3>Campings & ERP</h3><p>Diagnostics de vulnérabilité, plans d'évacuation, sensibilisation.</p></div>
+    <div class="cible-card cible-light"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></span><h3>Propriétaires & Particuliers</h3><p>Diagnostic de vulnérabilité pour un bien exposé, avant travaux ou décision.</p></div>
+    <div class="cible-card cible-light"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M10 18v-7" /><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" /><path d="M14 18v-7" /><path d="M18 18v-7" /><path d="M3 22h18" /><path d="M6 18v-7" /></svg></span><h3>Collectivités</h3><p>Appui technique sur les secteurs à enjeux du territoire communal.</p></div>
   </div>
 </section>
 
@@ -139,10 +139,11 @@
     <p style="color:rgba(255,255,255,0.5);font-size:9pt;margin-top:20px;">Ou directement : <a href="tel:0766663291" style="color:var(--foam);">07 66 66 32 91</a> · <a href="mailto:alexis.camand@littor-eau.fr" style="color:var(--foam);">alexis.camand@littor-eau.fr</a></p>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="footer-logo-large">
-    <picture><source srcset="images/logo-1.webp" type="image/webp"><img width="400" height="400" src="images/logo-1.jpg" alt="Littor'eau"></picture>
+    <picture><source srcset="images/logo-1.webp" type="image/webp"><img width="400" height="400" src="images/logo-1.jpg" alt=""></picture>
     <div>
       <p style="color:rgba(255,255,255,0.7);font-size:9pt;font-weight:600;">Littor'eau</p>
       <p style="color:rgba(255,255,255,0.3);font-size:8pt;">Ingénierie hydraulique & Risques côtiers</p>
@@ -152,16 +153,22 @@
     <p>© 2026 Littor'eau · Alexis Camand · Montpellier</p>
     <p>TVA non applicable (Art. 293 B CGI)</p>
     <p>Dernière mise à jour du site : 13 octobre 2026</p>
+    <div class="footer-legal" role="navigation" aria-label="Informations légales">
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="conditions-utilisation.html">Conditions d'utilisation</a>
+      <button type="button" class="cookie-manage" data-cookie-manage>Gérer les cookies</button>
+    </div>
   </div>
 </footer>
 
 <button id="backToTop" aria-label="Retour en haut de page">↑</button>
 
 <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Consentement cookies" style="display:none;">
-  <p>Ce site utilise Google Analytics pour mesurer l'audience, uniquement après votre accord. Aucun cookie n'est déposé sans votre consentement.</p>
+  <p>Avec votre accord, ce site utilise Google Analytics pour compter les visites. Sans accord, aucun cookie n'est déposé. Votre choix est gardé 6 mois et modifiable à tout moment. <a href="cookies.html">En savoir plus</a></p>
   <div class="cookie-banner-actions">
-    <button id="cookieRefuse" class="cookie-btn cookie-btn-outline">Refuser</button>
-    <button id="cookieAccept" class="cookie-btn cookie-btn-primary">Accepter</button>
+    <button type="button" id="cookieRefuse" class="cookie-btn cookie-btn-outline">Refuser</button>
+    <button type="button" id="cookieAccept" class="cookie-btn cookie-btn-primary">Accepter</button>
   </div>
 </div>
 

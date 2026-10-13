@@ -76,9 +76,7 @@
   }
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/archivo-latin-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="home refined">
@@ -101,6 +99,8 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
+
+<main id="contenu">
 
 <!-- HERO -->
 <section class="hero" id="hero" data-risk="submersion">
@@ -202,11 +202,11 @@
   <h2 class="section-title">J'interviens auprès de</h2>
   <p class="section-lead">Des acteurs publics et privés qui ont besoin d'une expertise technique accessible, réactive et ancrée dans le territoire.</p>
   <div class="cibles-grid">
-    <div class="cible-card"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M10 18v-7" /><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" /><path d="M14 18v-7" /><path d="M18 18v-7" /><path d="M3 22h18" /><path d="M6 18v-7" /></svg></span><h4>Collectivités & EPCI</h4><p>Communes, intercommunalités, syndicats de rivières. GEMAPI, PAPI, diagnostics territoriaux.</p></div>
-    <div class="cible-card"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /></svg></span><h4>Bureaux d'études</h4><p>Sous-traitance et partenariat hydraulique, SIG et modélisation.</p></div>
-    <div class="cible-card"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M3.5 21 14 3" /><path d="M20.5 21 10 3" /><path d="M15.5 21 12 15l-3.5 6" /><path d="M2 21h20" /></svg></span><h4><a class="card-link" href="campings.html">Campings & ERP</a></h4><p>Diagnostics vulnérabilité, plans d'évacuation, sensibilisation.</p></div>
-    <div class="cible-card"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg></span><h4>Assureurs & Promoteurs</h4><p>Expertise sinistres, évaluation aléas, analyse foncière en zone à risque.</p></div>
-    <div class="cible-card"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></span><h4>Propriétaires & Particuliers</h4><p>Diagnostic de vulnérabilité pour un bien exposé à l'érosion, la submersion ou l'incendie, avant travaux ou décision.</p></div>
+    <div class="cible-card"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M10 18v-7" /><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" /><path d="M14 18v-7" /><path d="M18 18v-7" /><path d="M3 22h18" /><path d="M6 18v-7" /></svg></span><h3>Collectivités & EPCI</h3><p>Communes, intercommunalités, syndicats de rivières. GEMAPI, PAPI, diagnostics territoriaux.</p></div>
+    <div class="cible-card"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /></svg></span><h3>Bureaux d'études</h3><p>Sous-traitance et partenariat hydraulique, SIG et modélisation.</p></div>
+    <div class="cible-card"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M3.5 21 14 3" /><path d="M20.5 21 10 3" /><path d="M15.5 21 12 15l-3.5 6" /><path d="M2 21h20" /></svg></span><h3><a class="card-link" href="campings.html">Campings & ERP</a></h3><p>Diagnostics vulnérabilité, plans d'évacuation, sensibilisation.</p></div>
+    <div class="cible-card"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg></span><h3>Assureurs & Promoteurs</h3><p>Expertise sinistres, évaluation aléas, analyse foncière en zone à risque.</p></div>
+    <div class="cible-card"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></span><h3>Propriétaires & Particuliers</h3><p>Diagnostic de vulnérabilité pour un bien exposé à l'érosion, la submersion ou l'incendie, avant travaux ou décision.</p></div>
   </div>
 </section>
 
@@ -252,45 +252,45 @@
   <p style="font-size:11pt;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.7;max-width:580px;margin-bottom:36px;">Ghisonaccia, Haute-Corse, 2024–2025 : profils de plage, drone, bathymétrie, sédimentologie, suivi du trait de côte sur 7 km.</p>
   <div class="galerie-grid">
         <div class="galerie-item featured">
-          <picture><source srcset="images/galerie-09-degats-erosion.webp" type="image/webp"><img width="675" height="900" src="images/galerie-09-degats-erosion.jpg" alt="Dégâts d'érosion côtière" loading="lazy"/></picture>
+          <picture><source srcset="images/galerie-09-degats-erosion.webp" type="image/webp"><img width="675" height="900" src="images/galerie-09-degats-erosion.jpg" alt="Dalle de béton effondrée sur la plage après une érosion côtière, Ghisonaccia (Haute-Corse)" loading="lazy"/></picture>
           <div class="galerie-caption"><strong>Dégâts d'érosion côtière</strong> · Ghisonaccia · Submersion marine · Infrastructures</div>
         </div>
         <div class="galerie-item">
-          <picture><source srcset="images/galerie-03-vue-aerienne.webp" type="image/webp"><img width="415" height="900" src="images/galerie-03-vue-aerienne.jpg" alt="Vue aérienne du site d'étude" loading="lazy"/></picture>
+          <picture><source srcset="images/galerie-03-vue-aerienne.webp" type="image/webp"><img width="415" height="900" src="images/galerie-03-vue-aerienne.jpg" alt="Vue aérienne du littoral de Ghisonaccia : herbiers de posidonie et barres sableuses sous l'eau" loading="lazy"/></picture>
           <div class="galerie-caption"><strong>Vue aérienne</strong> · Posidonie & barres sableuses</div>
         </div>
         <div class="galerie-item">
-          <picture><source srcset="images/galerie-01-profil-plage.webp" type="image/webp"><img width="675" height="900" src="images/galerie-01-profil-plage.jpg" alt="Profil de plage au niveau optique" loading="lazy"/></picture>
+          <picture><source srcset="images/galerie-01-profil-plage.webp" type="image/webp"><img width="675" height="900" src="images/galerie-01-profil-plage.jpg" alt="Niveau optique sur trépied pour mesurer un profil de plage, Ghisonaccia" loading="lazy"/></picture>
           <div class="galerie-caption"><strong>Profil de plage</strong> · Suivi quotidien</div>
         </div>
         <div class="galerie-item">
-          <picture><source srcset="images/galerie-04-orthophoto-drone.webp" type="image/webp"><img width="900" height="629" src="images/galerie-04-orthophoto-drone.jpg" alt="Orthophoto drone · Transects annotés" loading="lazy"/></picture>
+          <picture><source srcset="images/galerie-04-orthophoto-drone.webp" type="image/webp"><img width="900" height="629" src="images/galerie-04-orthophoto-drone.jpg" alt="Orthophoto drone de la plage de Ghisonaccia avec trois transects de suivi numérotés" loading="lazy"/></picture>
           <div class="galerie-caption"><strong>Orthophoto drone</strong> · 3 transects côtiers</div>
         </div>
         <div class="galerie-item">
-          <picture><source srcset="images/galerie-08-station-debit.webp" type="image/webp"><img width="675" height="900" src="images/galerie-08-station-debit.jpg" alt="Station de mesure de débit" loading="lazy"/></picture>
+          <picture><source srcset="images/galerie-08-station-debit.webp" type="image/webp"><img width="675" height="900" src="images/galerie-08-station-debit.jpg" alt="Capteur de hauteur d'eau fixé à un garde-corps au-dessus d'un cours d'eau, pour la vigilance crues" loading="lazy"/></picture>
           <div class="galerie-caption"><strong>Station de débit</strong> · Vigilance crues</div>
         </div>
   </div>
   <div class="galerie-grid galerie-more" id="galerieMore">
         <div class="galerie-item">
-          <picture><source srcset="images/galerie-02-mesure-deferlement.webp" type="image/webp"><img width="675" height="900" src="images/galerie-02-mesure-deferlement.jpg" alt="Mesure dans la zone de déferlement" loading="lazy"/></picture>
+          <picture><source srcset="images/galerie-02-mesure-deferlement.webp" type="image/webp"><img width="675" height="900" src="images/galerie-02-mesure-deferlement.jpg" alt="Mire de mesure tenue dans la zone de déferlement des vagues, Ghisonaccia" loading="lazy"/></picture>
           <div class="galerie-caption"><strong>Mesure de déferlement</strong> · Mire tenue dans les vagues</div>
         </div>
         <div class="galerie-item">
-          <picture><source srcset="images/galerie-05-pendage-clino.webp" type="image/webp"><img width="415" height="900" src="images/galerie-05-pendage-clino.jpg" alt="Pendage à l'application Clino" loading="lazy"/></picture>
+          <picture><source srcset="images/galerie-05-pendage-clino.webp" type="image/webp"><img width="415" height="900" src="images/galerie-05-pendage-clino.jpg" alt="Capture de l'application Clino : mesures de pente géoréférencées le long de la plage de Ghisonaccia" loading="lazy"/></picture>
           <div class="galerie-caption"><strong>Pendage Clino</strong> · Géoréférencement terrain</div>
         </div>
         <div class="galerie-item">
-          <picture><source srcset="images/galerie-06-piquets-suivi.webp" type="image/webp"><img width="675" height="900" src="images/galerie-06-piquets-suivi.jpg" alt="Piquets de suivi sédimentaire" loading="lazy"/></picture>
+          <picture><source srcset="images/galerie-06-piquets-suivi.webp" type="image/webp"><img width="675" height="900" src="images/galerie-06-piquets-suivi.jpg" alt="Piquets plantés dans le sable pour suivre les mouvements sédimentaires, Ghisonaccia" loading="lazy"/></picture>
           <div class="galerie-caption"><strong>Piquets de suivi</strong> · Mouvements de sable</div>
         </div>
         <div class="galerie-item">
-          <picture><source srcset="images/galerie-07-rechargement-plage.webp" type="image/webp"><img width="900" height="675" src="images/galerie-07-rechargement-plage.jpg" alt="Rechargement mécanique de plage" loading="lazy"/></picture>
+          <picture><source srcset="images/galerie-07-rechargement-plage.webp" type="image/webp"><img width="900" height="675" src="images/galerie-07-rechargement-plage.jpg" alt="Pelle mécanique déplaçant le sable lors d'un rechargement de plage, Ghisonaccia" loading="lazy"/></picture>
           <div class="galerie-caption"><strong>Rechargement de plage</strong> · Gestion du trait de côte</div>
         </div>
         <div class="galerie-item">
-          <picture><source srcset="images/galerie-10-releve-swash.webp" type="image/webp"><img width="675" height="900" src="images/galerie-10-releve-swash.jpg" alt="Relevé en zone de swash" loading="lazy"/></picture>
+          <picture><source srcset="images/galerie-10-releve-swash.webp" type="image/webp"><img width="675" height="900" src="images/galerie-10-releve-swash.jpg" alt="Mire graduée tenue dans le jet de rive des vagues pour un relevé, Ghisonaccia" loading="lazy"/></picture>
           <div class="galerie-caption"><strong>Relevé de swash</strong> · Limite de l'estran</div>
         </div>
   </div>
@@ -348,10 +348,10 @@
         <a href="#contact" class="btn-red" onclick="setTimeout(()=>{const s=document.querySelector('select[name=objet]');if(s){s.value='Suite Marche Méditerranée';}},200)">Échanger sur les données récoltées</a>
       </div>
       <div class="marche-cards">
-        <div class="mcard"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M10 10 7 7" /><path d="m10 14-3 3" /><path d="m14 10 3-3" /><path d="m14 14 3 3" /><path d="M14.205 4.139a4 4 0 1 1 5.439 5.863" /><path d="M19.637 14a4 4 0 1 1-5.432 5.868" /><path d="M4.367 10a4 4 0 1 1 5.438-5.862" /><path d="M9.795 19.862a4 4 0 1 1-5.429-5.873" /><rect x="10" y="8" width="4" height="8" rx="1" /></svg></span><h4>Relevés drone quotidiens</h4><p>Photogrammétrie, orthophotos, MNT des zones côtières traversées.</p></div>
-        <div class="mcard"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z" /><path d="M15 5.764v15" /><path d="M9 3.236v15" /></svg></span><h4>Cartographie SIG</h4><p>Données de terrain versées en open-source sur littor-eau.fr</p></div>
-        <div class="mcard"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M14 21v-3a2 2 0 0 0-4 0v3" /><path d="M18 4.933V21" /><path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6" /><path d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11" /><path d="M6 4.933V21" /><circle cx="12" cy="9" r="2" /></svg></span><h4>Interventions scolaires</h4><p>Lycées et collèges sensibilisés de Port-Bou à Vintimille.</p></div>
-        <div class="mcard"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z" /><circle cx="12" cy="13" r="3" /></svg></span><h4>Documenté au quotidien</h4><p>LinkedIn, Instagram et YouTube. La science littorale rendue accessible.</p></div>
+        <div class="mcard"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M10 10 7 7" /><path d="m10 14-3 3" /><path d="m14 10 3-3" /><path d="m14 14 3 3" /><path d="M14.205 4.139a4 4 0 1 1 5.439 5.863" /><path d="M19.637 14a4 4 0 1 1-5.432 5.868" /><path d="M4.367 10a4 4 0 1 1 5.438-5.862" /><path d="M9.795 19.862a4 4 0 1 1-5.429-5.873" /><rect x="10" y="8" width="4" height="8" rx="1" /></svg></span><h3>Relevés drone quotidiens</h3><p>Photogrammétrie, orthophotos, MNT des zones côtières traversées.</p></div>
+        <div class="mcard"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z" /><path d="M15 5.764v15" /><path d="M9 3.236v15" /></svg></span><h3>Cartographie SIG</h3><p>Données de terrain versées en open-source sur littor-eau.fr</p></div>
+        <div class="mcard"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M14 21v-3a2 2 0 0 0-4 0v3" /><path d="M18 4.933V21" /><path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6" /><path d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11" /><path d="M6 4.933V21" /><circle cx="12" cy="9" r="2" /></svg></span><h3>Interventions scolaires</h3><p>Lycées et collèges sensibilisés de Port-Bou à Vintimille.</p></div>
+        <div class="mcard"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z" /><circle cx="12" cy="13" r="3" /></svg></span><h3>Documenté au quotidien</h3><p>LinkedIn, Instagram et YouTube. La science littorale rendue accessible.</p></div>
       </div>
     </div>
   </div>
@@ -368,7 +368,7 @@
     <div class="reseau-hero-grid">
     <div class="reseau-panel" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:36px;position:relative;display:flex;flex-direction:column;">
       <div class="ref-meta ref-meta-accent" style="margin-bottom:20px;">Carte du tracé · Littoral méditerranéen</div>
-      <svg viewBox="0 0 560 340" style="width:100%;height:auto;display:block;margin:auto 0;" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 560 340" style="width:100%;height:auto;display:block;margin:auto 0;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carte schématique du tracé de la Marche Méditerranée, de Port-Bou à Vintimille, avec les partenaires et contacts le long de la côte">
           <defs>
             <linearGradient id="seaGrad" x1="0%" y1="0%" x2="60%" y2="100%">
               <stop offset="0%" stop-color="#0f3a5c"/>
@@ -727,10 +727,11 @@
     </div>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="footer-logo-large">
-    <picture><source srcset="images/logo-1.webp" type="image/webp"><img width="400" height="400" src="images/logo-1.jpg" alt="Littor'eau"></picture>
+    <picture><source srcset="images/logo-1.webp" type="image/webp"><img width="400" height="400" src="images/logo-1.jpg" alt=""></picture>
     <div>
       <p style="color:rgba(255,255,255,0.7);font-size:9pt;font-weight:600;">Littor'eau</p>
       <p style="color:rgba(255,255,255,0.3);font-size:13px;">Ingénierie hydraulique & Risques côtiers</p>
@@ -740,16 +741,22 @@
     <p>© 2026 Littor'eau · Alexis Camand · Montpellier</p>
     <p>TVA non applicable (Art. 293 B CGI)</p>
     <p>Dernière mise à jour du site : 13 octobre 2026</p>
+    <div class="footer-legal" role="navigation" aria-label="Informations légales">
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="conditions-utilisation.html">Conditions d'utilisation</a>
+      <button type="button" class="cookie-manage" data-cookie-manage>Gérer les cookies</button>
+    </div>
   </div>
 </footer>
 
 <button id="backToTop" aria-label="Retour en haut de page">↑</button>
 
 <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Consentement cookies" style="display:none;">
-  <p>Ce site utilise Google Analytics pour mesurer l'audience, uniquement après votre accord. Aucun cookie n'est déposé sans votre consentement.</p>
+  <p>Avec votre accord, ce site utilise Google Analytics pour compter les visites. Sans accord, aucun cookie n'est déposé. Votre choix est gardé 6 mois et modifiable à tout moment. <a href="cookies.html">En savoir plus</a></p>
   <div class="cookie-banner-actions">
-    <button id="cookieRefuse" class="cookie-btn cookie-btn-outline">Refuser</button>
-    <button id="cookieAccept" class="cookie-btn cookie-btn-primary">Accepter</button>
+    <button type="button" id="cookieRefuse" class="cookie-btn cookie-btn-outline">Refuser</button>
+    <button type="button" id="cookieAccept" class="cookie-btn cookie-btn-primary">Accepter</button>
   </div>
 </div>
 
