@@ -34,7 +34,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="refined">
 
 <a href="#main" class="skip-link">Aller au contenu principal</a>
 <div id="scrollProgress"></div>
@@ -80,10 +80,7 @@
       <p>Un littoral, une zone humide, un site difficile d'accès : le drone permet de couvrir en quelques heures ce qu'un relevé au sol prendrait des jours à documenter, avec une précision centimétrique.</p>
       <p>Couplée aux données LiDAR HD de l'IGN et traitée sous QGIS, cette cartographie devient un outil de décision — pas seulement une jolie image.</p>
     </div>
-    <div class="about-stats">
-      <div class="stat-card"><div class="stat-n">7 km</div><div class="stat-l">Littoral cartographié<br>Ghisonaccia, Haute-Corse</div></div>
-      <div class="stat-card"><div class="stat-n">60 m</div><div class="stat-l">Bathymétrie kayak<br>jusqu'à cette profondeur</div></div>
-    </div>
+    <ul class="about-facts"><li>7 km de littoral cartographiés à Ghisonaccia, en Haute-Corse</li><li>Bathymétrie en kayak jusqu'à 60 m de profondeur</li></ul>
   </div>
 </section>
 
@@ -92,18 +89,18 @@
   <h2 class="section-title">De la prise de vue<br>à la donnée exploitable</h2>
   <div class="terrain-grid" style="margin-top:48px;">
     <div class="terrain-card">
-      <h3>🚁 Photogrammétrie aérienne</h3>
+      <span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M10 10 7 7" /><path d="m10 14-3 3" /><path d="m14 10 3-3" /><path d="m14 14 3 3" /><path d="M14.205 4.139a4 4 0 1 1 5.439 5.863" /><path d="M19.637 14a4 4 0 1 1-5.432 5.868" /><path d="M4.367 10a4 4 0 1 1 5.438-5.862" /><path d="M9.795 19.862a4 4 0 1 1-5.429-5.873" /><rect x="10" y="8" width="4" height="8" rx="1" /></svg></span><h3>Photogrammétrie aérienne</h3>
       <p>Modèles 3D et orthophotos haute précision, générés à partir de vols drone.</p>
       <div class="terrain-tags"><span class="terrain-tag">Drone</span><span class="terrain-tag">Orthophotos</span><span class="terrain-tag">MNT 3D</span></div>
     </div>
     <div class="terrain-card">
-      <h3>🗺️ Cartographie SIG & LiDAR HD</h3>
+      <span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></svg></span><h3>Cartographie SIG & LiDAR HD</h3>
       <p>MNT haute résolution à partir de LiDAR HD IGN, cartographie d'aléas naturels et analyses spatiales sous QGIS.</p>
       <div class="terrain-tags"><span class="terrain-tag">QGIS</span><span class="terrain-tag">LiDAR HD</span><span class="terrain-tag">IGN</span></div>
     </div>
-    <div class="terrain-card" style="grid-column:1 / -1;background:linear-gradient(135deg,var(--ocean),var(--deep));color:var(--white);">
-      <h3 style="color:var(--white);">🛶 Bathymétrie légère</h3>
-      <p style="color:rgba(255,255,255,0.75);">Bathymétrie kayak en zone peu profonde jusqu'à 60 m, pour localiser barres sableuses et herbiers de posidonie — méthode testée sur le terrain corse pendant 5 mois.</p>
+    <div class="terrain-card terrain-wide">
+      <span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M10 2v15" /><path d="M7 22a4 4 0 0 1-4-4 1 1 0 0 1 1-1h16a1 1 0 0 1 1 1 4 4 0 0 1-4 4z" /><path d="M9.159 2.46a1 1 0 0 1 1.521-.193l9.977 8.98A1 1 0 0 1 20 13H4a1 1 0 0 1-.824-1.567z" /></svg></span><h3>Bathymétrie légère</h3>
+      <p>Bathymétrie kayak en zone peu profonde jusqu'à 60 m, pour localiser barres sableuses et herbiers de posidonie — méthode testée sur le terrain corse pendant 5 mois.</p>
       <div class="terrain-tags"><span class="terrain-tag">Bathymétrie kayak</span><span class="terrain-tag">Herbiers de posidonie</span></div>
     </div>
   </div>
@@ -112,9 +109,9 @@
 <section id="references" style="background:var(--off);">
   <div class="section-eyebrow">Référence</div>
   <h2 class="section-title">Une mission réelle</h2>
-  <div style="max-width:640px;margin-top:40px;background:var(--white);border-radius:12px;padding:24px 20px;border-top:3px solid var(--foam);">
-    <div style="font-size:8pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mist);margin-bottom:10px;">Haute-Corse · 2024-2025</div>
-    <h3 style="font-family:var(--font-display);font-size:14pt;font-weight:700;color:var(--ocean);margin-bottom:8px;">Suivi littoral · Commune de Ghisonaccia</h3>
+  <div class="ref-card" style="max-width:640px;margin-top:40px;">
+    <div class="ref-meta">Haute-Corse · 2024-2025</div>
+    <span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M2 12q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 19q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 5q2.5 2 5 0t5 0 5 0 5 0" /></svg></span><h3 style="font-family:var(--font-display);font-size:14pt;font-weight:700;color:var(--ocean);margin-bottom:8px;">Suivi littoral · Commune de Ghisonaccia</h3>
     <p style="font-size:9pt;color:#3a4e58;line-height:1.7;">Vols drone exploitables sous QGIS, bathymétrie kayak jusqu'à 60 m : barres sableuses et herbiers de posidonie localisés, sur 7 km de littoral suivis pendant 5 mois.</p>
     <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:5px;">
       <span class="exp-tag">Photogrammétrie</span><span class="exp-tag">MNT littoral</span><span class="exp-tag">Bathymétrie kayak</span><span class="exp-tag">QGIS SIG</span>

@@ -34,7 +34,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="refined">
 
 <a href="#main" class="skip-link">Aller au contenu principal</a>
 <div id="scrollProgress"></div>
@@ -80,10 +80,7 @@
       <p>Les incendies ne s'arrêtent pas à la lisière : ils déstabilisent les bassins versants et accélèrent l'érosion en aval, avec des conséquences hydrauliques qui persistent bien après l'extinction.</p>
       <p>Pour un camping, un ERP ou une propriété en zone boisée classée, la conformité aux Obligations Légales de Débroussaillement (OLD) n'est pas qu'une formalité administrative — c'est ce qui détermine la vitesse de propagation d'un feu autour de votre site.</p>
     </div>
-    <div class="about-stats">
-      <div class="stat-card"><div class="stat-n">OLD</div><div class="stat-l">Obligations Légales<br>de Débroussaillement</div></div>
-      <div class="stat-card"><div class="stat-n">4</div><div class="stat-l">Départements couverts<br>Var · 13 · 34 · 06</div></div>
-    </div>
+    <ul class="about-facts"><li>Vérification des obligations légales de débroussaillement (OLD) autour de vos installations</li><li>Interventions dans le Var, les Bouches-du-Rhône, l'Hérault et les Alpes-Maritimes</li></ul>
   </div>
 </section>
 
@@ -93,18 +90,18 @@
   <p class="section-lead">Trois facteurs déterminent la vitesse de propagation d'un feu : le vent, la pente, la végétation. Le diagnostic les croise avec l'historique local.</p>
   <div class="terrain-grid" style="margin-top:48px;">
     <div class="terrain-card">
-      <h3>🌬️ Étude de propagation</h3>
+      <span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M12.8 19.6A2 2 0 1 0 14 16H2" /><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" /><path d="M9.8 4.4A2 2 0 1 1 11 8H2" /></svg></span><h3>Étude de propagation</h3>
       <p>Analyse du vent, de la pente et de la végétation autour du site, croisée avec l'historique des incendies via la base Prométhée.</p>
       <div class="terrain-tags"><span class="terrain-tag">Base Prométhée</span><span class="terrain-tag">Feux de forêt</span></div>
     </div>
     <div class="terrain-card">
-      <h3>📋 Diagnostic de conformité OLD</h3>
+      <span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="m9 14 2 2 4-4" /></svg></span><h3>Diagnostic de conformité OLD</h3>
       <p>Vérification des obligations de débroussaillement autour du site, avec recommandations concrètes.</p>
       <div class="terrain-tags"><span class="terrain-tag">OLD</span><span class="terrain-tag">Conformité</span></div>
     </div>
-    <div class="terrain-card" style="grid-column:1 / -1;background:linear-gradient(135deg,var(--ocean),var(--deep));color:var(--white);">
-      <h3 style="color:var(--white);">🗺️ Cartographie SIG des zones à risque</h3>
-      <p style="color:rgba(255,255,255,0.75);">Cartographie d'aléas naturels sous QGIS, à partir de LiDAR HD IGN, pour visualiser précisément les zones de vulnérabilité de votre site et appuyer vos plans d'évacuation.</p>
+    <div class="terrain-card terrain-wide">
+      <span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z" /><path d="M15 5.764v15" /><path d="M9 3.236v15" /></svg></span><h3>Cartographie SIG des zones à risque</h3>
+      <p>Cartographie d'aléas naturels sous QGIS, à partir de LiDAR HD IGN, pour visualiser précisément les zones de vulnérabilité de votre site et appuyer vos plans d'évacuation.</p>
       <div class="terrain-tags"><span class="terrain-tag">QGIS</span><span class="terrain-tag">LiDAR HD</span><span class="terrain-tag">Plans d'évacuation</span></div>
     </div>
   </div>
@@ -114,9 +111,9 @@
   <div class="section-eyebrow">Pour qui</div>
   <h2 class="section-title">Campings, ERP<br>et propriétés en zone boisée</h2>
   <div class="cibles-grid" style="grid-template-columns:repeat(3,1fr);">
-    <div class="cible-card" style="border-color:#e0eaf0;"><span class="cible-icon">🏕️</span><h4 style="color:var(--ocean);">Campings & ERP</h4><p style="color:var(--mist);">Diagnostics de vulnérabilité, plans d'évacuation, sensibilisation.</p></div>
-    <div class="cible-card" style="border-color:#e0eaf0;"><span class="cible-icon">🏠</span><h4 style="color:var(--ocean);">Propriétaires & Particuliers</h4><p style="color:var(--mist);">Diagnostic de vulnérabilité pour un bien exposé, avant travaux ou décision.</p></div>
-    <div class="cible-card" style="border-color:#e0eaf0;"><span class="cible-icon">🏘️</span><h4 style="color:var(--ocean);">Collectivités</h4><p style="color:var(--mist);">Appui technique sur les secteurs à enjeux du territoire communal.</p></div>
+    <div class="cible-card cible-light"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M3.5 21 14 3" /><path d="M20.5 21 10 3" /><path d="M15.5 21 12 15l-3.5 6" /><path d="M2 21h20" /></svg></span><h4>Campings & ERP</h4><p>Diagnostics de vulnérabilité, plans d'évacuation, sensibilisation.</p></div>
+    <div class="cible-card cible-light"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></span><h4>Propriétaires & Particuliers</h4><p>Diagnostic de vulnérabilité pour un bien exposé, avant travaux ou décision.</p></div>
+    <div class="cible-card cible-light"><span class="card-icon" aria-hidden="true"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ><path d="M10 18v-7" /><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" /><path d="M14 18v-7" /><path d="M18 18v-7" /><path d="M3 22h18" /><path d="M6 18v-7" /></svg></span><h4>Collectivités</h4><p>Appui technique sur les secteurs à enjeux du territoire communal.</p></div>
   </div>
 </section>
 
