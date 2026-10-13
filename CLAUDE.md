@@ -46,6 +46,8 @@ Les captures de l'inspecteur vont dans `.taste-skill/` (ignoré par git).
 | `copywriting` | coreyhaines31/marketingskills (MIT) | Écrire ou réécrire les textes des pages |
 | `copy-editing` | coreyhaines31/marketingskills (MIT) | Relire et resserrer un texte existant |
 | `cro` | coreyhaines31/marketingskills (MIT) | Rendre les pages et le formulaire de contact plus efficaces |
+| `cold-email` | coreyhaines31/marketingskills (MIT) | Emails de prospection (utilisé avec l'agent `prospection-email`) |
+| `humanizer` | blader/humanizer (MIT) | Relecture : repérer les tournures typiques d'un texte écrit par une IA (exemples en anglais) |
 
-Les skills marketing lisent d'abord `.claude/product-marketing.md` (offre, cibles, règles de ton).
+Les skills marketing (dont `cold-email`) lisent d'abord `.claude/product-marketing.md` (offre, cibles, règles de ton).
 Ils sont écrits en anglais : les textes produits pour le site restent en français.

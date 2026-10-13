@@ -1,6 +1,6 @@
 # Contexte marketing de Littor'eau
 
-Lu par les skills `copywriting`, `copy-editing`, `cro`, `schema`, `ai-seo` et `seo-audit` avant toute proposition.
+Lu par les skills `copywriting`, `copy-editing`, `cro`, `cold-email`, `schema`, `ai-seo` et `seo-audit` avant toute proposition.
 
 ## Qui
 
