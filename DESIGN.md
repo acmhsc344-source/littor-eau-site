@@ -96,6 +96,22 @@ action principale par écran, focus clavier visible, images avec `width`/`height
 À éviter : petites étiquettes en capitales au-dessus des titres, numérotation décorative 01/02/03,
 filets de séparation, emoji, texte gris pâle, dégradés décoratifs hors du héros.
 
+## Langage Apple (14/10/2026)
+
+Inspiré de `.claude/skills/design-md/library/apple.md`, transposé aux couleurs de Littor'eau
+(on reprend la grammaire, jamais l'identité d'Apple) :
+- Surfaces plates qui alternent : blanc `#ffffff`, gris clair `#f5f5f7` (parchment), bleu nuit
+  `#081f36` / `#0b2c4a`. La couleur de fond sert de séparation, pas de filet ni de dégradé.
+- Une seule couleur d'action : terre cuite `#b9502f` (boutons) ; sur fond sombre, liens en
+  `#e8937a` (contraste ≥ 4,8:1), l'équivalent du « bleu sur fond sombre » d'Apple.
+- Boutons en pilule (`border-radius: 999px`), 17 px, effet de pression `transform: scale(.95)`.
+- Texte courant 17 px / 1,47 dans la police système (SF Pro sur Apple, Segoe UI sur Windows) ;
+  titres en Archivo largeur normale, graisse 600, interlettrage −0,022 em.
+- En-têtes de section centrés au-dessus des grilles ; paragraphes d'intro 21 px gris `#6e6e73`.
+- Cartes : rayon 18 px, filet `rgba(0,0,0,.08)` ou fond gris clair, aucune ombre.
+- Barre de navigation fine (logo 48 px), givrée au défilement ; pied de page clair et dense.
+- Le héros animé (ShaderGradient, verre liquide, logo liquide) est conservé : c'est la signature.
+
 ## Écarts assumés par rapport à taste-skill
 
 L'inspecteur taste-skill signale encore ces points. Ce sont des choix d'Alexis : ne pas les
