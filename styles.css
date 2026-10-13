@@ -510,3 +510,173 @@ body{font-family:var(--font-body);font-stretch:100%;-webkit-font-smoothing:antia
     url('images/galerie-03-vue-aerienne.jpg');
   background-position:center 50%;
 }
+
+/* ===== Finitions : ordre de lecture client, rythme des fonds, détails ===== */
+.home .expertises{background:var(--white);}
+.home .territoire{background:var(--off);}
+.references{background:var(--white);}
+.refs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:44px;}
+.refs-grid .ref-card{display:flex;flex-direction:column;}
+.ref-card h3{font-family:var(--font-display);font-size:14pt;font-weight:620;font-stretch:112%;letter-spacing:-0.02em;color:var(--ocean);margin-bottom:8px;line-height:1.25;}
+.ref-card p{font-size:9.5pt;color:#3a4e58;line-height:1.7;}
+.ref-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;}
+.ref-link{margin-top:auto;padding-top:16px;align-self:flex-start;color:var(--wave);font-weight:600;font-size:9.5pt;text-decoration:none;border-bottom:1px solid rgba(200,90,60,0.35);}
+.ref-link:hover{border-bottom-color:var(--wave);}
+
+/* bouton de la galerie : un <button> garde le fond gris du navigateur sans cette règle */
+button.btn-outline{background:transparent;font-family:inherit;}
+#galerieToggle{border-radius:999px;padding:11px 26px;font-size:9.5pt;}
+
+/* FAQ alignée sur le titre, questions moins massives */
+.refined .faq-list{max-width:860px;margin:40px 0 0;display:flex;flex-direction:column;gap:10px;}
+.refined .faq-item{background:#fff;border-color:rgba(11,44,74,0.10);border-radius:12px;}
+.refined .faq-item summary{font-size:11.5pt;font-weight:600;font-stretch:105%;letter-spacing:-0.01em;padding:18px 48px 18px 22px;}
+.refined .faq-item p{padding:0 22px 20px;color:#3a4e58;max-width:70ch;}
+
+/* Réseau : statuts écrits sobrement */
+#reseau .reseau-cards-grid span[style*="border-radius:20px"]{text-transform:none;letter-spacing:0;font-weight:600;font-size:7.5pt;}
+
+/* Contact */
+.contact-engaged{font-size:9.5pt;line-height:1.7;color:rgba(255,255,255,0.6);max-width:46ch;margin:-8px 0 28px;}
+.contact-engaged a{color:var(--foam);}
+
+/* Territoire : carte plus présente */
+.refined .territoire-map{padding:56px 40px;background:linear-gradient(160deg,rgba(8,31,54,0.78),rgba(11,44,74,0.92)),url('images/galerie-03-vue-aerienne.jpg') center/cover;}
+
+@media (max-width:760px){
+  .refs-grid{grid-template-columns:1fr;}
+  #reseau{padding:64px 6vw !important;}
+  #reseau .reseau-panel{padding:16px !important;}
+  .refined .faq-item summary{font-size:10.5pt;}
+  .refined .territoire-map{padding:40px 20px;}
+}
+.marche .marche-inner > .section-lead{margin-bottom:36px;color:rgba(255,255,255,0.68);}
+@media (min-width:1000px){
+  .refined .faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);column-gap:64px;align-items:start;}
+  .refined .faq > .section-eyebrow{grid-column:1;grid-row:1;}
+  .refined .faq > .section-title{grid-column:1;grid-row:2;align-self:start;}
+  .refined .faq > .faq-list{grid-column:2;grid-row:1 / span 3;margin-top:0;max-width:none;}
+}
+@media (max-width:600px){
+  .galerie,.marche,.cibles,.outils{padding-left:6vw;padding-right:6vw;}
+  #faq{padding:60px 6vw !important;}
+  .galerie-grid{grid-template-columns:1fr 1fr;grid-auto-rows:130px;gap:8px;}
+  .galerie-item.featured{grid-column:span 2;grid-row:span 2;}
+  .galerie-caption{font-size:7.5pt;padding:14px 10px 8px;}
+  .galerie-item:not(.featured) .galerie-caption{display:none;}
+}
+@media (max-width:600px){
+  /* cartes sombres en format liste : icône à gauche, texte à droite */
+  .refined .cible-card,.refined .mcard{display:grid;grid-template-columns:36px minmax(0,1fr);column-gap:14px;align-items:start;padding:16px;}
+  .refined .cible-card .card-icon,.refined .mcard .card-icon{grid-row:1 / span 2;margin:0;}
+  .refined .cible-card h4,.refined .mcard h4{margin:6px 0 4px;}
+  .marche-cards{gap:10px;}
+  #reseau .reseau-photo{padding:0 !important;aspect-ratio:4/3;min-height:0;width:100%;}
+}
+@media (max-width:600px){
+  .refined .exp-card,.refined .terrain-card{display:grid;grid-template-columns:36px minmax(0,1fr);column-gap:14px;align-items:center;padding:20px;}
+  .refined .exp-card > *,.refined .terrain-card > *{grid-column:1 / -1;}
+  .refined .exp-card > .card-icon,.refined .terrain-card > .card-icon{grid-column:1;width:36px;height:36px;margin:0;}
+  .refined .exp-card > h3,.refined .terrain-card > h3{grid-column:2;margin:0;font-size:12pt;}
+  .refined .exp-card > h3 + *,.refined .terrain-card > h3 + *{margin-top:12px;}
+}
+@media (max-width:900px){
+  .reseau-hero-grid,.reseau-cards-grid{grid-template-columns:minmax(0,1fr);}
+  .reseau-hero-grid > *,.reseau-cards-grid > *{min-width:0;}
+}
+@media (max-width:600px){
+  footer{flex-direction:column;align-items:flex-start;gap:18px;}
+  footer > div[style*="text-align:right"]{text-align:left !important;}
+}
+/* Pages intérieures : le bandeau ne double plus la marge, et le texte passe sous la barre de navigation */
+.refined .hero:not(#hero) .hero-content{padding-left:0;padding-right:0;}
+.refined .hero:not(#hero){padding-top:140px;padding-bottom:80px;}
+@media (max-width:600px){.refined .hero:not(#hero){padding-top:120px;padding-bottom:56px;}}
+/* FAQ de la page campings : même mise en page que l'accueil */
+#faq-campings .faq-list{max-width:860px;margin:40px 0 0;display:flex;flex-direction:column;gap:10px;}
+#faq-campings .sources{margin-left:0;}
+@media (min-width:1000px){
+  .refined #faq-campings{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);column-gap:64px;align-items:start;}
+  #faq-campings > .section-eyebrow{grid-column:1;grid-row:1;}
+  #faq-campings > .section-title{grid-column:1;grid-row:2;}
+  #faq-campings > .faq-list{grid-column:2;grid-row:1 / span 3;margin-top:0;max-width:none;}
+  #faq-campings > .sources{grid-column:2;}
+}
+
+/* ==========================================================================
+   Lisibilité (audit taste-skill + Web Interface Guidelines, 13/10/2026)
+   Texte courant à 16 px, rien de lisible sous 13 px, lignes de 45 à 75 signes.
+   ========================================================================== */
+:where(img){height:auto;}
+html{-webkit-text-size-adjust:100%;}
+section[id],[id].section-anchor{scroll-margin-top:96px;}
+a,button,summary,.objet-chip{touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+h1,h2,h3,h4{text-wrap:balance;}
+p,li{text-wrap:pretty;}
+.hero{min-height:100svh;}
+
+/* texte courant */
+body.refined{font-size:16px;}
+body.refined .section-lead{font-size:18px;line-height:1.6;max-width:60ch;color:#4a5d6b;}
+body.refined .cibles .section-lead,body.refined .galerie p,body.refined .marche .section-lead,body.refined #reseau .section-lead,body.refined .contact .section-lead{color:rgba(255,255,255,0.74);}
+body.refined .about-text p,body.refined .marche-text p,body.refined .marche-text ul li,body.refined .territoire-text p,
+body.refined .faq-item p,body.refined .steps p,body.refined .about-facts li,body.refined .contact-engaged{font-size:16px;line-height:1.65;max-width:68ch;}
+body.refined .terrain-card p,body.refined .exp-card p,body.refined .ref-card p{font-size:15.5px;line-height:1.6;}
+body.refined .cible-card p,body.refined .mcard p{font-size:15px;line-height:1.55;}
+body.refined .terrain-card h3,body.refined .exp-card h3,body.refined .ref-card h3{font-size:19px;line-height:1.25;}
+body.refined .cible-card h4,body.refined .mcard h4{font-size:16.5px;}
+body.refined .risk-detail{font-size:16px;}
+body.refined #hero .hero-sub{font-size:18px;line-height:1.6;color:rgba(255,255,255,0.84);}
+body.refined .hero:not(#hero) .hero-sub{font-size:18px;line-height:1.6;}
+
+/* petits textes : jamais sous 13 px */
+body.refined .terrain-tag,body.refined .exp-tag{font-size:13px;padding:3px 10px;}
+body.refined .ref-meta,body.refined .galerie-caption,body.refined .sources,body.refined .dept,body.refined .map-sub,body.refined .badge-available,body.refined .contact-alt p,body.refined footer p,body.refined .cookie-banner p{font-size:13.5px;}
+body.refined .outil-pill{font-size:14px;}
+body.refined .exp-domain-title{font-size:15px;}
+body.refined .btn-primary,body.refined .btn-outline,body.refined .btn-red,body.refined .form-submit,body.refined #galerieToggle,body.refined .ref-link{font-size:15px;}
+body.refined .risk-lens{font-size:14.5px;}
+body.refined .objet-chip{font-size:13.5px;}
+body.refined .form-group label{font-size:13.5px;letter-spacing:0;text-transform:none;}
+body.refined .form-group input,body.refined .form-group textarea,body.refined .form-group select{font-size:16px;}
+body.refined .contact-item-text .label{font-size:13.5px;letter-spacing:0;text-transform:none;color:rgba(255,255,255,0.6);}
+body.refined .contact-item-text .value{font-size:16px;}
+body.refined .faq-item summary{font-size:17px;}
+
+/* navigation en casse normale, sans espacement de lettres */
+body.refined .nav-links a{font-size:14.5px;letter-spacing:0;text-transform:none;}
+@media (max-width:900px){body.refined .nav-links a{font-size:20px;}}
+
+/* liste « à propos » : séparée par l'espace, pas par des filets */
+body.refined .about-facts{display:grid;gap:10px;}
+body.refined .about-facts li,body.refined .about-facts li:last-child{border:0;padding:12px 16px;background:rgba(11,44,74,0.05);border-radius:10px;}
+
+/* titre d'accueil sur deux lignes à l'écran large */
+@media (min-width:1001px){
+  body.refined #hero[data-risk] .hero-content{max-width:min(1120px,78vw);}
+  body.refined #hero[data-risk] .hero-title{font-size:clamp(44px,4.4vw,68px);max-width:16.5em;line-height:1.02;letter-spacing:-0.025em;}
+  body.refined #hero[data-risk] .hero-sub,body.refined #hero .risk-detail{max-width:52ch;}
+  .hero-mark{width:min(24vw,360px);right:4vw;top:auto;bottom:8vh;transform:none;z-index:1;}
+}
+
+/* focus clavier visible partout, y compris dans le formulaire */
+:focus-visible{outline:2px solid var(--foam);outline-offset:3px;}
+.form-group input:focus-visible,.form-group textarea:focus-visible,.form-group select:focus-visible{outline:2px solid var(--foam);outline-offset:1px;}
+.form-group select option{background:#0b2c4a;color:#fff;}
+.form-error{min-height:1em;margin-top:10px;font-size:14px;color:#ffb4a2;}
+.form-error:empty{display:none;}
+
+/* FAQ sans étiquette : le titre prend la première ligne */
+@media (min-width:1000px){
+  .refined .faq > .section-title,#faq-campings > .section-title{grid-row:1;}
+}
+@media (max-width:600px){
+  body.refined #hero[data-risk] .hero-title{font-size:clamp(30px,8.6vw,36px);max-width:none;line-height:1.05;letter-spacing:-0.02em;}
+  body.refined #hero .hero-sub{font-size:16.5px;}
+}
+@media (min-width:601px) and (max-width:1000px){
+  body.refined #hero[data-risk] .hero-title{max-width:none;font-size:clamp(36px,5.6vw,52px);}
+}
+body.refined .contact-alt{border-top:0;padding-top:4px;}
+body.refined footer{border-top:0;}
+.skip-link{background:var(--deep);color:#fff;}

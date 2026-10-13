@@ -54,7 +54,8 @@ if (galerieToggle && galerieMore) {
   galerieToggle.addEventListener('click', () => {
     const show = galerieMore.style.display !== 'grid';
     galerieMore.style.display = show ? 'grid' : 'none';
-    galerieToggle.textContent = show ? 'Voir moins de photos ↑' : 'Voir 5 photos supplémentaires →';
+    galerieToggle.textContent = show ? 'Voir moins de photos' : 'Voir 5 photos supplémentaires';
+    galerieToggle.setAttribute('aria-expanded', String(show));
     if (show) {
       galerieMore.querySelectorAll('.galerie-item').forEach(el => {
         el.style.opacity = '1';
@@ -73,19 +74,30 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {threshold: 0.08});
-document.querySelectorAll('.exp-card,.cible-card,.stat-card,.outil-pill,.mstat,.mcard,.terrain-card,.galerie-item,.reseau-panel,.faq-item').forEach(el => {
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!reduceMotion) document.querySelectorAll('.exp-card,.cible-card,.stat-card,.outil-pill,.mstat,.mcard,.terrain-card,.galerie-item,.reseau-panel,.faq-item,.ref-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   observer.observe(el);
 });
 
+// Message d'erreur affiché sous le bouton, lu par les lecteurs d'écran
+function showFormError(btn) {
+  btn.textContent = 'Envoyer le message';
+  btn.disabled = false;
+  const err = document.getElementById('formError');
+  if (err) err.textContent = "Le message n'est pas parti. Réessayez, ou écrivez directement à alexis.camand@littor-eau.fr.";
+}
+
 // Formspree handler
 async function handleSubmit(e) {
   e.preventDefault();
   const form = e.target;
   const btn = document.getElementById('submitBtn');
-  btn.textContent = 'Envoi en cours...';
+  btn.textContent = 'Envoi en cours…';
+  const err = document.getElementById('formError');
+  if (err) err.textContent = '';
   btn.disabled = true;
 
   const data = new FormData(form);
@@ -101,14 +113,10 @@ async function handleSubmit(e) {
       form.style.display = 'none';
       document.getElementById('formSuccess').style.display = 'block';
     } else {
-      btn.textContent = '✉ Envoyer le message';
-      btn.disabled = false;
-      alert('Une erreur est survenue. Contactez-moi directement : alexis.camand@littor-eau.fr');
+      showFormError(btn);
     }
   } catch (error) {
-    btn.textContent = '✉ Envoyer le message';
-    btn.disabled = false;
-    alert('Une erreur est survenue. Contactez-moi directement : alexis.camand@littor-eau.fr');
+    showFormError(btn);
   }
 }
 
