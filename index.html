@@ -99,25 +99,47 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="hero">
-  <svg class="wave-lines" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="300" cy="300" r="80"/><circle cx="300" cy="300" r="140"/>
-    <circle cx="300" cy="300" r="200"/><circle cx="300" cy="300" r="260"/>
-    <circle cx="300" cy="300" r="320"/><circle cx="300" cy="300" r="380"/>
-    <circle cx="300" cy="300" r="440"/><circle cx="300" cy="300" r="500"/>
-  </svg>
-  
+<section class="hero" id="hero" data-risk="submersion">
+  <div class="hero-fx" id="hero-fx" aria-hidden="true"></div>
+  <div class="hero-veil" aria-hidden="true"></div>
+
   <div class="hero-content">
-    <div class="hero-eyebrow">Littor'eau · Montpellier · Sud de la France</div>
-    <h1 class="hero-title">Ingénierie hydraulique<br>& <em>risques côtiers</em></h1>
-    <p class="hero-sub">Expertise indépendante en hydraulique fluviale, risques côtiers et cartographie SIG, au service des territoires du Sud de la France.</p>
+    <p class="hero-eyebrow">Littor'eau, ingénierie des risques naturels à Montpellier</p>
+    <h1 class="hero-title">La mer qui monte, la rivière qui déborde, le feu qui approche.</h1>
+    <p class="hero-sub">J'évalue l'exposition de votre site à ces trois risques et je vous aide à vous y préparer : diagnostic sur le terrain, cartographie par drone et SIG, plan de mise en sûreté. Pour les campings, les collectivités et les propriétaires du Sud de la France.</p>
+
+    <ul class="risk-lenses" aria-label="Les trois risques que je traite">
+      <li><a class="risk-lens" data-risk="submersion" href="erosion-cotiere.html" aria-pressed="true">
+        <span class="lens-name">Submersion &amp; érosion</span>
+        <span class="lens-text">Tempêtes marines, recul du trait de côte, PPRL</span>
+      </a></li>
+      <li><a class="risk-lens" data-risk="inondation" href="inondations.html" aria-pressed="false">
+        <span class="lens-name">Inondation</span>
+        <span class="lens-text">Crues, ruissellement, PPRI, modélisation HEC-RAS</span>
+      </a></li>
+      <li><a class="risk-lens" data-risk="incendie" href="prevention-incendie.html" aria-pressed="false">
+        <span class="lens-name">Feux de forêt</span>
+        <span class="lens-text">Débroussaillement obligatoire, mise en sécurité</span>
+      </a></li>
+    </ul>
+
     <div class="hero-btns">
       <a href="#contact" class="btn-primary">Demander un devis gratuit</a>
-      <a href="#marche" class="btn-red">🥾 La Marche Méditerranée</a>
-      <a href="#expertises" class="btn-outline">Mes expertises</a>
+      <a href="#marche" class="btn-outline">La Marche Méditerranée</a>
     </div>
   </div>
-  <div class="hero-scroll"><div class="scroll-line"></div>Découvrir</div>
+
+  <div class="hero-mark" id="hero-mark" aria-hidden="true">
+    <img src="images/logo-mark.png" alt="" width="253" height="284">
+  </div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="liquid-glass" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/>
+      <feGaussianBlur in="noise" stdDeviation="2" result="soft"/>
+      <feDisplacementMap in="SourceGraphic" in2="soft" scale="38" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
 </section>
 
 <!-- ABOUT -->
@@ -814,5 +836,6 @@
 </div>
 
 <script src="script.js"></script>
+<script type="module" src="assets/hero/hero.js"></script>
 </body>
 </html>
