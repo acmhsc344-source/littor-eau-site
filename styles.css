@@ -733,3 +733,129 @@ button.btn-red{border:0;font-family:inherit;cursor:pointer;}
   .legal-page td{border:0;padding:3px 0;}
   .legal-page td::before{content:attr(data-label);display:block;font-size:13.5px;font-weight:600;color:var(--ocean);}
 }
+
+/* ==========================================================================
+   Langage Apple (design-md/library/apple.md), transposé à Littor'eau
+   - surfaces plates qui alternent : blanc, gris clair #f5f5f7, bleu nuit
+   - une seule couleur d'action (terre cuite), boutons en pilule, pression scale(.95)
+   - texte courant 17 px, titres 600 serrés, en-têtes de section centrés
+   - aucune ombre sur les cartes : filet très léger + rayon 18 px
+   - pas de dégradé décoratif hors du héros animé
+   ========================================================================== */
+:root{
+  --parchment:#f5f5f7; --apple-ink:#1d1d1f; --hairline:rgba(0,0,0,0.08);
+  --font-text:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",Arial,system-ui,sans-serif;
+}
+body.refined{font-family:var(--font-text);font-size:17px;line-height:1.47;letter-spacing:-0.01em;color:var(--apple-ink);}
+body.refined p,body.refined li{letter-spacing:-0.01em;}
+
+/* Titres : Archivo à largeur normale, graisse 600, interlettrage serré */
+body.refined .section-title,body.refined .hero-title,body.refined h2,body.refined h3,body.refined .faq-item summary{
+  font-family:var(--font-display);font-stretch:100%;font-weight:600;letter-spacing:-0.022em;}
+body.refined .section-title{font-size:clamp(30px,3.6vw,48px);line-height:1.08;color:var(--apple-ink);margin-bottom:14px;}
+body.refined .cibles .section-title,body.refined .galerie .section-title,body.refined .marche .section-title,
+body.refined #reseau .section-title,body.refined .contact .section-title{color:#fff;}
+body.refined .section-lead{font-size:21px;line-height:1.38;font-weight:400;color:#6e6e73;max-width:44ch;}
+body.refined .cibles .section-lead,body.refined .galerie p,body.refined .marche .section-lead,
+body.refined #reseau .section-lead,body.refined .contact .section-lead{color:rgba(255,255,255,0.72);}
+
+/* Sections bord à bord, 96 px d'air, la couleur fait la séparation */
+body.refined main > section:not(.hero){padding-top:96px;padding-bottom:96px;}
+body.refined .about,body.refined .home .territoire,body.refined #faq-campings,body.refined .references{background:var(--parchment);}
+body.refined.home .expertises,body.refined #terrain,body.refined #faq,body.refined .territoire{background:#fff;}
+body.refined.home .territoire{background:var(--parchment);}
+body.refined .outils{background:#fff;}
+body.refined .marche{background:#0b2c4a;}
+body.refined .cibles,body.refined .galerie,body.refined #reseau{background:#081f36 !important;}
+body.refined .contact{background:#0b2c4a;}
+body.refined .contact::before{display:none;}
+
+/* En-têtes centrés au-dessus des grilles, comme une vitrine */
+@media (min-width:761px){
+  body.refined #expertises > .section-title,body.refined #expertises > .section-lead,
+  body.refined #cibles > .section-title,body.refined #cibles > .section-lead,
+  body.refined #references > .section-title,body.refined #references > .section-lead,
+  body.refined #galerie > .section-title,body.refined #galerie > p,
+  body.refined #terrain > .section-title,body.refined #terrain > .section-lead,
+  body.refined #outils > .section-title,
+  body.refined #reseau .section-title,body.refined #reseau .section-lead{text-align:center;margin-left:auto;margin-right:auto;}
+  body.refined #outils .outils-grid{justify-content:center;}
+  body.refined .exp-domain-title{text-align:left;}
+}
+
+/* Cartes : plates, filet fin, rayon 18 px, pas d'ombre au repos ni au survol */
+body.refined .terrain-card,body.refined .exp-card,body.refined .ref-card,body.refined .cible-card.cible-light,body.refined .steps li{
+  background:#fff;border:1px solid var(--hairline);border-radius:18px;box-shadow:none !important;transform:none !important;}
+body.refined .about .terrain-card,body.refined .references .ref-card,body.refined #faq-campings .faq-item{background:#fff;}
+body.refined .expertises .exp-card,body.refined #terrain .terrain-card{background:var(--parchment);border-color:transparent;}
+body.refined .terrain-card:hover,body.refined .exp-card:hover,body.refined .ref-card:hover{border-color:rgba(0,0,0,0.14);}
+body.refined .terrain-wide{background:#0b2c4a !important;}
+body.refined .card-icon{box-shadow:none !important;background:#fff;border:1px solid var(--hairline);border-radius:12px;}
+body.refined .expertises .card-icon,body.refined #terrain .card-icon{background:#fff;}
+body.refined .terrain-card h3,body.refined .exp-card h3,body.refined .ref-card h3{font-size:21px;line-height:1.19;color:var(--apple-ink);}
+body.refined .terrain-card p,body.refined .exp-card p,body.refined .ref-card p{font-size:16px;line-height:1.47;color:#424245;}
+body.refined .ref-meta{color:#6e6e73;}
+body.refined .exp-tag,body.refined .terrain-tag{border-radius:999px;background:#fff;border:1px solid var(--hairline);color:#424245;}
+body.refined .expertises .exp-tag,body.refined #terrain .terrain-tag{background:#fff;}
+body.refined .cible-card,body.refined .mcard{border-radius:18px;box-shadow:none !important;}
+body.refined .outil-pill{border-radius:999px;background:var(--parchment);border:0;color:var(--apple-ink);font-size:15px;padding:9px 16px;}
+body.refined .outil-pill .dot{display:none;}
+body.refined .galerie-item{border-radius:18px;}
+body.refined .about-portrait img{border-radius:18px;}
+body.refined .about-facts li,body.refined .about-facts li:last-child{background:#fff;border-radius:12px;}
+
+/* Boutons : pilule, une seule couleur d'action, pression qui rétrécit */
+body.refined .btn-primary,body.refined .btn-red,body.refined .form-submit,body.refined .cookie-btn-primary,
+body.refined .btn-outline,body.refined #galerieToggle,body.refined .cookie-btn,body.refined #reseau a[href="#contact"]{
+  border-radius:999px !important;font-family:var(--font-text);font-size:17px !important;font-weight:400 !important;letter-spacing:-0.01em;
+  padding:11px 22px;transition:background-color .2s ease,transform .12s ease,border-color .2s ease;}
+body.refined .btn-primary:active,body.refined .btn-red:active,body.refined .form-submit:active,body.refined .btn-outline:active,
+body.refined #galerieToggle:active,body.refined .cookie-btn:active,body.refined .nav-cta:active{transform:scale(0.95);}
+body.refined .btn-shine::after,body.refined .btn-shine::before{display:none !important;}
+body.refined .nav-cta{border-radius:999px !important;padding:7px 16px !important;font-weight:400 !important;}
+body.refined .ref-link,body.refined .risk-more{border:0;color:var(--wave);}
+body.refined .ref-link::after{content:" ›";}
+
+/* Navigation : barre fine et givrée */
+body.refined nav#navbar{padding:6px 6vw;}
+body.refined .nav-logo img{height:48px;border-radius:10px;box-shadow:none;}
+body.refined nav.scrolled,body.legal nav#navbar{background:rgba(8,31,54,0.78) !important;
+  -webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);box-shadow:none;}
+body.refined .nav-links a{font-family:var(--font-text);font-size:14px;letter-spacing:-0.01em;}
+
+/* Pied de page clair et dense, à la manière d'un plan du site */
+body.refined footer{background:var(--parchment);border-top:1px solid var(--hairline);padding:40px 8vw 48px;}
+body.refined footer p,body.refined .footer-logo-large p{color:#424245 !important;font-size:13.5px;}
+body.refined .footer-logo-large p:first-child{color:var(--apple-ink) !important;font-weight:600;}
+body.refined .footer-legal a,body.refined .footer-legal .cookie-manage{color:#424245;}
+body.refined .footer-legal a:hover,body.refined .footer-legal .cookie-manage:hover{color:var(--apple-ink);}
+
+/* Pas de dégradé décoratif en dehors du héros */
+body.refined .territoire-map{background:#0b2c4a !important;}
+body.refined .territoire-map::before{display:none;}
+
+/* Formulaire : champs arrondis à la manière d'une recherche */
+body.refined .form-group input,body.refined .form-group textarea,body.refined .form-group select{border-radius:12px;}
+body.refined .objet-chip{border-radius:999px;}
+body.refined .contact-card{border-radius:18px;box-shadow:none;}
+
+@media (max-width:760px){
+  body.refined main > section:not(.hero){padding-top:64px;padding-bottom:64px;}
+  body.refined .section-lead{font-size:19px;}
+  body.refined .terrain-card h3,body.refined .exp-card h3,body.refined .ref-card h3{font-size:18px;}
+}
+@media (prefers-reduced-motion:reduce){
+  body.refined .btn-primary:active,body.refined .btn-red:active,body.refined .form-submit:active,body.refined .btn-outline:active{transform:none;}
+}
+body.refined #galerie > p{font-size:19px !important;line-height:1.42 !important;color:rgba(255,255,255,0.72) !important;max-width:44ch !important;}
+/* Liens sur fond sombre : terre cuite éclaircie (contraste ≥ 4,8:1), comme le bleu « sur fond sombre » d'Apple */
+body.refined .contact a:not(.btn-red):not(.btn-primary),body.refined .marche-text a,body.refined #reseau a:not([href="#contact"]),
+body.refined .galerie a,body.refined .cibles a,body.refined [style*="background:var(--deep)"] a:not([class]),
+body.refined [style*="background:var(--ocean)"] a:not([class]),body.refined .contact-alt a,body.refined a[style*="color:var(--foam)"]{color:#e8937a !important;}
+body.refined .contact-card .form-group label{color:rgba(255,255,255,0.78);}
+body.refined .badge-available{color:#e8937a;}
+body.refined .contact-alt p{color:rgba(255,255,255,0.75);}
+body.refined .terrain-wide .terrain-tag,body.refined .terrain-wide .exp-tag{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.22);color:#fff;}
+body.refined .terrain-wide .card-icon{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.18);color:#cfe6ee;}
+body.refined .terrain-wide h3{color:#fff !important;}
+body.refined .terrain-wide p{color:rgba(255,255,255,0.78) !important;}
