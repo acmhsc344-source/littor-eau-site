@@ -55,7 +55,7 @@ function Background({ initial }) {
         reflection={0.1}
         lightType="3d"
         brightness={1.05}
-        grain="on"
+        grain="off"
         grainBlending={0.15}
         enableTransition
         smoothTime={0.6}

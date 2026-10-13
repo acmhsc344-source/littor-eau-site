@@ -63,8 +63,8 @@
     "@type": "OfferCatalog",
     "name": "Prestations Littor'eau",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hydraulique fluviale & Inondations", "description": "Modélisation des écoulements sous HEC-RAS, cartographie des zones inondables, appui réglementaire PPRI, GEMAPI, PAPI." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Risques côtiers & Submersions", "description": "Érosion du trait de côte, submersion marine, dynamiques littorales et sédimentaires, études réglementaires PPRL." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hydraulique fluviale et inondations", "description": "Modélisation des écoulements sous HEC-RAS, cartographie des zones inondables, appui réglementaire PPRI, GEMAPI, PAPI." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Risques côtiers et submersion", "description": "Érosion du trait de côte, submersion marine, dynamiques littorales et sédimentaires, études réglementaires PPRL." } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cartographie SIG & LiDAR HD", "description": "MNT haute résolution à partir de LiDAR HD IGN, cartographie d'aléas naturels, orthophotos, analyses spatiales sous QGIS." } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cartographie & Photogrammétrie Drone", "description": "Photogrammétrie aérienne, modèles 3D et orthophotos haute précision pour littoraux et zones difficiles d'accès." } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conseil & Appui réglementaire", "description": "Rédaction de cahiers des charges, montage de dossiers Loi sur l'Eau, PPRI/PPRL, interface avec les services de l'État." } },
@@ -78,7 +78,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home">
 
 <a href="#hero" class="skip-link">Aller au contenu principal</a>
 <div id="scrollProgress"></div>
@@ -171,19 +171,19 @@
   <p class="section-lead">Avant d'être un rapport, la connaissance du littoral, c'est des heures passées à pied, en mer, sur les plages.</p>
   <div class="terrain-grid" style="margin-top:48px;">
     <div class="terrain-card">
-      <h3>🎓 Master Sciences de l'Eau et de l'Environnement</h3>
+      <h3>Master Sciences de l'Eau et de l'Environnement</h3>
       <p>Spécialisations <strong>Eau & Littoral</strong> et <strong>Gestion des Mers</strong>, Université de Montpellier.</p>
       <div class="terrain-tags"><span class="terrain-tag">Université de Montpellier</span><span class="terrain-tag">Eau & Littoral</span><span class="terrain-tag">Gestion des Mers</span></div>
     </div>
     <div class="terrain-card">
-      <h3>🏝️ 5 mois de terrain continu à Ghisonaccia</h3>
-      <p>Suivi morphodynamique quotidien du littoral corse, 2024–2025. <a href="#galerie" style="color:var(--wave);font-weight:600;text-decoration:none;">Voir le terrain →</a></p>
+      <h3>5 mois de terrain continu à Ghisonaccia</h3>
+      <p>Suivi morphodynamique quotidien du littoral corse, 2024–2025. <a href="#galerie" style="color:var(--wave);font-weight:600;text-decoration:none;">Voir le terrain</a></p>
       <div class="terrain-tags"><span class="terrain-tag">Haute-Corse</span><span class="terrain-tag">2024–2025</span></div>
     </div>
-    <div class="terrain-card" style="grid-column:1 / -1;background:linear-gradient(135deg,var(--ocean),var(--deep));color:var(--white);">
-      <h3 style="color:var(--white);">🥾 La Marche Méditerranée 2026 · 1 000 km de terrain</h3>
-      <p style="color:rgba(255,255,255,0.75);">28 jours à pied, de Port-Bou à Vintimille, tout le littoral méditerranéen français traversé pour documenter l'érosion côtière et la submersion marine sur le terrain — relevés drone, cartographie SIG, série documentaire « Voix du Littoral ». <a href="#marche" style="color:var(--foam);font-weight:600;text-decoration:none;">Découvrir la Marche →</a></p>
-      <div class="terrain-tags"><span class="terrain-tag">1 000 km</span><span class="terrain-tag">28 jours</span><span class="terrain-tag">Port-Bou → Vintimille</span><span class="terrain-tag">11 mai → 7 juin 2026</span></div>
+    <div class="terrain-card terrain-wide">
+      <h3>La Marche Méditerranée 2026 · 1 000 km de terrain</h3>
+      <p>28 jours à pied, de Port-Bou à Vintimille, tout le littoral méditerranéen français traversé pour documenter l'érosion côtière et la submersion marine sur le terrain — relevés drone, cartographie SIG, série documentaire « Voix du Littoral ». <a href="#marche" style="color:var(--foam);font-weight:600;text-decoration:none;">Découvrir la Marche</a></p>
+      <div class="terrain-tags"><span class="terrain-tag">1 000 km</span><span class="terrain-tag">28 jours</span><span class="terrain-tag">de Port-Bou à Vintimille</span><span class="terrain-tag">du 11 mai au 7 juin 2026</span></div>
     </div>
   </div>
 </section>
@@ -195,20 +195,20 @@
   <p class="section-lead">Deux interventions récentes, du diagnostic à la donnée de terrain. Le détail complet est disponible plus bas.</p>
   <div class="terrain-grid" style="margin-top:48px;">
     <div class="exp-card">
-      <span class="exp-icon">📍</span>
+      
       <h3>Étude de cas : suivi littoral, Ghisonaccia (Haute-Corse)</h3>
       <p style="font-weight:600;color:var(--wave);margin-bottom:8px;">5 mois de mission continue · 2024–2025</p>
       <p>Profils de plage, drone, bathymétrie, sédimentologie : 7 km de littoral suivis avec la Mairie de Ghisonaccia.</p>
       <div class="exp-tags"><span class="exp-tag">Suivi morphodynamique</span><span class="exp-tag">Photogrammétrie drone</span><span class="exp-tag">Bathymétrie</span></div>
-      <p style="margin-top:14px;"><a href="#galerie" style="color:var(--wave);font-weight:600;text-decoration:none;">Voir le détail →</a></p>
+      <p style="margin-top:14px;"><a href="#galerie" style="color:var(--wave);font-weight:600;text-decoration:none;">Voir le détail</a></p>
     </div>
     <div class="exp-card">
-      <span class="exp-icon">🏕️</span>
+      
       <h3>Étude de cas : diagnostic camping littoral</h3>
       <p style="font-weight:600;color:var(--wave);margin-bottom:8px;">Note d'avis technique · Marche Méditerranée 2026</p>
       <p>Note d'avis technique pour un camping audois/héraultais exposé à l'érosion : diagnostic et recommandations remis à l'exploitant.</p>
       <div class="exp-tags"><span class="exp-tag">Diagnostic érosion</span><span class="exp-tag">Note technique</span><span class="exp-tag">Camping littoral</span></div>
-      <p style="margin-top:14px;"><a href="#marche" style="color:var(--wave);font-weight:600;text-decoration:none;">Voir le détail →</a></p>
+      <p style="margin-top:14px;"><a href="#marche" style="color:var(--wave);font-weight:600;text-decoration:none;">Voir le détail</a></p>
     </div>
   </div>
 </section>
@@ -263,24 +263,19 @@
         </div>
   </div>
   <div style="text-align:center;margin-top:24px;">
-    <button type="button" class="btn-outline" id="galerieToggle" style="cursor:pointer;">Voir 5 photos supplémentaires →</button>
+    <button type="button" class="btn-outline" id="galerieToggle" style="cursor:pointer;">Voir 5 photos supplémentaires</button>
   </div>
 </section>
 
 <!-- LA MARCHE -->
 <section class="marche" id="marche">
   <div class="marche-inner">
-    <div class="section-eyebrow">Mission accomplie · 11 mai → 7 juin 2026 · Port-Bou → Vintimille</div>
+    <div class="section-eyebrow">Marche terminée le 7 juin 2026</div>
     <h2 class="section-title">La Marche Méditerranée 2026 · 1 000 km de terrain</h2>
     <p class="section-lead">28 jours. 1 000 km à pied. De Port-Bou à Vintimille. Une expédition de terrain pour documenter l'état réel de l'érosion côtière et de la submersion marine sur le littoral méditerranéen français en 2026.</p>
 
     <!-- BILAN DE LA MARCHE -->
-    <div class="marche-stats">
-      <div class="mstat"><div class="n">28</div><div class="l">jours de marche</div></div>
-      <div class="mstat"><div class="n">1 000+</div><div class="l">km à pied</div></div>
-      <div class="mstat"><div class="n">40+</div><div class="l">Contacts établis</div></div>
-      <div class="mstat"><div class="n">100%</div><div class="l">Open source</div></div>
-    </div>
+    <p class="marche-summary">Du 11 mai au 7 juin 2026, de Port-Bou à Vintimille, à pied. Les relevés et les cartes produits en chemin sont publiés librement sur ce site.</p>
 
     <div class="marche-body">
       <div class="marche-text">
@@ -290,15 +285,15 @@
           <li>Série documentaire <strong>« Voix du Littoral »</strong></li>
           <li>Interventions de sensibilisation en lycées</li>
         </ul>
-        <p>Concrètement : une note d'avis technique remise à un camping littoral exposé à l'érosion, dès le terrain. <a href="#portfolio" style="color:var(--foam);font-weight:600;text-decoration:none;">Voir l'étude de cas →</a></p>
+        <p>Concrètement : une note d'avis technique remise à un camping littoral exposé à l'érosion, dès le terrain. <a href="#portfolio" style="color:var(--foam);font-weight:600;text-decoration:none;">Voir l'étude de cas</a></p>
         <p><strong>Constat :</strong> les plages méditerranéennes reculent, certaines disparaîtront sous 10 à 20 ans. Littor'eau fait le lien entre donnée scientifique et décision locale.</p>
         <a href="#contact" class="btn-red" onclick="setTimeout(()=>{const s=document.querySelector('select[name=objet]');if(s){s.value='Suite Marche Méditerranée';}},200)">Échanger sur les données récoltées</a>
       </div>
       <div class="marche-cards">
-        <div class="mcard"><span class="icon">🚁</span><h4>Relevés drone quotidiens</h4><p>Photogrammétrie, orthophotos, MNT des zones côtières traversées.</p></div>
-        <div class="mcard"><span class="icon">🗺️</span><h4>Cartographie SIG</h4><p>Données de terrain versées en open-source sur littor-eau.fr</p></div>
-        <div class="mcard"><span class="icon">🏫</span><h4>Interventions scolaires</h4><p>Lycées et collèges sensibilisés de Port-Bou à Vintimille.</p></div>
-        <div class="mcard"><span class="icon">📱</span><h4>Documenté au quotidien</h4><p>LinkedIn, Instagram et YouTube. La science littorale rendue accessible.</p></div>
+        <div class="mcard"><h4>Relevés drone quotidiens</h4><p>Photogrammétrie, orthophotos, MNT des zones côtières traversées.</p></div>
+        <div class="mcard"><h4>Cartographie SIG</h4><p>Données de terrain versées en open-source sur littor-eau.fr</p></div>
+        <div class="mcard"><h4>Interventions scolaires</h4><p>Lycées et collèges sensibilisés de Port-Bou à Vintimille.</p></div>
+        <div class="mcard"><h4>Documenté au quotidien</h4><p>LinkedIn, Instagram et YouTube. La science littorale rendue accessible.</p></div>
       </div>
     </div>
   </div>
@@ -387,7 +382,7 @@
       <div class="reseau-panel reseau-photo" style="border-radius:16px;overflow:hidden;position:relative;">
         <picture><source srcset="images/conference-lycee-feuillade.webp" type="image/webp"><img src="images/conference-lycee-feuillade.jpg" alt="Intervention en lycée, Lycée Louis Feuillade, Lunel" style="width:100%;height:100%;object-fit:cover;display:block;"/></picture>
         <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(8,31,54,0.92),transparent);padding:18px 20px 16px;">
-          <div style="font-size:8pt;font-weight:600;color:var(--foam);">📚 Intervention en lycée</div>
+          <div style="font-size:8pt;font-weight:600;color:var(--foam);">Intervention en lycée</div>
           <div style="font-size:7.5pt;color:rgba(255,255,255,0.65);margin-top:3px;">Lycée Louis Feuillade · Lunel · Terminales en amphithéâtre</div>
         </div>
       </div>
@@ -399,7 +394,7 @@
         <div style="font-size:7.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--foam);margin-bottom:14px;">● Partenaires confirmés</div>
         <div style="display:flex;flex-direction:column;gap:10px;">
           <div style="background:rgba(200,90,60,0.08);border:1px solid rgba(200,90,60,0.3);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
-            <span style="font-size:16pt;">🏕️</span>
+            <span style="font-size:16pt;"></span>
             <div>
               <div style="font-size:9.5pt;font-weight:600;color:var(--white);">Camping partenaire · Pyrénées-Orientales</div>
               <div style="font-size:8pt;color:rgba(255,255,255,0.5);">66 · Hébergement + intervention sensibilisation</div>
@@ -407,7 +402,7 @@
             <span style="margin-left:auto;background:rgba(200,90,60,0.2);color:var(--foam);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">CONFIRMÉ</span>
           </div>
           <div style="background:rgba(200,90,60,0.08);border:1px solid rgba(200,90,60,0.3);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
-            <span style="font-size:16pt;">🏕️</span>
+            <span style="font-size:16pt;"></span>
             <div>
               <div style="font-size:9.5pt;font-weight:600;color:var(--white);">Camping partenaire · Hérault</div>
               <div style="font-size:8pt;color:rgba(255,255,255,0.5);">34 · Hébergement + étude littorale</div>
@@ -421,7 +416,7 @@
         <div style="font-size:7.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--light);margin-bottom:14px;">● Contacts établis</div>
         <div style="display:flex;flex-direction:column;gap:10px;">
           <div style="background:rgba(221,125,95,0.06);border:1px solid rgba(221,125,95,0.25);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
-            <span style="font-size:16pt;">🏫</span>
+            <span style="font-size:16pt;"></span>
             <div>
               <div style="font-size:9.5pt;font-weight:600;color:var(--white);">15+ lycées & collèges</div>
               <div style="font-size:8pt;color:rgba(255,255,255,0.5);">66 · 11 · 34</div>
@@ -429,7 +424,7 @@
             <span style="margin-left:auto;background:rgba(221,125,95,0.2);color:var(--light);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">EN COURS</span>
           </div>
           <div style="background:rgba(221,125,95,0.06);border:1px solid rgba(221,125,95,0.25);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
-            <span style="font-size:16pt;">🏕️</span>
+            <span style="font-size:16pt;"></span>
             <div>
               <div style="font-size:9.5pt;font-weight:600;color:var(--white);">10+ campings littoraux</div>
               <div style="font-size:8pt;color:rgba(255,255,255,0.5);">66 · 11 · 34</div>
@@ -437,7 +432,7 @@
             <span style="margin-left:auto;background:rgba(221,125,95,0.2);color:var(--light);font-size:7pt;font-weight:700;padding:3px 10px;border-radius:20px;">EN COURS</span>
           </div>
           <div style="background:rgba(221,125,95,0.06);border:1px solid rgba(221,125,95,0.25);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;">
-            <span style="font-size:16pt;">🏛️</span>
+            <span style="font-size:16pt;"></span>
             <div>
               <div style="font-size:9.5pt;font-weight:600;color:var(--white);">5+ mairies & EPCI</div>
               <div style="font-size:8pt;color:rgba(255,255,255,0.5);">Gruissan · Grand Narbonne…</div>
@@ -450,7 +445,7 @@
 
     <div style="text-align:center;margin-top:40px;">
       <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;background:var(--foam);color:var(--deep);padding:12px 26px;border-radius:4px;text-decoration:none;font-weight:600;font-size:9.5pt;transition:background 0.2s,transform 0.2s;" onmouseover="this.style.background='var(--light)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='var(--foam)';this.style.transform=''">
-        Rejoindre le réseau →
+        Rejoindre le réseau
       </a>
     </div>
   </div>
@@ -474,7 +469,7 @@
     </div>
     <div class="terrain-card">
       <h3>Analyses sédimentaires de laboratoire</h3>
-      <p>Prélèvements sur 7 km : granulométrie, susceptibilité magnétique (37–235 µS), ICP-MS. Dérive Sud → Nord confirmée 9 jours sur 10.</p>
+      <p>Prélèvements sur 7 km : granulométrie, susceptibilité magnétique (37–235 µS), ICP-MS. Dérive du sud vers le nord confirmée 9 jours sur 10.</p>
       <div class="terrain-tags"><span class="terrain-tag">Granulométrie</span><span class="terrain-tag">ICP-MS</span><span class="terrain-tag">Susceptibilité magnétique</span><span class="terrain-tag">Dérive littorale</span></div>
     </div>
     <div class="terrain-card">
@@ -526,26 +521,26 @@
   <div class="exp-domain">
     <div class="exp-domain-title">Risques côtiers & Incendie</div>
     <div class="exp-grid">
-      <div class="exp-card"><span class="exp-icon">🌊</span><h3>Hydraulique fluviale & Inondations</h3><p>Modélisation des écoulements sous HEC-RAS, cartographie des zones inondables, diagnostics de vulnérabilité des enjeux exposés. Appui réglementaire pour les dossiers PPRI, GEMAPI et PAPI.</p><div class="exp-tags"><span class="exp-tag">HEC-RAS</span><span class="exp-tag">RAS Mapper</span><span class="exp-tag">PPRI</span><span class="exp-tag">PAPI</span></div></div>
-      <div class="exp-card"><span class="exp-icon">🏖️</span><h3>Risques côtiers & Submersions</h3><p>Érosion du trait de côte, submersion marine, dynamiques littorales et sédimentaires. Études réglementaires PPRL et suivi morphologique du littoral dans la durée.</p><div class="exp-tags"><span class="exp-tag">PPRL</span><span class="exp-tag">Érosion</span><span class="exp-tag">Submersion</span><span class="exp-tag">Loi Littoral</span></div></div>
-      <div class="exp-card" style="border-top:3px solid #E76F51;"><span class="exp-icon">🔥</span><h3>Prévention des Risques Incendie</h3><p>Les incendies déstabilisent les bassins versants et accélèrent l'érosion en aval. Étude de propagation (vent, pente, végétation, historique Prométhée) et diagnostic de conformité OLD.</p><div class="exp-tags"><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Feux de forêt</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">OLD</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Base Prométhée</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Var · 13 · 34 · 06</span></div></div>
+      <div class="exp-card"><h3>Hydraulique fluviale et inondations</h3><p>Modélisation des écoulements sous HEC-RAS, cartographie des zones inondables, diagnostics de vulnérabilité des enjeux exposés. Appui réglementaire pour les dossiers PPRI, GEMAPI et PAPI.</p><div class="exp-tags"><span class="exp-tag">HEC-RAS</span><span class="exp-tag">RAS Mapper</span><span class="exp-tag">PPRI</span><span class="exp-tag">PAPI</span></div></div>
+      <div class="exp-card"><h3>Risques côtiers et submersion</h3><p>Érosion du trait de côte, submersion marine, dynamiques littorales et sédimentaires. Études réglementaires PPRL et suivi morphologique du littoral dans la durée.</p><div class="exp-tags"><span class="exp-tag">PPRL</span><span class="exp-tag">Érosion</span><span class="exp-tag">Submersion</span><span class="exp-tag">Loi Littoral</span></div></div>
+      <div class="exp-card"><h3>Prévention du risque incendie</h3><p>Les incendies déstabilisent les bassins versants et accélèrent l'érosion en aval. Étude de propagation (vent, pente, végétation, historique Prométhée) et diagnostic de conformité OLD.</p><div class="exp-tags"><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Feux de forêt</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">OLD</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Base Prométhée</span><span class="exp-tag" style="background:#fbe9e4;color:#E76F51;">Var · 13 · 34 · 06</span></div></div>
     </div>
   </div>
   <div class="exp-domain">
     <div class="exp-domain-title">Cartographie & Terrain</div>
     <div class="exp-grid">
       <!-- Carte dé-fusionnée (était "Cartographie SIG, LiDAR & Drone") : SIG/LiDAR d'un côté, Drone de l'autre -->
-      <div class="exp-card"><span class="exp-icon">🗺️</span><h3>Cartographie SIG & LiDAR HD</h3><p>MNT haute résolution à partir de LiDAR HD IGN, cartographie d'aléas naturels, orthophotos et analyses spatiales sous QGIS pour l'aide à la décision.</p><div class="exp-tags"><span class="exp-tag">QGIS</span><span class="exp-tag">LiDAR HD</span><span class="exp-tag">IGN</span><span class="exp-tag">MNT</span></div></div>
-      <div class="exp-card"><span class="exp-icon">🚁</span><h3>Cartographie & Photogrammétrie Drone</h3><p>Photogrammétrie aérienne, modèles 3D et orthophotos haute précision, pour les littoraux, zones humides et sites difficiles d'accès.</p><div class="exp-tags"><span class="exp-tag">Drone</span><span class="exp-tag">Photogrammétrie</span><span class="exp-tag">Orthophotos</span><span class="exp-tag">MNT 3D</span></div></div>
-      <div class="exp-card"><span class="exp-icon">📐</span><h3>Suivi morphodynamique du littoral & Bathymétrie</h3><p>Profils de plage et suivi du trait de côte sur transects fixes, bathymétrie légère en zone peu profonde, analyses sédimentaires (granulométrie, dérive littorale). Une méthodologie éprouvée sur le terrain corse pendant 5 mois.</p><div class="exp-tags"><span class="exp-tag">Profils de plage</span><span class="exp-tag">Bathymétrie</span><span class="exp-tag">Sédimentologie</span><span class="exp-tag">Suivi du trait de côte</span></div></div>
+      <div class="exp-card"><h3>Cartographie SIG & LiDAR HD</h3><p>MNT haute résolution à partir de LiDAR HD IGN, cartographie d'aléas naturels, orthophotos et analyses spatiales sous QGIS pour l'aide à la décision.</p><div class="exp-tags"><span class="exp-tag">QGIS</span><span class="exp-tag">LiDAR HD</span><span class="exp-tag">IGN</span><span class="exp-tag">MNT</span></div></div>
+      <div class="exp-card"><h3>Cartographie & Photogrammétrie Drone</h3><p>Photogrammétrie aérienne, modèles 3D et orthophotos haute précision, pour les littoraux, zones humides et sites difficiles d'accès.</p><div class="exp-tags"><span class="exp-tag">Drone</span><span class="exp-tag">Photogrammétrie</span><span class="exp-tag">Orthophotos</span><span class="exp-tag">MNT 3D</span></div></div>
+      <div class="exp-card"><h3>Suivi morphodynamique du littoral & Bathymétrie</h3><p>Profils de plage et suivi du trait de côte sur transects fixes, bathymétrie légère en zone peu profonde, analyses sédimentaires (granulométrie, dérive littorale). Une méthodologie éprouvée sur le terrain corse pendant 5 mois.</p><div class="exp-tags"><span class="exp-tag">Profils de plage</span><span class="exp-tag">Bathymétrie</span><span class="exp-tag">Sédimentologie</span><span class="exp-tag">Suivi du trait de côte</span></div></div>
     </div>
   </div>
   <div class="exp-domain">
     <div class="exp-domain-title">Conseil & Ressources</div>
     <div class="exp-grid">
-      <div class="exp-card"><span class="exp-icon">🏛️</span><h3>Conseil & Appui réglementaire</h3><p>Rédaction de cahiers des charges et montage de dossiers Loi sur l'Eau, PPRI/PPRL. Interface technique entre collectivités, bureaux d'études et services de l'État.</p><div class="exp-tags"><span class="exp-tag">GEMAPI</span><span class="exp-tag">Loi sur l'Eau</span><span class="exp-tag">Marchés publics</span></div></div>
-      <div class="exp-card"><span class="exp-icon">🎓</span><h3>Sensibilisation & Formation</h3><p>Interventions de sensibilisation auprès des élus, des équipes techniques et des lycées. Risques naturels et littoraux vulgarisés, adaptés à chaque public.</p><div class="exp-tags"><span class="exp-tag">Élus</span><span class="exp-tag">Lycées</span><span class="exp-tag">ERP</span><span class="exp-tag">Campings</span></div></div>
-      <div class="exp-card"><span class="exp-icon">💧</span><h3>Étude hydrogéologique & Forage</h3><p>Étude hydrogéologique préalable et pilotage d'une prospection géophysique pour localiser la ressource avant tout forage. Montage du dossier loi sur l'eau, suivi de chantier confié à un foreur certifié Qualiforage.</p><div class="exp-tags"><span class="exp-tag">Hydrogéologie</span><span class="exp-tag">Géophysique</span><span class="exp-tag">Rubrique 1.1.1.0</span><span class="exp-tag">Qualiforage</span></div></div>
+      <div class="exp-card"><h3>Conseil & Appui réglementaire</h3><p>Rédaction de cahiers des charges et montage de dossiers Loi sur l'Eau, PPRI/PPRL. Interface technique entre collectivités, bureaux d'études et services de l'État.</p><div class="exp-tags"><span class="exp-tag">GEMAPI</span><span class="exp-tag">Loi sur l'Eau</span><span class="exp-tag">Marchés publics</span></div></div>
+      <div class="exp-card"><h3>Sensibilisation & Formation</h3><p>Interventions de sensibilisation auprès des élus, des équipes techniques et des lycées. Risques naturels et littoraux vulgarisés, adaptés à chaque public.</p><div class="exp-tags"><span class="exp-tag">Élus</span><span class="exp-tag">Lycées</span><span class="exp-tag">ERP</span><span class="exp-tag">Campings</span></div></div>
+      <div class="exp-card"><h3>Étude hydrogéologique & Forage</h3><p>Étude hydrogéologique préalable et pilotage d'une prospection géophysique pour localiser la ressource avant tout forage. Montage du dossier loi sur l'eau, suivi de chantier confié à un foreur certifié Qualiforage.</p><div class="exp-tags"><span class="exp-tag">Hydrogéologie</span><span class="exp-tag">Géophysique</span><span class="exp-tag">Rubrique 1.1.1.0</span><span class="exp-tag">Qualiforage</span></div></div>
     </div>
   </div>
 </section>
@@ -556,11 +551,11 @@
   <h2 class="section-title">J'interviens auprès de</h2>
   <p class="section-lead">Des acteurs publics et privés qui ont besoin d'une expertise technique accessible, réactive et ancrée dans le territoire.</p>
   <div class="cibles-grid">
-    <div class="cible-card"><span class="cible-icon">🏘️</span><h4>Collectivités & EPCI</h4><p>Communes, intercommunalités, syndicats de rivières. GEMAPI, PAPI, diagnostics territoriaux.</p></div>
-    <div class="cible-card"><span class="cible-icon">📐</span><h4>Bureaux d'études</h4><p>Sous-traitance et partenariat hydraulique, SIG et modélisation.</p></div>
-    <div class="cible-card"><span class="cible-icon">🏕️</span><h4>Campings & ERP</h4><p>Diagnostics vulnérabilité, plans d'évacuation, sensibilisation.</p></div>
-    <div class="cible-card"><span class="cible-icon">🏢</span><h4>Assureurs & Promoteurs</h4><p>Expertise sinistres, évaluation aléas, analyse foncière en zone à risque.</p></div>
-    <div class="cible-card"><span class="cible-icon">🏠</span><h4>Propriétaires & Particuliers</h4><p>Diagnostic de vulnérabilité pour un bien exposé à l'érosion, la submersion ou l'incendie, avant travaux ou décision.</p></div>
+    <div class="cible-card"><h4>Collectivités & EPCI</h4><p>Communes, intercommunalités, syndicats de rivières. GEMAPI, PAPI, diagnostics territoriaux.</p></div>
+    <div class="cible-card"><h4>Bureaux d'études</h4><p>Sous-traitance et partenariat hydraulique, SIG et modélisation.</p></div>
+    <div class="cible-card"><h4>Campings & ERP</h4><p>Diagnostics vulnérabilité, plans d'évacuation, sensibilisation.</p></div>
+    <div class="cible-card"><h4>Assureurs & Promoteurs</h4><p>Expertise sinistres, évaluation aléas, analyse foncière en zone à risque.</p></div>
+    <div class="cible-card"><h4>Propriétaires & Particuliers</h4><p>Diagnostic de vulnérabilité pour un bien exposé à l'érosion, la submersion ou l'incendie, avant travaux ou décision.</p></div>
   </div>
 </section>
 
@@ -593,7 +588,7 @@
   <div class="territoire-inner">
     <div class="territoire-map">
       
-      <span class="map-icon">🗺️</span>
+      <span class="map-icon"></span>
       <div class="map-title">Sud de la France</div>
       <div class="map-sub">Zone d'intervention principale</div>
       <div class="map-depts">
@@ -695,32 +690,8 @@
 -->
 
 <section class="temoignages" id="temoignages" style="background:var(--white);padding:70px 8vw;">
-  <div class="section-eyebrow">Confiance</div>
   <h2 class="section-title">Ce qui est déjà engagé</h2>
-  <p class="section-lead">En attendant les premiers témoignages écrits, voici ce qui est aujourd'hui confirmé sur le terrain.</p>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px;">
-    <div style="background:var(--off);border-radius:12px;padding:22px 20px;border-top:3px solid var(--foam);display:flex;align-items:center;gap:14px;">
-      <span style="font-size:22pt;">🏕️</span>
-      <div>
-        <div style="font-size:15pt;font-weight:700;color:var(--ocean);font-family:'Cormorant Garamond',serif;">2 campings</div>
-        <div style="font-size:8.5pt;color:var(--mist);">Partenaires confirmés · 66 · 34</div>
-      </div>
-    </div>
-    <div style="background:var(--off);border-radius:12px;padding:22px 20px;border-top:3px solid var(--foam);display:flex;align-items:center;gap:14px;">
-      <span style="font-size:22pt;">📋</span>
-      <div>
-        <div style="font-size:15pt;font-weight:700;color:var(--ocean);font-family:'Cormorant Garamond',serif;">3 missions</div>
-        <div style="font-size:8.5pt;color:var(--mist);">Réalisées et documentées <a href="#references" style="color:var(--wave);font-weight:600;text-decoration:none;">→ Voir</a></div>
-      </div>
-    </div>
-    <div style="background:var(--off);border-radius:12px;padding:22px 20px;border-top:3px solid var(--foam);display:flex;align-items:center;gap:14px;">
-      <span style="font-size:22pt;">🏛️</span>
-      <div>
-        <div style="font-size:15pt;font-weight:700;color:var(--ocean);font-family:'Cormorant Garamond',serif;">5+ mairies</div>
-        <div style="font-size:8.5pt;color:var(--mist);">Contacts établis · Marche Méditerranée</div>
-      </div>
-    </div>
-  </div>
+  <p class="section-lead engaged">Deux campings partenaires dans l'Hérault et les Pyrénées-Orientales, trois missions réalisées et documentées dans les <a href="#references">références</a>, et des échanges ouverts avec plusieurs mairies du littoral rencontrées pendant la Marche Méditerranée.</p>
 </section>
 
 <!-- CONTACT -->
@@ -733,28 +704,28 @@
       <p class="section-lead">Un diagnostic, une étude, un partenariat pour la marche ? Je vous réponds sous 24h.</p>
       <div class="contact-items">
         <div class="contact-item">
-          <div class="contact-item-icon">☎</div>
+          
           <div class="contact-item-text">
             <div class="label">Téléphone</div>
             <div class="value"><a href="tel:0766663291">07 66 66 32 91</a></div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-item-icon">@</div>
+          
           <div class="contact-item-text">
             <div class="label">Email</div>
             <div class="value"><a href="mailto:alexis.camand@littor-eau.fr">alexis.camand@littor-eau.fr</a></div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-item-icon">📍</div>
+          
           <div class="contact-item-text">
             <div class="label">Localisation</div>
             <div class="value">Montpellier (34), Sud de la France</div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-item-icon">🌐</div>
+          
           <div class="contact-item-text">
             <div class="label">Site</div>
             <div class="value"><a href="https://littor-eau.fr">littor-eau.fr</a></div>
@@ -799,13 +770,13 @@
           <label>Message *</label>
           <textarea name="message" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
         </div>
-        <button type="submit" class="form-submit" id="submitBtn">✉ Envoyer le message</button>
+        <button type="submit" class="form-submit" id="submitBtn">Envoyer le message</button>
       </form>
       <div class="form-success" id="formSuccess">
-        ✅ Message reçu ! Je vous réponds sous 24h.
+         Message reçu ! Je vous réponds sous 24h.
       </div>
       <div class="contact-alt">
-        <span style="font-size:14pt;">☎</span>
+        <span style="font-size:14pt;"></span>
         <p>Besoin d'une réponse plus rapide ? <a href="tel:0766663291">Appelez directement</a></p>
       </div>
     </div>

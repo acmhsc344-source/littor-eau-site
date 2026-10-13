@@ -388,3 +388,50 @@ footer p{font-size:8pt;color:rgba(255,255,255,0.3);}
 }
 
 #about .about-grid{align-items:start;}
+
+/* ==========================================================================
+   Accueil : sobriété éditoriale. Les cartes deviennent des listes séparées par
+   un filet, les pastilles deviennent une ligne de mots-clés, plus d'icônes.
+   (portée limitée à la page d'accueil : body.home)
+   ========================================================================== */
+.home .section-eyebrow{text-transform:none;letter-spacing:0.2px;font-size:10pt;font-weight:500;}
+.home .exp-domain-title{text-transform:none;letter-spacing:0.2px;font-size:10.5pt;border-bottom:0;padding-bottom:0;margin-bottom:4px;}
+
+.home .terrain-grid,.home .exp-grid{gap:0 56px;}
+.home .terrain-card,.home .exp-card{
+  background:none;border:0;border-top:1px solid rgba(11,44,74,0.16);border-radius:0;box-shadow:none;
+  padding:24px 0 28px;transform:none;overflow:visible;}
+.home .exp-card::before{display:none;}
+.home .exp-card:hover{transform:none;box-shadow:none;}
+.home .terrain-card h3,.home .exp-card h3{font-size:16pt;margin-bottom:8px;}
+.home .terrain-card p,.home .exp-card p{font-size:10pt;color:#3a4e58;}
+.home .terrain-wide{grid-column:1 / -1;}
+
+.home .terrain-tags,.home .exp-tags{display:block;margin-top:10px;font-size:9pt;line-height:1.6;color:var(--mist);}
+.home .terrain-tag,.home .exp-tag{display:inline;background:none;padding:0;border-radius:0;font-size:inherit;font-weight:400;color:inherit;}
+.home .terrain-tag:not(:last-child)::after,.home .exp-tag:not(:last-child)::after{content:', ';}
+
+/* Cibles et cartes de la Marche (fond sombre) : liste à filets clairs */
+.home .cibles-grid{gap:0 32px;}
+.home .cible-card,.home .mcard{background:none;border:0;border-top:1px solid rgba(255,255,255,0.16);border-radius:0;padding:18px 0 20px;transform:none;}
+.home .cible-card:hover,.home .mcard:hover{background:none;transform:none;}
+.home .cible-card h4,.home .mcard h4{font-size:11pt;}
+.home .cible-card p,.home .mcard p{font-size:9pt;color:rgba(255,255,255,0.62);}
+.home .marche-cards{gap:0;}
+
+/* Outils : simple liste en ligne */
+.home .outils-grid{display:block;font-size:11pt;line-height:1.9;color:var(--ocean);max-width:70ch;}
+.home .outil-pill{display:inline;background:none;border:0;padding:0;box-shadow:none;border-radius:0;font-size:inherit;}
+.home .outil-pill:hover{transform:none;}
+.home .outil-pill .dot{display:none;}
+.home .outil-pill:not(:last-child)::after{content:', ';}
+.home .dept{background:none;border:0;padding:0;color:rgba(255,255,255,0.85);font-weight:400;}
+.home .dept:not(:last-child)::after{content:',';}
+
+.home .marche-summary{font-size:12pt;line-height:1.7;color:rgba(255,255,255,0.8);max-width:60ch;margin:24px 0 8px;}
+.home .engaged{max-width:64ch;color:#3a4e58;}
+.home .engaged a{color:var(--wave);}
+.home .contact-item{gap:0;}
+
+/* Héros : contenu calé en haut, pas de grain (il créait un effet de trame) */
+.home #hero[data-risk]{align-items:flex-start;padding-top:clamp(130px,18vh,200px);}
