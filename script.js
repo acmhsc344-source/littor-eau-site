@@ -120,10 +120,19 @@ async function handleSubmit(e) {
   }
 }
 
-// Consentement cookies : Google Analytics ne se charge qu'après acceptation
+// Consentement cookies (recommandations CNIL) :
+// - Google Analytics ne se charge qu'après « Accepter » ;
+// - refuser est aussi simple qu'accepter ;
+// - le choix est gardé 6 mois, puis redemandé ;
+// - « Gérer les cookies » (pied de page) permet de changer d'avis à tout moment.
 const GA_MEASUREMENT_ID = 'G-VJ692FHVEL';
+const CONSENT_KEY = 'cookieConsent';
+const CONSENT_MAX_AGE = 182 * 24 * 60 * 60 * 1000; // environ 6 mois
 
 function loadGoogleAnalytics() {
+  if (window.__gaLoaded) return;
+  window.__gaLoaded = true;
+  window['ga-disable-' + GA_MEASUREMENT_ID] = false;
   const script = document.createElement('script');
   script.async = true;
   script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
@@ -132,34 +141,48 @@ function loadGoogleAnalytics() {
   function gtag(){ dataLayer.push(arguments); }
   window.gtag = gtag;
   gtag('js', new Date());
-  gtag('config', GA_MEASUREMENT_ID);
+  // Mesure d'audience seulement : pas de signaux publicitaires ni de personnalisation
+  gtag('config', GA_MEASUREMENT_ID, { allow_google_signals: false, allow_ad_personalization_signals: false, cookie_expires: 33696000 }); // 13 mois au plus (CNIL)
+}
+
+function stopGoogleAnalytics() {
+  window['ga-disable-' + GA_MEASUREMENT_ID] = true;
+  // Supprime les cookies _ga déjà déposés, sur le domaine courant et le domaine parent
+  const host = location.hostname.replace(/^www\./, '');
+  document.cookie.split(';').map(c => c.trim().split('=')[0]).filter(n => /^_ga/.test(n)).forEach(name => {
+    [location.hostname, '.' + host, host].forEach(d => {
+      document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + d;
+    });
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+  });
+}
+
+function readConsent() {
+  try {
+    const raw = localStorage.getItem(CONSENT_KEY);
+    if (!raw) return null;
+    const v = JSON.parse(raw);
+    if (!v || !v.choice || Date.now() - v.at > CONSENT_MAX_AGE) return null;
+    return v.choice;
+  } catch (e) { return null; }
+}
+function saveConsent(choice) {
+  try { localStorage.setItem(CONSENT_KEY, JSON.stringify({ choice, at: Date.now() })); } catch (e) {}
 }
 
 const cookieBanner = document.getElementById('cookieBanner');
 const cookieAccept = document.getElementById('cookieAccept');
 const cookieRefuse = document.getElementById('cookieRefuse');
-let cookieChoice = null;
-try { cookieChoice = localStorage.getItem('cookieConsent'); } catch (e) {}
+function showBanner() { if (cookieBanner) { cookieBanner.style.display = 'flex'; (cookieRefuse || cookieAccept)?.focus({ preventScroll: true }); } }
+function hideBanner() { if (cookieBanner) cookieBanner.style.display = 'none'; }
 
-if (cookieChoice === 'accepted') {
-  loadGoogleAnalytics();
-} else if (cookieChoice !== 'refused' && cookieBanner) {
-  cookieBanner.style.display = 'flex';
-}
+const cookieChoice = readConsent();
+if (cookieChoice === 'accepted') loadGoogleAnalytics();
+else if (cookieChoice !== 'refused' && cookieBanner) cookieBanner.style.display = 'flex';
 
-if (cookieAccept) {
-  cookieAccept.addEventListener('click', () => {
-    try { localStorage.setItem('cookieConsent', 'accepted'); } catch (e) {}
-    loadGoogleAnalytics();
-    cookieBanner.style.display = 'none';
-  });
-}
-if (cookieRefuse) {
-  cookieRefuse.addEventListener('click', () => {
-    try { localStorage.setItem('cookieConsent', 'refused'); } catch (e) {}
-    cookieBanner.style.display = 'none';
-  });
-}
+cookieAccept?.addEventListener('click', () => { saveConsent('accepted'); loadGoogleAnalytics(); hideBanner(); });
+cookieRefuse?.addEventListener('click', () => { saveConsent('refused'); stopGoogleAnalytics(); hideBanner(); });
+document.querySelectorAll('[data-cookie-manage]').forEach(b => b.addEventListener('click', showBanner));
 
 // Halo qui suit le curseur sur les cartes de l'accueil (effet « spotlight » façon React Bits)
 document.querySelectorAll('.refined .terrain-card, .refined .exp-card, .refined .cible-card, .refined .mcard, .ref-card').forEach(card => {

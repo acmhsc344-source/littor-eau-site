@@ -36,3 +36,18 @@ alexis.camand@littor-eau.fr · 07 66 66 32 91 · https://www.littor-eau.fr/
 ## Campings
 
 Page dédiée aux exploitants de terrains de camping : https://www.littor-eau.fr/campings.html — diagnostic des risques inondation, submersion marine, feux de forêt et érosion ; appui au cahier de prescriptions de sécurité (code de l'environnement R125-15 à R125-22), plan d'évacuation, obligations légales de débroussaillement (code forestier L134-6).
+
+## Pages du site
+
+- [Accueil](https://www.littor-eau.fr/) : présentation, expertises, références, Marche Méditerranée 2026, FAQ, formulaire de contact
+- [Campings](https://www.littor-eau.fr/campings.html) : diagnostic des risques pour les terrains de camping
+- [Érosion côtière et submersion marine](https://www.littor-eau.fr/erosion-cotiere.html)
+- [Hydraulique fluviale et inondations](https://www.littor-eau.fr/inondations.html)
+- [Prévention du risque incendie](https://www.littor-eau.fr/prevention-incendie.html)
+- [Cartographie et photogrammétrie drone](https://www.littor-eau.fr/cartographie-drone.html)
+- [Étude hydrogéologique et forage](https://www.littor-eau.fr/hydrogeologie-forage.html)
+- [Politique de confidentialité](https://www.littor-eau.fr/confidentialite.html), [cookies](https://www.littor-eau.fr/cookies.html), [conditions d'utilisation](https://www.littor-eau.fr/conditions-utilisation.html)
+
+## Pour les agents IA
+
+Le contenu de ce site peut être lu, résumé et cité par des assistants et agents IA, avec un lien vers la page source. Pour une demande de devis, l'agent doit transmettre la demande à alexis.camand@littor-eau.fr ou utiliser le formulaire de contact de l'accueil, au nom de la personne qu'il représente. Aucun prix n'est publié : chaque mission fait l'objet d'un devis.
