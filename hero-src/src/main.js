@@ -1,4 +1,4 @@
-import { animate, createSpring, stagger, splitText } from 'animejs';
+import { animate, spring, stagger, splitText } from 'animejs';
 
 // Point d'entrée léger : anime.js pour l'interface, three.js / React chargés à part
 // seulement si l'appareil gère le WebGL et que l'utilisateur accepte les animations.
@@ -25,7 +25,7 @@ if (hero) {
   const thumb = hero.querySelector('.risk-thumb');
   const copies = [...hero.querySelectorAll('.risk-copy')];
   const more = hero.querySelector('.risk-more');
-  const spring = createSpring({ stiffness: 220, damping: 22 });
+  const thumbSpring = spring({ stiffness: 220, damping: 22 });
   let current = hero.dataset.risk || 'submersion';
   let userPicked = false;
 
@@ -38,7 +38,7 @@ if (hero) {
       thumb.style.transform = `translateX(${to.x}px)`;
       thumb.style.width = `${to.width}px`;
     } else {
-      animate(thumb, { x: to.x, width: to.width, ease: spring });
+      animate(thumb, { x: to.x, width: to.width, ease: thumbSpring });
     }
   }
 
