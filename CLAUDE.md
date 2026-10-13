@@ -29,3 +29,23 @@ aucune commande de build).
 
 Aperçu local : `python3 -m http.server 8765` à la racine, puis `http://localhost:8765/`.
 Les captures de l'inspecteur vont dans `.taste-skill/` (ignoré par git).
+
+## Qualité web et contenu (dossier `.claude/skills/`)
+
+| Skill | Source | Usage |
+| --- | --- | --- |
+| `web-quality-audit` | addyosmani/web-quality-skills (MIT) | Audit global ; `scripts/analyze.sh <dossier>` vérifie le HTML en lecture seule (jq requis) |
+| `accessibility` | addyosmani/web-quality-skills (MIT) | Audit WCAG 2.2 |
+| `performance` | addyosmani/web-quality-skills (MIT) | Temps de chargement, poids des pages |
+| `core-web-vitals` | addyosmani/web-quality-skills (MIT) | LCP, INP, CLS |
+| `best-practices` | addyosmani/web-quality-skills (MIT) | Sécurité, compatibilité, qualité du code |
+| `seo` | addyosmani/web-quality-skills (MIT) | SEO technique (balises, sitemap, données structurées) |
+| `seo-audit` | coreyhaines31/marketingskills (MIT) | Audit SEO, y compris référencement local |
+| `schema` | coreyhaines31/marketingskills (MIT) | Données structurées JSON-LD |
+| `ai-seo` | coreyhaines31/marketingskills (MIT) | Être cité par les moteurs de réponse IA |
+| `copywriting` | coreyhaines31/marketingskills (MIT) | Écrire ou réécrire les textes des pages |
+| `copy-editing` | coreyhaines31/marketingskills (MIT) | Relire et resserrer un texte existant |
+| `cro` | coreyhaines31/marketingskills (MIT) | Rendre les pages et le formulaire de contact plus efficaces |
+
+Les skills marketing lisent d'abord `.claude/product-marketing.md` (offre, cibles, règles de ton).
+Ils sont écrits en anglais : les textes produits pour le site restent en français.
