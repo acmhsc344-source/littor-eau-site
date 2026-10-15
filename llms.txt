@@ -31,22 +31,22 @@ Collectivités, campings et hébergements touristiques, gestionnaires de sites n
 
 ## Contact
 
-alexis.camand@littor-eau.fr · 07 66 66 32 91 · https://www.littor-eau.fr/
+alexis.camand@littor-eau.fr · 07 66 66 32 91 · https://littor-eau.fr/
 
 ## Campings
 
-Page dédiée aux exploitants de terrains de camping : https://www.littor-eau.fr/campings.html — diagnostic des risques inondation, submersion marine, feux de forêt et érosion ; appui au cahier de prescriptions de sécurité (code de l'environnement R125-15 à R125-22), plan d'évacuation, obligations légales de débroussaillement (code forestier L134-6).
+Page dédiée aux exploitants de terrains de camping : https://littor-eau.fr/campings.html — diagnostic des risques inondation, submersion marine, feux de forêt et érosion ; appui au cahier de prescriptions de sécurité (code de l'environnement R125-15 à R125-22), plan d'évacuation, obligations légales de débroussaillement (code forestier L134-6).
 
 ## Pages du site
 
-- [Accueil](https://www.littor-eau.fr/) : présentation, expertises, références, Marche Méditerranée 2026, FAQ, formulaire de contact
-- [Campings](https://www.littor-eau.fr/campings.html) : diagnostic des risques pour les terrains de camping
-- [Érosion côtière et submersion marine](https://www.littor-eau.fr/erosion-cotiere.html)
-- [Hydraulique fluviale et inondations](https://www.littor-eau.fr/inondations.html)
-- [Prévention du risque incendie](https://www.littor-eau.fr/prevention-incendie.html)
-- [Cartographie et photogrammétrie drone](https://www.littor-eau.fr/cartographie-drone.html)
-- [Étude hydrogéologique et forage](https://www.littor-eau.fr/hydrogeologie-forage.html)
-- [Politique de confidentialité](https://www.littor-eau.fr/confidentialite.html), [cookies](https://www.littor-eau.fr/cookies.html), [conditions d'utilisation](https://www.littor-eau.fr/conditions-utilisation.html)
+- [Accueil](https://littor-eau.fr/) : présentation, expertises, références, Marche Méditerranée 2026, FAQ, formulaire de contact
+- [Campings](https://littor-eau.fr/campings.html) : diagnostic des risques pour les terrains de camping
+- [Érosion côtière et submersion marine](https://littor-eau.fr/erosion-cotiere.html)
+- [Hydraulique fluviale et inondations](https://littor-eau.fr/inondations.html)
+- [Prévention du risque incendie](https://littor-eau.fr/prevention-incendie.html)
+- [Cartographie et photogrammétrie drone](https://littor-eau.fr/cartographie-drone.html)
+- [Étude hydrogéologique et forage](https://littor-eau.fr/hydrogeologie-forage.html)
+- [Politique de confidentialité](https://littor-eau.fr/confidentialite.html), [cookies](https://littor-eau.fr/cookies.html), [conditions d'utilisation](https://littor-eau.fr/conditions-utilisation.html)
 
 ## Pour les agents IA
 
