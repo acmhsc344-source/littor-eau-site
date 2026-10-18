@@ -733,3 +733,29 @@ button.btn-red{border:0;font-family:inherit;cursor:pointer;}
   .legal-page td{border:0;padding:3px 0;}
   .legal-page td::before{content:attr(data-label);display:block;font-size:13.5px;font-weight:600;color:var(--ocean);}
 }
+
+/* Carte du tracé de la Marche */
+.marche-map{width:100%;height:auto;display:block;border-radius:12px;font-family:'Archivo',system-ui,sans-serif;}
+.marche-map .m-sea{fill:#0a2844;}
+.marche-map .m-land{fill:#1d4a6b;}
+.marche-map .m-coast{fill:none;stroke:rgba(255,255,255,0.35);stroke-width:1.2;}
+.marche-map .m-trace{fill:none;stroke:var(--light);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:marcheDraw 3.2s ease .4s forwards;}
+@keyframes marcheDraw{to{stroke-dashoffset:0;}}
+.marche-map .m-contact{fill:#f2c3b0;stroke:#0c2e4d;stroke-width:1.5;}
+.marche-map .m-partner{fill:#c85a3c;stroke:#fff;stroke-width:2;}
+.marche-map .m-halo{fill:rgba(200,90,60,0.28);transform-box:fill-box;transform-origin:center;animation:marchePulse 2.6s ease-out infinite;}
+@keyframes marchePulse{0%{opacity:.7;transform:scale(.6);}100%{opacity:0;transform:scale(1.6);}}
+.marche-map .m-town{fill:rgba(255,255,255,0.7);}
+.marche-map .m-end{fill:var(--light);stroke:#fff;stroke-width:2.5;}
+.marche-map .m-city{fill:rgba(255,255,255,0.78);font-size:15px;font-weight:500;}
+.marche-map .m-key{fill:#fff;font-size:18px;font-weight:650;font-stretch:112%;}
+.marche-map .m-date{fill:var(--light);font-size:15px;font-weight:600;}
+.marche-map .m-sea-label{fill:rgba(255,255,255,0.28);font-size:15px;letter-spacing:.32em;}
+.marche-map-legend{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;color:rgba(255,255,255,0.82);}
+.marche-map-legend li{display:flex;align-items:center;gap:8px;}
+.marche-map-legend .lg{display:inline-block;flex:none;}
+.lg-partner{width:12px;height:12px;border-radius:50%;background:#c85a3c;box-shadow:0 0 0 2px #fff inset;border:2px solid #fff;}
+.lg-contact{width:10px;height:10px;border-radius:50%;background:#f2c3b0;}
+.lg-trace{width:22px;height:4px;border-radius:2px;background:var(--light);}
+@media (prefers-reduced-motion:reduce){.marche-map .m-trace{animation:none;stroke-dashoffset:0;}.marche-map .m-halo{animation:none;opacity:.4;}}
+@media (max-width:600px){.marche-map .m-city,.marche-map .m-sea-label{display:none;}.marche-map .m-key{font-size:32px;}.marche-map .m-date{font-size:26px;transform:translateY(9px);}}
